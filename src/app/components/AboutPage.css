@@ -1,0 +1,345 @@
+:root {
+  --navy: #182d57;
+  --orange: #f25b17;
+  --rust: #de5c35;
+  --bg: #f4f4f4;
+  --light: #f1f1f1;
+  --gray: #575757;
+  --mid-gray: #c2c2c2;
+  --slate: #5b639f;
+}
+
+.about-page-container {
+  font-family: 'Merriweather Sans', sans-serif;
+  background: var(--bg);
+  color: var(--navy);
+  width: 100%;
+  min-height: 100vh;
+}
+
+.about-page-container *,
+.about-page-container *::before,
+.about-page-container *::after {
+  box-sizing: border-box;
+}
+
+/* NAV */
+.about-page-container nav {
+  background: #ffffff;
+  border-bottom: 0.3px solid #d0d0d0;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 68px;
+}
+
+.about-page-container .nav-inner {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-page-container .logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-page-container .logo-text-block {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.about-page-container .logo-text-block strong {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-bottom: 1px;
+}
+
+.about-page-container .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-page-container .nav-links a {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #00182b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.about-page-container .nav-links .btn-contact {
+  background: var(--orange);
+  color: var(--light);
+  padding: 6px 20px;
+  border-radius: 4px;
+}
+
+/* HERO */
+.about-page-container .hero {
+  position: relative;
+  height: 655px;
+  overflow: hidden;
+}
+
+.about-page-container .hero img.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.about-page-container .hero-fade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom,
+    rgba(255,255,255,0.08) 0%,
+    rgba(244,244,244,0.45) 55%,
+    #f4f4f4 100%);
+}
+
+.about-page-container .hero-quote {
+  position: absolute;
+  bottom: 88px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 788px;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 55px;
+  letter-spacing: -0.78px;
+  color: var(--navy);
+  margin: 0;
+}
+
+/* WHITE PANEL */
+.about-page-container .white-panel {
+  background: #ffffff;
+}
+
+.about-page-container .divider {
+  height: 0.3px;
+  background: #575757;
+  border: none;
+  margin: 0;
+}
+
+/* STORY */
+.about-page-container .story-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-page-container .story-left {
+  padding: 62px 68px 80px 68px;
+  border-right: 0.3px solid #575757;
+}
+
+.about-page-container .story-label {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 20px;
+  letter-spacing: -0.4px;
+  color: var(--orange);
+  margin-bottom: 30px;
+}
+
+.about-page-container .story-heading {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.64px;
+  line-height: 1.4;
+  color: var(--navy);
+  max-width: 493px;
+  margin: 0;
+}
+
+.about-page-container .story-right {
+  overflow: hidden;
+  min-height: 414px;
+}
+
+.about-page-container .story-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* APART */
+.about-page-container .apart-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-page-container .apart-left {
+  overflow: hidden;
+  min-height: 478px;
+  border-right: 0.3px solid #575757;
+}
+
+.about-page-container .apart-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.about-page-container .apart-right {
+  padding: 49px 68px 64px 68px;
+}
+
+.about-page-container .apart-heading {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: -0.64px;
+  color: var(--navy);
+  margin-bottom: 48px;
+}
+
+.about-page-container .apart-body {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  color: var(--gray);
+  line-height: 1.65;
+  margin-bottom: 36px;
+  max-width: 560px;
+}
+
+.about-page-container .apart-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about-page-container .apart-items li {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.32px;
+  color: var(--navy);
+  padding: 19px 0;
+  border-top: 0.3px solid #575757;
+  max-width: 594px;
+}
+
+.about-page-container .apart-items li:last-child {
+  border-bottom: 0.3px solid #575757;
+}
+
+/* STATS BAR */
+.about-page-container .stats-bar {
+  background: var(--rust);
+  padding: 58px 68px;
+}
+
+.about-page-container .stats-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+}
+
+.about-page-container .stat {
+  flex: 1;
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  color: var(--light);
+  line-height: 1.3;
+}
+
+.about-page-container .stat + .stat {
+  padding-left: 48px;
+  border-left: 0.3px solid rgba(241,241,241,0.35);
+}
+
+/* CTA */
+.about-page-container .cta-section {
+  background: #ffffff;
+  padding: 82px 68px 90px;
+}
+
+.about-page-container .cta-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.about-page-container .cta-heading {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 40px;
+  letter-spacing: -0.8px;
+  line-height: 1.25;
+  color: var(--navy);
+  max-width: 609px;
+  margin: 0;
+}
+
+.about-page-container .arrow-btn {
+  width: 64px;
+  height: 56px;
+  background: var(--orange);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  border: none;
+}
+
+/* FOOTER — scaled canvas approach to match landing page */
+.about-page-container .about-footer {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.about-page-container .about-footer-canvas {
+  width: 1280px;
+  height: 501px;
+  position: relative;
+  transform-origin: top left;
+}
+
+/* Reset Layer1's hardcoded position inside the footer wrapper */
+.about-page-container .about-footer-canvas [data-name="Layer_1"] {
+  top: 0 !important;
+  left: 0 !important;
+}
+

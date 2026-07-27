@@ -1,0 +1,85 @@
+.main-navbar {
+  background: #ffffff;
+  border-bottom: 0.3px solid #575757;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding: 0 68px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  box-sizing: border-box;
+}
+
+.main-navbar .nav-inner {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main-navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main-navbar .logo-text-block {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  line-height: 1.4;
+  color: #182d57;
+  text-transform: uppercase;
+}
+
+.main-navbar .logo-text-block strong {
+  display: block;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.15em;
+  margin-bottom: 1px;
+}
+
+.main-navbar .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 44px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-navbar .nav-links a {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: #00182b;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.main-navbar .nav-links a:hover {
+  opacity: 0.75;
+}
+
+.main-navbar .btn-contact {
+  background: #f25b17;
+  color: #f1f1f1 !important;
+  padding: 6px 20px;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.main-navbar .btn-contact:hover {
+  background: #c94a10;
+  opacity: 1 !important;
+}

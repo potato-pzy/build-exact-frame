@@ -1,0 +1,202 @@
+.contact-page-container {
+  background: #f4f4f4;
+  color: #000;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact-page-container main {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 32px;
+  width: 100%;
+  flex: 1;
+  box-sizing: border-box;
+}
+
+/* Hero */
+.contact-page-container .hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  padding: 64px 0 80px;
+}
+
+.contact-page-container .hero h1 {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 64px;
+  color: #182d57;
+  line-height: 1.08;
+  letter-spacing: -1.28px;
+  margin: 0;
+}
+
+.contact-page-container .hero-desc {
+  font-size: 16px;
+  color: #575757;
+  line-height: 1.7;
+  letter-spacing: -0.32px;
+  padding-top: 12px;
+  margin: 0;
+}
+
+/* Contact section */
+.contact-page-container .contact-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 64px;
+  padding-bottom: 96px;
+}
+
+/* Left info */
+.contact-page-container .info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 16px;
+}
+
+.contact-page-container .info-label {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: -0.32px;
+  margin-bottom: 12px;
+}
+
+.contact-page-container .info-value {
+  font-size: 16px;
+  color: #575757;
+  line-height: 1.7;
+  letter-spacing: -0.32px;
+  margin: 0;
+}
+
+/* Form */
+.contact-page-container .form-col form {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.contact-page-container .form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-page-container .field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-page-container .field label {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000;
+  letter-spacing: -0.32px;
+}
+
+.contact-page-container .field label span {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 11px;
+  margin-left: 4px;
+  color: #575757;
+}
+
+.contact-page-container .field input,
+.contact-page-container .field textarea {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  color: #575757;
+  padding-bottom: 4px;
+  resize: none;
+  line-height: 1.6;
+  width: 100%;
+}
+
+.contact-page-container .field-line {
+  height: 1px;
+  background: #F25B17;
+  margin-top: 4px;
+}
+
+/* Submit row */
+.contact-page-container .submit-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Orange banner */
+.contact-page-container .orange-banner {
+  background: #de5c35;
+  padding: 64px 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-page-container .orange-banner-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.contact-page-container .orange-banner p {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 40px;
+  color: #f1f1f1;
+  line-height: 1.2;
+  letter-spacing: -0.8px;
+  max-width: 516px;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-page-container .hero {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .contact-page-container .hero h1 {
+    font-size: 44px;
+  }
+
+  .contact-page-container .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .contact-page-container .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page-container main {
+    padding: 0 20px;
+  }
+
+  .contact-page-container .orange-banner {
+    padding: 48px 20px;
+  }
+
+  .contact-page-container .orange-banner p {
+    font-size: 28px;
+  }
+}

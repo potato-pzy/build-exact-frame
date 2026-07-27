@@ -1,0 +1,708 @@
+import svgPaths from "./svg-hsfh0kwwsp";
+import imgRectangle3 from "./a3769218c4c5a01624ac9804b1ed2ffef91f1c71.png";
+import imgImage3 from "./cc999a5ba4b6802d6eab44c1d7937aa20a701725.png";
+import imgImage8 from "./4e10b6ba3ded133f635912426fb9c5ff2df73af9.png";
+import imgRectangle11 from "./687e2d1a8a490f002a858b824dcf1b359ed3afa1.png";
+import imgRectangle12 from "./8d3090800ee5c4269773692b859f3ffb20585a5b.png";
+import Navbar from "@/app/components/Navbar";
+
+function LtRadialRepeatGt() {
+  return (
+    <div className="absolute inset-[83.69%_34.83%_0_32.57%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.3207 7.66471">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.pc66e200} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt1() {
+  return (
+    <div className="absolute inset-[54.28%_71.73%_12.04%_2.06%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.32 15.8311">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p24e91a80} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt2() {
+  return (
+    <div className="absolute inset-[12.8%_72.79%_53.86%_0]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.7874 15.6694">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p25a6ed00} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt3() {
+  return (
+    <div className="absolute inset-[0_32.57%_83.69%_34.83%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.3207 7.66471">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p2bc56c80} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt4() {
+  return (
+    <div className="absolute inset-[12.04%_2.06%_54.28%_71.73%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.32 15.8311">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p3f0d3630} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt5() {
+  return (
+    <div className="absolute inset-[53.86%_0_12.8%_72.79%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.7874 15.6694">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p3eb13100} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function IsolationMode() {
+  return (
+    <div className="-translate-x-1/2 absolute left-[calc(50%+0.5px)] overflow-clip size-[47px] top-[902px]" data-name="Isolation_Mode">
+      <LtRadialRepeatGt />
+      <LtRadialRepeatGt1 />
+      <LtRadialRepeatGt2 />
+      <LtRadialRepeatGt3 />
+      <LtRadialRepeatGt4 />
+      <LtRadialRepeatGt5 />
+    </div>
+  );
+}
+
+function LtRadialRepeatGt6() {
+  return (
+    <div className="absolute inset-[83.69%_85.26%_0_7.37%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.0717 7.99087">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p215d7d80} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt7() {
+  return (
+    <div className="absolute inset-[54.28%_93.61%_12.04%_0.46%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.924 16.5047">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p9342f00} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt8() {
+  return (
+    <div className="absolute inset-[12.8%_93.85%_53.86%_0]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.4143 16.3362">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p18627c80} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt9() {
+  return (
+    <div className="absolute inset-[0_84.75%_83.69%_7.88%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 16.0717 7.99087">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p34123900} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt10() {
+  return (
+    <div className="absolute inset-[12.04%_77.85%_54.28%_16.22%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 12.924 16.5047">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p12a71400} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt11() {
+  return (
+    <div className="absolute inset-[53.86%_77.38%_12.8%_16.46%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 13.4143 16.3362">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p14ceaa00} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group() {
+  return (
+    <div className="absolute contents inset-[0_77.38%_0_0]" data-name="Group">
+      <LtRadialRepeatGt6 />
+      <LtRadialRepeatGt7 />
+      <LtRadialRepeatGt8 />
+      <LtRadialRepeatGt9 />
+      <LtRadialRepeatGt10 />
+      <LtRadialRepeatGt11 />
+    </div>
+  );
+}
+
+function Group1() {
+  return (
+    <div className="absolute inset-[18.22%_0_7.88%_29.24%]" data-name="Group">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 154.251 36.2119">
+        <g id="Group">
+          <path d={svgPaths.p21cdc300} fill="var(--fill-0, #182D57)" id="Vector" />
+          <path d={svgPaths.pa7ce080} fill="var(--fill-0, #182D57)" id="Vector_2" />
+          <path d={svgPaths.p17cdf600} fill="var(--fill-0, #182D57)" id="Vector_3" />
+          <path d={svgPaths.p88c6900} fill="var(--fill-0, #182D57)" id="Vector_4" />
+          <path d={svgPaths.p2753a400} fill="var(--fill-0, #182D57)" id="Vector_5" />
+          <path d={svgPaths.p3f18c100} fill="var(--fill-0, #182D57)" id="Vector_6" />
+          <path d={svgPaths.p3c642000} fill="var(--fill-0, #182D57)" id="Vector_7" />
+          <path d={svgPaths.p374ff400} fill="var(--fill-0, #182D57)" id="Vector_8" />
+          <path d={svgPaths.p35d4c00} fill="var(--fill-0, #182D57)" id="Vector_9" />
+          <path d={svgPaths.pd025e00} fill="var(--fill-0, #182D57)" id="Vector_10" />
+          <path d={svgPaths.p2b775380} fill="var(--fill-0, #182D57)" id="Vector_11" />
+          <path d={svgPaths.pfd7c580} fill="var(--fill-0, #182D57)" id="Vector_12" />
+          <path d={svgPaths.p169c08c0} fill="var(--fill-0, #182D57)" id="Vector_13" />
+          <path d={svgPaths.p3a039f00} fill="var(--fill-0, #182D57)" id="Vector_14" />
+          <path d={svgPaths.p23de0f00} fill="var(--fill-0, #182D57)" id="Vector_15" />
+          <path d={svgPaths.p7685200} fill="var(--fill-0, #182D57)" id="Vector_16" />
+          <path d={svgPaths.p2963b680} fill="var(--fill-0, #182D57)" id="Vector_17" />
+          <path d={svgPaths.p1945f200} fill="var(--fill-0, #182D57)" id="Vector_18" />
+          <path d={svgPaths.p14a86400} fill="var(--fill-0, #182D57)" id="Vector_19" />
+          <path d={svgPaths.pf16bc00} fill="var(--fill-0, #182D57)" id="Vector_20" />
+          <path d={svgPaths.p1803a9f0} fill="var(--fill-0, #182D57)" id="Vector_21" />
+          <path d={svgPaths.pcc93380} fill="var(--fill-0, #182D57)" id="Vector_22" />
+          <path d={svgPaths.pf82ba00} fill="var(--fill-0, #182D57)" id="Vector_23" />
+          <path d={svgPaths.p4ae3e00} fill="var(--fill-0, #182D57)" id="Vector_24" />
+          <path d={svgPaths.p31fc0100} fill="var(--fill-0, #182D57)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+export function Layer() {
+  return (
+    <div className="absolute h-[49px] left-[67px] overflow-clip top-[28px] w-[218px]" data-name="Layer_1">
+      <Group />
+      <Group1 />
+    </div>
+  );
+}
+
+function Group2() {
+  return (
+    <div className="absolute h-[26px] left-[821px] top-[3344px] w-[30px]">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 30 26">
+        <g id="Group 2">
+          <rect fill="var(--fill-0, #182D57)" height="26" id="Rectangle 8" rx="4" width="30" />
+          <path d={svgPaths.p342fe180} fill="var(--stroke-0, white)" id="Arrow 2" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group3() {
+  return (
+    <div className="absolute contents left-[821px] top-[3344px]">
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[861px] text-[#f1f1f1] text-[16px] top-[3347px] tracking-[-0.32px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Contact Us
+      </p>
+      <Group2 />
+    </div>
+  );
+}
+
+function LtRadialRepeatGt12() {
+  return (
+    <div className="absolute inset-[98.84%_12.15%_-0.51%_77.36%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 134.289 65.7117">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p34958b00} fill="url(#paint0_linear_2_404)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_404" x1="67.1445" x2="67.1445" y1="6.20037e-05" y2="65.7117">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt13() {
+  return (
+    <div className="absolute inset-[95.83%_24.02%_0.72%_67.54%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 108.048 135.832">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p2b241480} fill="url(#paint0_linear_2_490)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_490" x1="54.0242" x2="54.0242" y1="-5.82081e-10" y2="135.831">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt14() {
+  return (
+    <div className="absolute inset-[91.58%_24.37%_5%_66.88%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 112.037 134.523">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p36a36a00} fill="url(#paint0_linear_2_401)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_401" x1="56.0185" x2="56.0185" y1="4.15146e-05" y2="134.523">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt15() {
+  return (
+    <div className="absolute inset-[90.27%_11.42%_8.06%_78.09%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 134.281 65.7116">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p2eabcdc0} fill="url(#paint0_linear_2_395)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_395" x1="67.1405" x2="67.1405" y1="0" y2="65.7116">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt16() {
+  return (
+    <div className="absolute inset-[91.5%_1.59%_5.05%_89.97%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 108.048 135.832">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p1edb0800} fill="url(#paint0_linear_2_398)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_398" x1="54.0243" x2="54.0243" y1="0" y2="135.831">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt17() {
+  return (
+    <div className="absolute inset-[95.79%_0.93%_0.8%_90.31%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 112.037 134.523">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.pb378770} fill="url(#paint0_linear_2_392)" id="Vector" />
+        </g>
+        <defs>
+          <linearGradient gradientUnits="userSpaceOnUse" id="paint0_linear_2_392" x1="56.0185" x2="56.0185" y1="5.9306e-05" y2="134.523">
+            <stop stopColor="#173E63" />
+            <stop offset="1" stopColor="#1D2D55" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  );
+}
+
+export function Group4() {
+  return (
+    <div className="absolute contents inset-[90.27%_0.93%_-0.51%_66.88%]">
+      <LtRadialRepeatGt12 />
+      <LtRadialRepeatGt13 />
+      <LtRadialRepeatGt14 />
+      <LtRadialRepeatGt15 />
+      <LtRadialRepeatGt16 />
+      <LtRadialRepeatGt17 />
+    </div>
+  );
+}
+
+function LtRadialRepeatGt18() {
+  return (
+    <div className="absolute inset-[83.69%_85.32%_0_7.34%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18.6507 9.13242">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p1922d800} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt19() {
+  return (
+    <div className="absolute inset-[54.28%_93.63%_12.04%_0.46%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.9979 18.8625">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p28ea9d80} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt20() {
+  return (
+    <div className="absolute inset-[12.8%_93.87%_53.86%_0]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.5669 18.6699">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p30ce0880} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt21() {
+  return (
+    <div className="absolute inset-[0_84.81%_83.69%_7.85%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 18.6507 9.13242">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p3ac0c780} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt22() {
+  return (
+    <div className="absolute inset-[12.04%_77.94%_54.28%_16.16%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 14.9979 18.8625">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p8551e72} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function LtRadialRepeatGt23() {
+  return (
+    <div className="absolute inset-[53.86%_77.47%_12.8%_16.4%]" data-name="&lt;Radial Repeat&gt;">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 15.5669 18.6699">
+        <g id="&lt;Radial Repeat&gt;">
+          <path d={svgPaths.p2801f480} fill="var(--fill-0, #F25B17)" id="Vector" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+function Group5() {
+  return (
+    <div className="absolute contents inset-[0_77.47%_0_0]" data-name="Group">
+      <LtRadialRepeatGt18 />
+      <LtRadialRepeatGt19 />
+      <LtRadialRepeatGt20 />
+      <LtRadialRepeatGt21 />
+      <LtRadialRepeatGt22 />
+      <LtRadialRepeatGt23 />
+    </div>
+  );
+}
+
+function Group6() {
+  return (
+    <div className="absolute inset-[13.06%_0_13.04%_29.12%]" data-name="Group">
+      <svg className="absolute block inset-0 size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 180.021 41.3851">
+        <g id="Group">
+          <path d={svgPaths.pb10ac40} fill="var(--fill-0, #F1F1F1)" id="Vector" />
+          <path d={svgPaths.p1e216800} fill="var(--fill-0, #F1F1F1)" id="Vector_2" />
+          <path d={svgPaths.p2103ba00} fill="var(--fill-0, #F1F1F1)" id="Vector_3" />
+          <path d={svgPaths.p1a207b00} fill="var(--fill-0, #F1F1F1)" id="Vector_4" />
+          <path d={svgPaths.p6b9c500} fill="var(--fill-0, #F1F1F1)" id="Vector_5" />
+          <path d={svgPaths.p227f79f0} fill="var(--fill-0, #F1F1F1)" id="Vector_6" />
+          <path d={svgPaths.p185c4240} fill="var(--fill-0, #F1F1F1)" id="Vector_7" />
+          <path d={svgPaths.p16b8d480} fill="var(--fill-0, #F1F1F1)" id="Vector_8" />
+          <path d={svgPaths.p10799380} fill="var(--fill-0, #F1F1F1)" id="Vector_9" />
+          <path d={svgPaths.p777bd00} fill="var(--fill-0, #F1F1F1)" id="Vector_10" />
+          <path d={svgPaths.p32d6d380} fill="var(--fill-0, #F1F1F1)" id="Vector_11" />
+          <path d={svgPaths.p127d8f00} fill="var(--fill-0, #F1F1F1)" id="Vector_12" />
+          <path d={svgPaths.p290a2900} fill="var(--fill-0, #F1F1F1)" id="Vector_13" />
+          <path d={svgPaths.p1a0f03c0} fill="var(--fill-0, #F1F1F1)" id="Vector_14" />
+          <path d={svgPaths.p33fa3980} fill="var(--fill-0, #F1F1F1)" id="Vector_15" />
+          <path d={svgPaths.p86d8c70} fill="var(--fill-0, #F1F1F1)" id="Vector_16" />
+          <path d={svgPaths.p17b24d70} fill="var(--fill-0, #F1F1F1)" id="Vector_17" />
+          <path d={svgPaths.p2dccbc00} fill="var(--fill-0, #F1F1F1)" id="Vector_18" />
+          <path d={svgPaths.p2fadd500} fill="var(--fill-0, #F1F1F1)" id="Vector_19" />
+          <path d={svgPaths.pfc0d200} fill="var(--fill-0, #F1F1F1)" id="Vector_20" />
+          <path d={svgPaths.p15444590} fill="var(--fill-0, #F1F1F1)" id="Vector_21" />
+          <path d={svgPaths.p2d10940} fill="var(--fill-0, #F1F1F1)" id="Vector_22" />
+          <path d={svgPaths.p7661380} fill="var(--fill-0, #F1F1F1)" id="Vector_23" />
+          <path d={svgPaths.p1358080} fill="var(--fill-0, #F1F1F1)" id="Vector_24" />
+          <path d={svgPaths.pdcfc900} fill="var(--fill-0, #F1F1F1)" id="Vector_25" />
+        </g>
+      </svg>
+    </div>
+  );
+}
+
+export function Layer1() {
+  return (
+    <div className="absolute h-[56px] left-[84px] overflow-clip top-[3579px] w-[254px]" data-name="Layer_1">
+      <Group5 />
+      <Group6 />
+    </div>
+  );
+}
+
+export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about") => void }) {
+  return (
+    <div className="bg-[#f4f4f4] relative size-full" data-name="Home Page">
+      <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
+      <div className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[64px] top-[201px] tracking-[-1.28px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        <p className="leading-[69px] mb-0">When fuel matters</p>
+        <p className="leading-[69px]">
+          the most
+          <br aria-hidden />
+          <br aria-hidden />
+        </p>
+      </div>
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-1/2 text-[#182d57] text-[32px] text-center top-[1007px] tracking-[-0.64px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100' }}>{`OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore.`}</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-582px)] text-[#182d57] text-[32px] top-[2474px] tracking-[-0.64px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet.
+      </p>
+      <IsolationMode />
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[795px] text-[#575757] text-[16px] top-[233px] tracking-[-0.32px] w-[341px]">OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts.</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100' }}>{`Learn More `}</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-59px)] text-[#f25b17] text-[20px] top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Learn More →
+      </p>
+      <div className="absolute bg-white h-[1042px] left-0 top-[1347px] w-[1280px]" />
+      <div className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-[203.21%] left-0 max-w-none top-[-56.72%] w-full" src={imgRectangle3} />
+        </div>
+      </div>
+      <div className="absolute bg-[#f25b17] h-[26px] left-[796px] rounded-[4px] top-[308px] w-[30px]" />
+      <div className="absolute h-0 left-[805px] top-[321px] w-[10px]">
+        <div className="absolute inset-[-3.68px_-5%_-3.68px_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.5 7.36396">
+            <path d={svgPaths.pb3a500} fill="var(--stroke-0, white)" id="Arrow 1" />
+          </svg>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Name for Brand Strengths
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        1 M+
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        24 hour
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+26px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        10+
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Global
+      </p>
+      <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[62px] text-[#f25b17] text-[20px] top-[1448px] tracking-[-0.4px] whitespace-nowrap">
+        <p className="leading-[normal] mb-0 whitespace-pre">{`WHY  OEC`}</p>
+        <p className="leading-[normal] whitespace-pre">​</p>
+      </div>
+      <div className="absolute flex h-[1042px] items-center justify-center left-[619px] top-[1347px] w-0">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[1042px]">
+            <div className="absolute inset-[-0.3px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 0.3">
+                <line id="Line 2" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="1042" y1="0.15" y2="0.15" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1501px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Ready Financing
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1641px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Anywhere Delivery
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1781px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Fair Pricing
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1921px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Project Know-How
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2056px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Project Know-How
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2216px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Offshore Focus
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1538px] tracking-[-0.28px] w-[234px]">When the project runs before the payment does</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1678px] tracking-[-0.28px] w-[234px]">When it has to arrive by truck, vessel, or pipeline, anywhere in the world</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[100px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[150px]">MT of fuel delivered since 2022</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[338px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px]">turnaround at major bunkering ports</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[666px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px] whitespace-pre-wrap">{`years of  experience in offshore bunkering`}</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[942px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[235px]">Active across Singapore, Malaysia, Vietnam, Thailand, the Middle East, and the Americas.</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1818px] tracking-[-0.28px] w-[234px]">{`When the market moves, the terms don't punish you for it`}</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1958px] tracking-[-0.28px] w-[234px]">When the fuel plan is as complex as the drilling plan</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2093px] tracking-[-0.28px] w-[234px]">When the fuel plan is as complex as the drilling plan</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2253px] tracking-[-0.28px] w-[234px]">When years of offshore focus mean this has already been solved before</p>
+      <div className="absolute h-0 left-[620px] top-[1603px] w-[660px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
+            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-0 left-[620px] top-[1743px] w-[660px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
+            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-0 left-[620px] top-[1883px] w-[660px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
+            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-0 left-[620px] top-[2023px] w-[660px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
+            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-0 left-[620px] top-[2158px] w-[660px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
+            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-0 left-0 top-[2389px] w-[1280px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 0.3">
+            <line id="Line 7" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[1496px] w-[77px]" data-name="image 3">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+      </div>
+      <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+      </div>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[20px] top-[2696px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        See how we deliver →
+      </p>
+      <div className="absolute h-[414px] left-[619px] top-[2389px] w-[661px]">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <img alt="" className="absolute h-full left-[-5.54%] max-w-none top-0 w-[113.03%]" src={imgRectangle11} />
+        </div>
+      </div>
+      <div className="absolute bg-[#de5c35] h-[495px] left-0 top-[3029px] w-[1280px]" />
+      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[102px] leading-[normal] left-[calc(50%+181px)] text-[#f1f1f1] text-[40px] top-[3162px] tracking-[-0.8px] w-[367px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+        Talk to someone who can say yes.
+        <br aria-hidden />
+        <br aria-hidden />
+      </p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[821px] text-[#f1f1f1] text-[14px] top-[3278px] tracking-[-0.28px] w-[373px]">No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot.</p>
+      <Group3 />
+      <div className="absolute flex h-[495px] items-center justify-center left-[737px] top-[3027px] w-0">
+        <div className="flex-none rotate-90">
+          <div className="h-0 relative w-[495px]">
+            <div className="absolute inset-[-0.3px_0_0_0]">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 495 0.3">
+                <line id="Line 8" stroke="var(--stroke-0, white)" strokeWidth="0.3" x2="495" y1="0.15" y2="0.15" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-556px)] text-[#f1f1f1] text-[32px] top-[3140px] tracking-[-0.64px] w-[591px]" style={{ fontVariationSettings: '"wdth" 100' }}>{`“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”`}</p>
+      <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[84px] text-[#f1f1f1] text-[0px] top-[3378px] tracking-[-0.32px] w-[419px]">
+        <p className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] mb-0 text-[16px]">Rajiv Chada</p>
+        <p className="leading-[normal] text-[16px]">Director, OEC</p>
+      </div>
+      <div className="absolute bg-[#182d57] h-[501px] left-0 top-[3524px] w-[1280px]" />
+      <Group4 />
+      <div className="absolute h-[177px] left-0 top-[3760px] w-[1280px]">
+        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle12} />
+      </div>
+      <Layer1 />
+      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[3849px] w-[1127px]">
+        <div className="absolute inset-[-0.3px_0_0_0]">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.3">
+            <line id="Line 10" stroke="var(--stroke-0, #5B639F)" strokeWidth="0.3" x2="1127" y1="0.15" y2="0.15" />
+          </svg>
+        </div>
+      </div>
+      <p onClick={() => onNavigate?.("home")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3700px] whitespace-nowrap cursor-pointer">Home</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3738px] whitespace-nowrap cursor-pointer">About</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3776px] whitespace-nowrap">Delivery</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">{`Terms & Conditions`}</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">Privacy Policy</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[809px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">Offshore energy consultants pvt ltd 2026 - All Rights reserved</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[3738px] whitespace-nowrap">ContacT</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[3697px] whitespace-nowrap">One stop solution</p>
+    </div>
+  );
+}

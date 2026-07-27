@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About – Offshore Energy Consultants</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Merriweather+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #182d57;
+      --orange: #f25b17;
+      --rust: #de5c35;
+      --bg: #f4f4f4;
+      --light: #f1f1f1;
+      --gray: #575757;
+      --mid-gray: #c2c2c2;
+      --slate: #5b639f;
+    }
+
+    body {
+      font-family: 'Merriweather Sans', sans-serif;
+      background: var(--bg);
+      color: var(--navy);
+    }
+
+    /* NAV */
+    nav {
+      background: #ffffff;
+      border-bottom: 0.3px solid #d0d0d0;
+      height: 110px;
+      display: flex;
+      align-items: center;
+      padding: 0 68px;
+    }
+
+    .nav-inner {
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+    }
+
+    .logo-text-block {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      color: var(--navy);
+      text-transform: uppercase;
+    }
+
+    .logo-text-block strong {
+      display: block;
+      font-weight: 700;
+      font-size: 18px;
+      letter-spacing: 0.15em;
+      margin-bottom: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 44px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 14px;
+      color: #00182b;
+      text-decoration: none;
+    }
+
+    .nav-links .btn-contact {
+      background: var(--orange);
+      color: var(--light);
+      padding: 6px 20px;
+      border-radius: 4px;
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      height: 655px;
+      overflow: hidden;
+    }
+
+    .hero img.hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+
+    .hero-fade {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom,
+        rgba(255,255,255,0.08) 0%,
+        rgba(244,244,244,0.45) 55%,
+        #f4f4f4 100%);
+    }
+
+    .hero-quote {
+      position: absolute;
+      bottom: 88px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 788px;
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 39px;
+      line-height: 55px;
+      letter-spacing: -0.78px;
+      color: var(--navy);
+    }
+
+    /* WHITE PANEL */
+    .white-panel {
+      background: #ffffff;
+    }
+
+    .divider {
+      height: 0.3px;
+      background: #575757;
+      border: none;
+    }
+
+    /* STORY */
+    .story-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .story-left {
+      padding: 62px 68px 80px 68px;
+      border-right: 0.3px solid #575757;
+    }
+
+    .story-label {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 20px;
+      letter-spacing: -0.4px;
+      color: var(--orange);
+      margin-bottom: 30px;
+    }
+
+    .story-heading {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: -0.64px;
+      line-height: 1.4;
+      color: var(--navy);
+      max-width: 493px;
+    }
+
+    .story-right {
+      overflow: hidden;
+      min-height: 414px;
+    }
+
+    .story-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* APART */
+    .apart-grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .apart-left {
+      overflow: hidden;
+      min-height: 478px;
+      border-right: 0.3px solid #575757;
+    }
+
+    .apart-left img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .apart-right {
+      padding: 49px 68px 64px 68px;
+    }
+
+    .apart-heading {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: -0.64px;
+      color: var(--navy);
+      margin-bottom: 48px;
+    }
+
+    .apart-body {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      color: var(--gray);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 560px;
+    }
+
+    .apart-items {
+      list-style: none;
+    }
+
+    .apart-items li {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      color: var(--navy);
+      padding: 19px 0;
+      border-top: 0.3px solid #575757;
+      max-width: 594px;
+    }
+
+    .apart-items li:last-child {
+      border-bottom: 0.3px solid #575757;
+    }
+
+    /* STATS BAR */
+    .stats-bar {
+      background: var(--rust);
+      padding: 58px 68px;
+    }
+
+    .stats-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .stat {
+      flex: 1;
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+      color: var(--light);
+      line-height: 1.3;
+    }
+
+    .stat + .stat {
+      padding-left: 48px;
+      border-left: 0.3px solid rgba(241,241,241,0.35);
+    }
+
+    /* CTA */
+    .cta-section {
+      background: #ffffff;
+      padding: 82px 68px 90px;
+    }
+
+    .cta-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .cta-heading {
+      font-family: 'Merriweather', serif;
+      font-weight: 400;
+      font-size: 40px;
+      letter-spacing: -0.8px;
+      line-height: 1.25;
+      color: var(--navy);
+      max-width: 609px;
+    }
+
+    .arrow-btn {
+      width: 64px;
+      height: 56px;
+      background: var(--orange);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      border: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .footer-map {
+      width: 100%;
+      height: 177px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .footer-deco {
+      position: absolute;
+      right: 48px;
+      top: 120px;
+      opacity: 0.5;
+    }
+
+    .footer-body {
+      padding: 68px 93px 40px;
+    }
+
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 52px;
+    }
+
+    .footer-logo-text {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      color: var(--light);
+      text-transform: uppercase;
+    }
+
+    .footer-logo-text strong {
+      display: block;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.15em;
+      margin-bottom: 1px;
+    }
+
+    .footer-cols {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      margin-bottom: 52px;
+    }
+
+    .footer-nav a,
+    .footer-nav span {
+      display: block;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: var(--mid-gray);
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    .footer-divider {
+      height: 0.3px;
+      background: var(--slate);
+      border: none;
+      margin-bottom: 24px;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-legal {
+      display: flex;
+      gap: 48px;
+    }
+
+    .footer-legal a {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: var(--slate);
+      text-decoration: none;
+    }
+
+    .footer-copy {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300;
+      font-size: 12px;
+      color: var(--slate);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17"/>
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17" transform="rotate(60 23 23)"/>
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17" transform="rotate(120 23 23)"/>
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17" transform="rotate(180 23 23)"/>
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17" transform="rotate(240 23 23)"/>
+          <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f25b17" transform="rotate(300 23 23)"/>
+        </svg>
+        <div class="logo-text-block">
+          <strong>OEC</strong>
+          Offshore Energy Consultants
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Delivery</a></li>
+        <li><a href="#">Full Circle Fuel</a></li>
+        <li><a href="#" class="btn-contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-bg" src="../src/imports/AboutPage/a3769218c4c5a01624ac9804b1ed2ffef91f1c71.png" alt="Offshore oil platform at sea" />
+    <div class="hero-fade"></div>
+    <p class="hero-quote">Offshore operations can't afford a weak link in their fuel supply. OEC exists to be the one link that never breaks.</p>
+  </section>
+
+  <!-- STORY -->
+  <section class="white-panel">
+    <hr class="divider" />
+    <div class="story-grid">
+      <div class="story-left">
+        <p class="story-label">The story</p>
+        <p class="story-heading">Since 2022, OEC has built its entire operating model around one job: getting fuel to offshore sites, on time, every time. Not adapted from a broader fuel business. Built for this, from day one.</p>
+      </div>
+      <div class="story-right">
+        <img src="../src/imports/AboutPage/687e2d1a8a490f002a858b824dcf1b359ed3afa1.png" alt="OEC fuel tanker" />
+      </div>
+    </div>
+    <hr class="divider" />
+  </section>
+
+  <!-- WHAT SETS OEC APART -->
+  <section class="white-panel">
+    <div class="apart-grid">
+      <div class="apart-left">
+        <img src="../src/imports/AboutPage/5bf48760f50d9f3a0721f4ce3a28a60c08be5859.png" alt="OEC logo" />
+      </div>
+      <div class="apart-right">
+        <h2 class="apart-heading">What sets OEC apart</h2>
+        <p class="apart-body">Most fuel suppliers compete on the same things: port counts, years in business, headcount. None of that answers the question that actually matters offshore: when the plan changes at the last minute, who picks up the phone and makes the call?<br><br>OEC is built around that question.</p>
+        <ul class="apart-items">
+          <li>No call center layers between you and a decision.</li>
+          <li>No attention split across fleets. Offshore is our whole business.</li>
+          <li>No distractions. Just fuel, where it needs to be, when it needs to be there.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="stats-bar">
+    <div class="stats-inner">
+      <div class="stat">Founded in 2022</div>
+      <div class="stat">Headquartered in Singapore</div>
+      <div class="stat">Offshore upstream fuel supply, exclusively</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section">
+    <div class="cta-inner">
+      <h2 class="cta-heading">Same principle, every single time. Reach out when it matters.</h2>
+      <button class="arrow-btn" aria-label="Contact us">
+        <svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 9H25M25 9L17 1M25 9L17 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <img class="footer-map" src="../src/imports/AboutPage/50077b9ccb7faa6e4624a919fbc85245dec3786d.png" alt="" />
+
+    <!-- Decorative radial repeat (top-right area) -->
+    <svg class="footer-deco" width="160" height="220" viewBox="0 0 160 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- large flower -->
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(0 118 118)" transform-origin="118 118"/>
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(60 118 118)" transform-origin="118 118"/>
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(120 118 118)" transform-origin="118 118"/>
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(180 118 118)" transform-origin="118 118"/>
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(240 118 118)" transform-origin="118 118"/>
+      <ellipse cx="118" cy="80" rx="10" ry="28" fill="url(#fd1)" transform="rotate(300 118 118)" transform-origin="118 118"/>
+      <defs>
+        <linearGradient id="fd1" x1="80" y1="0" x2="80" y2="220" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#173E63"/>
+          <stop offset="1" stop-color="#1D2D55"/>
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <div class="footer-body">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <svg width="44" height="44" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1"/>
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1" transform="rotate(60 23 23)"/>
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1" transform="rotate(120 23 23)"/>
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1" transform="rotate(180 23 23)"/>
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1" transform="rotate(240 23 23)"/>
+            <ellipse cx="23" cy="9.5" rx="4" ry="8.5" fill="#f1f1f1" transform="rotate(300 23 23)"/>
+          </svg>
+          <div class="footer-logo-text">
+            <strong>OEC</strong>
+            Offshore Energy Consultants
+          </div>
+        </div>
+
+        <div class="footer-cols">
+          <div class="footer-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Delivery</a>
+          </div>
+          <div class="footer-nav">
+            <span>One stop solution</span>
+            <a href="#">About</a>
+            <a href="#">ContacT</a>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <div class="footer-bottom">
+          <div class="footer-legal">
+            <a href="#">Terms &amp; Conditions</a>
+            <a href="#">Privacy Policy</a>
+          </div>
+          <p class="footer-copy">Offshore energy consultants pvt ltd 2026 – All Rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
