@@ -1,10 +1,11 @@
 import "./AboutPage.css";
-import heroBg from "../../../public/img/hero.png";
-import tankerImg from "../../../public/img/tanker.png";
-import logoImg from "../../../public/img/oec-logo.png";
+import heroBg from "../../../public/img/hero.webp";
+import tankerImg from "../../../public/img/tanker.webp";
+import logoImg from "../../../public/img/oec-logo.webp";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FillButton from "./FillButton";
+import RevealText from "./RevealText";
 
 interface AboutPageProps {
   onNavigate?: (page: "home" | "about" | "contact") => void;
@@ -23,10 +24,13 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           src={heroBg}
           alt="Offshore oil platform at sea"
         />
-        <div className="hero-fade"></div>
-        <p className="hero-quote">
-          Offshore operations can't afford a weak link in their fuel supply. OEC exists to be the one link that never breaks.
-        </p>
+      </section>
+
+      {/* HERO QUOTE */}
+      <section className="hero-quote-section">
+        <h1 className="hero-quote">
+          <RevealText text="Offshore operations can't afford a weak link in their fuel supply. OEC exists to be the one link that never breaks." />
+        </h1>
       </section>
 
       {/* STORY */}
@@ -34,15 +38,15 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         <hr className="divider" />
         <div className="story-grid">
           <div className="story-left">
-            <p className="story-label">The story</p>
+            <p className="story-label">
+              <RevealText text="The story" />
+            </p>
             <p className="story-heading">
-              Since 2022, OEC has built its entire operating model around one
-              job: getting fuel to offshore sites, on time, every time. Not
-              adapted from a broader fuel business. Built for this, from day one.
+              <RevealText text="Since 2022, OEC has built its entire operating model around one job: getting fuel to offshore sites, on time, every time. Not adapted from a broader fuel business. Built for this, from day one." />
             </p>
           </div>
           <div className="story-right">
-            <img src={tankerImg} alt="OEC fuel tanker" />
+            <img src={tankerImg} alt="OEC offshore fuel tanker vessel operations" />
           </div>
         </div>
         <hr className="divider" />
@@ -52,27 +56,29 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="white-panel">
         <div className="apart-grid">
           <div className="apart-left">
-            <img src={logoImg} alt="OEC logo" />
+            <img src={logoImg} alt="Offshore Energy Consultants OEC Logo" />
           </div>
           <div className="apart-right">
-            <h2 className="apart-heading">What sets OEC apart</h2>
-            <p className="apart-body">
-              Most fuel suppliers compete on the same things: port counts, years in
-              business, headcount. None of that answers the question that
-              actually matters offshore: when the plan changes at the last
-              minute, who picks up the phone and makes the call?
-              <br />
-              <br />
-              OEC is built around that question.
-            </p>
+            <h2 className="apart-heading">
+              <RevealText text="What sets OEC apart" />
+            </h2>
+            <div className="apart-body">
+              <p style={{ marginBottom: "16px" }}>
+                <RevealText text="Most fuel suppliers compete on the same things: port counts, years in business, headcount. None of that answers the question that actually matters offshore: when the plan changes at the last minute, who picks up the phone and makes the call?" />
+              </p>
+              <p>
+                <RevealText text="OEC is built around that question." />
+              </p>
+            </div>
             <ul className="apart-items">
-              <li>No call center layers between you and a decision.</li>
               <li>
-                No attention split across fleets. Offshore is our whole business.
+                <RevealText text="No call center layers between you and a decision." />
               </li>
               <li>
-                No distractions. Just fuel, where it needs to be, when it needs
-                to be there.
+                <RevealText text="No attention split across fleets. Offshore is our whole business." />
+              </li>
+              <li>
+                <RevealText text="No distractions. Just fuel, where it needs to be, when it needs to be there." />
               </li>
             </ul>
           </div>
@@ -82,9 +88,15 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       {/* STATS BAR */}
       <section className="stats-bar">
         <div className="stats-inner">
-          <div className="stat">Founded in 2022</div>
-          <div className="stat">Headquartered in Singapore</div>
-          <div className="stat">Offshore upstream fuel supply, exclusively</div>
+          <div className="stat">
+            <RevealText text="Founded in 2022" />
+          </div>
+          <div className="stat">
+            <RevealText text="Headquartered in Singapore" />
+          </div>
+          <div className="stat">
+            <RevealText text="Offshore upstream fuel supply, exclusively" />
+          </div>
         </div>
       </section>
 
@@ -92,7 +104,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="cta-section">
         <div className="cta-inner">
           <h2 className="cta-heading">
-            Same principle, every single time. Reach out when it matters.
+            <RevealText text="Same principle, every single time. Reach out when it matters." />
           </h2>
           <FillButton
             squareSize={40}
@@ -128,3 +140,4 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
     </div>
   );
 }
+

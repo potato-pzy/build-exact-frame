@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import mapImg from "@/imports/HomePage-1/8d3090800ee5c4269773692b859f3ffb20585a5b.png";
+import mapImg from "@/imports/HomePage-1/8d3090800ee5c4269773692b859f3ffb20585a5b.webp";
 import { Layer1, Group4 } from "@/imports/HomePage-1/index";
 
 const FOOTER_DESIGN_WIDTH = 1280;
@@ -51,7 +51,7 @@ export default function Footer({ onNavigate }: FooterProps) {
         {/* Map band */}
         <div className="absolute h-[177px] left-0 top-[236px] w-[1280px]">
           <img
-            alt=""
+            alt="OEC Global Service Delivery Map"
             className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
             src={mapImg}
           />

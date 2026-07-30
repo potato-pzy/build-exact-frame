@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Building2,
   Code2,
@@ -6,9 +6,80 @@ import {
   ShieldCheck,
   Cpu,
   Umbrella,
-  ArrowRight,
-  Shield
+  Shield,
+  ArrowRight
 } from 'lucide-react';
+import RevealText from './RevealText';
+
+function SolutionFillButton({ text }: { text: string }) {
+  const [hovered, setHovered] = useState(false);
+  const squareSize = 40;
+  return (
+    <div
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      style={{
+        position: "relative",
+        display: "inline-flex",
+        alignItems: "center",
+        height: 44,
+        width: 220,
+        borderRadius: 4,
+        overflow: "hidden",
+        cursor: "pointer",
+        background: "#f4f4f4",
+        flexShrink: 0,
+      }}
+    >
+      {/* Fill layer */}
+      <div style={{
+        position: "absolute",
+        top: 0, left: 0, bottom: 0,
+        background: "#FF5A00",
+        width: hovered ? "100%" : squareSize,
+        borderRadius: 4,
+        transition: "width 380ms cubic-bezier(0.4, 0, 0.2, 1)",
+        pointerEvents: "none",
+      }} />
+      {/* Arrow — slides right */}
+      <span style={{
+        position: "relative",
+        zIndex: 2,
+        width: squareSize,
+        height: "100%",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        color: "white",
+        flexShrink: 0,
+        transform: hovered ? `translateX(calc(100% - ${squareSize}px + 8px))` : "translateX(0)",
+        transition: "transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
+      }}>
+        <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
+          <path d="M1 6h12M8 1l5 5-5 5" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </span>
+      {/* Text — slides left */}
+      <span style={{
+        position: "relative",
+        zIndex: 2,
+        paddingLeft: 8,
+        paddingRight: 14,
+        color: hovered ? "#ffffff" : "#FF5A00",
+        fontSize: 15,
+        fontFamily: "'Merriweather', serif",
+        fontWeight: 400,
+        letterSpacing: "-0.3px",
+        whiteSpace: "nowrap",
+        transform: hovered ? "translateX(-8px)" : "translateX(0)",
+        transition: "color 200ms ease, transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
+      }}>
+        {text}
+      </span>
+    </div>
+  );
+}
+
 
 const tracksData = [
   {
@@ -148,17 +219,22 @@ export default function SolutionTracks() {
           {/* Badge */}
           <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#FF5A00]/30 bg-white shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#FF5A00] mr-2"></span>
-            <span className="text-xs font-bold tracking-wider text-[#FF5A00] uppercase font-['Merriweather_Sans:Regular',sans-serif]">Our Solution Tracks</span>
+            <span className="text-xs font-bold tracking-wider text-[#FF5A00] uppercase font-['Merriweather:Regular',serif]">
+              <RevealText text="Our Solution Tracks" />
+            </span>
           </div>
           
           {/* Main Title */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 font-['Merriweather:Regular',serif]">
-             Solutions for <span className="text-[#FF5A00]">Every Security Function</span>
+             <RevealText text="Solutions for " />
+             <span className="text-[#FF5A00]">
+               <RevealText text="Every Security Function" />
+             </span>
           </h1>
           
           {/* Subtitle */}
           <p className="text-[16px] text-slate-500 font-['Merriweather_Sans:Light',sans-serif] font-light leading-relaxed">
-            Purpose-built tracks that help security teams build, operate and improve across their core functional areas.
+            <RevealText text="Purpose-built tracks that help security teams build, operate and improve across their core functional areas." />
           </p>
         </div>
 
@@ -177,10 +253,10 @@ export default function SolutionTracks() {
               {/* Content */}
               <div className="flex-grow z-10">
                 <h3 className="text-xl font-normal text-slate-900 mb-3 group-hover:text-[#FF5A00] transition-colors font-['Merriweather:Regular',serif]">
-                  {track.title}
+                  <RevealText text={track.title} />
                 </h3>
                 <p className="text-slate-500 leading-relaxed text-[16px] font-['Merriweather_Sans:Light',sans-serif] font-light pr-12">
-                  {track.description}
+                  <RevealText text={track.description} />
                 </p>
               </div>
               
@@ -190,7 +266,7 @@ export default function SolutionTracks() {
                    href={track.link} 
                    className="inline-flex items-center text-sm font-semibold text-[#FF5A00] group-hover:underline underline-offset-4 font-['Merriweather_Sans:Regular',sans-serif] !italic"
                  >
-                   Learn more 
+                   <RevealText text="Learn more" />
                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
                  </a>
               </div>
@@ -211,15 +287,15 @@ export default function SolutionTracks() {
               </div>
               <div>
                  <p className="text-slate-700 text-sm md:text-base font-['Merriweather_Sans:Light',sans-serif] font-light">
-                    <span className="font-normal text-slate-900 font-['Merriweather:Regular',serif]">One Platform. Every Function. Real Impact.</span> Unify your security programs and drive continuous improvement across people, process and technology.
+                    <span className="font-normal text-slate-900 font-['Merriweather:Regular',serif]">
+                      <RevealText text="One Platform. Every Function. Real Impact." />
+                    </span>{" "}
+                    <RevealText text="Unify your security programs and drive continuous improvement across people, process and technology." />
                  </p>
               </div>
            </div>
            
-           <button className="whitespace-nowrap inline-flex items-center justify-center px-6 py-3 rounded-lg bg-[#FF5A00] text-white font-semibold hover:bg-orange-600 transition-colors shadow-sm hover:shadow-md active:scale-95 w-full md:w-auto font-['Merriweather_Sans:Regular',sans-serif]">
-              Explore All Tracks
-              <ArrowRight className="w-4 h-4 ml-2" />
-           </button>
+           <SolutionFillButton text="Explore All Tracks" />
         </div>
 
       </div>

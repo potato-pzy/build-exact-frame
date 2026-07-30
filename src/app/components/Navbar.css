@@ -71,15 +71,83 @@
   opacity: 0.75;
 }
 
-.main-navbar .btn-contact {
-  background: #f25b17;
-  color: #f1f1f1 !important;
+.main-navbar .btn-contact-wipe {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 6px 20px;
   border-radius: 4px;
-  transition: background 0.2s ease;
+  background: transparent;
+  border: 1.5px solid #f25b17;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  height: 32px;
+  box-sizing: border-box;
+  transition: opacity 0.2s ease, border-color 0.3s ease;
 }
 
-.main-navbar .btn-contact:hover {
-  background: #c94a10;
+.main-navbar .btn-contact-wipe:hover {
   opacity: 1 !important;
+}
+
+/* Rest state text */
+.main-navbar .btn-contact-bg-text {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f25b17;
+  z-index: 1;
+  transition: color 0.3s ease;
+}
+
+/* Wipe layer sliding container */
+.main-navbar .btn-contact-wipe-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  background: #f25b17;
+  overflow: hidden;
+  z-index: 2;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Revealed text inside wipe container */
+.main-navbar .btn-contact-wipe-text {
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #f1f1f1 !important;
+  white-space: nowrap;
+  position: absolute;
+  left: 20px; /* aligns with padding */
+}
+
+/* The vertical scanner wipe bar */
+.main-navbar .btn-contact-wipe-bar {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -5px;
+  width: 3px;
+  background: #182d57; /* Dark navy scanner line */
+  z-index: 3;
+  transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hover & Active triggers */
+.main-navbar .btn-contact-wipe:hover .btn-contact-wipe-layer,
+.main-navbar .btn-contact-wipe.active .btn-contact-wipe-layer {
+  width: 100%;
+}
+
+.main-navbar .btn-contact-wipe:hover .btn-contact-wipe-bar,
+.main-navbar .btn-contact-wipe.active .btn-contact-wipe-bar {
+  left: 100%;
 }

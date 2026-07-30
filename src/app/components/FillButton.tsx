@@ -43,10 +43,10 @@ export default function FillButton({
 }: FillButtonProps) {
   const [hovered, setHovered] = useState(false);
 
-  const defaultIcon = (
-    <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
+  const arrowIcon = (
+    <svg width="14" height="12" viewBox="0 0 14 12" fill="none">
       <path
-        d="M1 5h10M7 1l4 4-4 4"
+        d="M1 6h12M8 1l5 5-5 5"
         stroke="white"
         strokeWidth="1.5"
         strokeLinecap="round"
@@ -78,7 +78,7 @@ export default function FillButton({
         ...style,
       }}
     >
-      {/* Animated fill layer: extends from squareSize to 100% on hover, retracts smoothly on unhover */}
+      {/* Animated fill layer */}
       <div
         style={{
           position: "absolute",
@@ -93,7 +93,7 @@ export default function FillButton({
         }}
       />
 
-      {/* Icon inside square */}
+      {/* Arrow — slides RIGHT on hover */}
       <span
         style={{
           position: "relative",
@@ -105,12 +105,14 @@ export default function FillButton({
           justifyContent: "center",
           color: "white",
           flexShrink: 0,
+          transform: hovered ? `translateX(calc(100% - ${squareSize}px + 8px))` : "translateX(0)",
+          transition: "transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
-        {icon ?? defaultIcon}
+        {icon ?? arrowIcon}
       </span>
 
-      {/* Button Text */}
+      {/* Button Text — slides LEFT on hover */}
       <span
         style={{
           position: "relative",
@@ -123,7 +125,8 @@ export default function FillButton({
           fontWeight,
           letterSpacing,
           whiteSpace: "nowrap",
-          transition: "color 200ms ease",
+          transform: hovered ? "translateX(-8px)" : "translateX(0)",
+          transition: "color 200ms ease, transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         {text}

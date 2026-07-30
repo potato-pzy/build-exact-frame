@@ -50,14 +50,20 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
           <li>
             <a
               href="#"
-              className="btn-contact"
-              style={{ opacity: currentPage === "contact" ? 0.9 : 1 }}
+              className={`btn-contact-wipe ${currentPage === "contact" ? "active" : ""}`}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("contact");
               }}
             >
-              Contact
+              {/* Rest state background & text */}
+              <span className="btn-contact-bg-text">Contact</span>
+              {/* Wipe layer that expands on hover */}
+              <span className="btn-contact-wipe-layer">
+                <span className="btn-contact-wipe-text">Contact</span>
+              </span>
+              {/* The vertical scanner wipe line */}
+              <span className="btn-contact-wipe-bar" />
             </a>
           </li>
         </ul>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FillButton from "./FillButton";
+import RevealText from "./RevealText";
 import "./ContactPage.css";
 
 interface ContactPageProps {
@@ -42,15 +43,13 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
         {/* Hero */}
         <section className="hero">
           <div>
-            <h1>Reach out to us</h1>
+            <h1>
+              <RevealText text="Reach out to us" />
+            </h1>
           </div>
           <div>
             <p className="hero-desc">
-              Whether it's financing terms, a delivery timeline, or a fuel plan that
-              needs to move fast, the person who picks this up can act on it directly.
-              There's no queue to sit in and no case number to wait on. Fill in what
-              you can below, and someone with the authority to answer will get back
-              to you.
+              <RevealText text="Whether it's financing terms, a delivery timeline, or a fuel plan that needs to move fast, the person who picks this up can act on it directly. There's no queue to sit in and no case number to wait on. Fill in what you can below, and someone with the authority to answer will get back to you." />
             </p>
           </div>
         </section>
@@ -60,20 +59,30 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
           {/* Info */}
           <div className="info-col">
             <div className="info-block">
-              <p className="info-label">Office:</p>
+              <p className="info-label">
+                <RevealText text="Office:" />
+              </p>
               <p className="info-value">
-                72 Circular Road, #02-01,
+                <RevealText text="72 Circular Road, #02-01," />
                 <br />
-                Singapore, 049426
+                <RevealText text="Singapore, 049426" />
               </p>
             </div>
             <div className="info-block">
-              <p className="info-label">Call us:</p>
-              <p className="info-value">+65 9170 1934</p>
+              <p className="info-label">
+                <RevealText text="Call us:" />
+              </p>
+              <p className="info-value">
+                <RevealText text="+65 9170 1934" />
+              </p>
             </div>
             <div className="info-block">
-              <p className="info-label">Mail:</p>
-              <p className="info-value">rc@offshore-bunkers.com.</p>
+              <p className="info-label">
+                <RevealText text="Mail:" />
+              </p>
+              <p className="info-value">
+                <RevealText text="rc@offshore-bunkers.com" />
+              </p>
             </div>
           </div>
 
@@ -90,7 +99,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                     margin: 0,
                   }}
                 >
-                  We've received your message.
+                  <RevealText text="We've received your message." />
                 </p>
                 <p
                   style={{
@@ -102,7 +111,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                     letterSpacing: "-0.32px",
                   }}
                 >
-                  Someone with the authority to answer will get back to you shortly.
+                  <RevealText text="Someone with the authority to answer will get back to you shortly." />
                 </p>
               </div>
             ) : (
@@ -208,7 +217,9 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
       {/* Orange Banner */}
       <div className="orange-banner">
         <div className="orange-banner-inner">
-          <p>Whoever answers can make the call.</p>
+          <p>
+            <RevealText text="Whoever answers can make the call." />
+          </p>
         </div>
       </div>
 
@@ -217,3 +228,4 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
     </div>
   );
 }
+

@@ -1,8 +1,9 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import HomePage from "@/imports/HomePage-1/index";
-import AboutPage from "@/app/components/AboutPage";
-import ContactPage from "@/app/components/ContactPage";
 import Navbar from "@/app/components/Navbar";
+
+const AboutPage = lazy(() => import("@/app/components/AboutPage"));
+const ContactPage = lazy(() => import("@/app/components/ContactPage"));
 
 const DESIGN_WIDTH = 1280;
 const DESIGN_HEIGHT = 4025;
@@ -80,7 +81,7 @@ function FillButton({
           pointerEvents: "none",
         }}
       />
-      {/* Arrow inside square */}
+      {/* Arrow inside square — slides RIGHT on hover */}
       {arrow && (
         <span
           style={{
@@ -93,12 +94,14 @@ function FillButton({
             color: "white",
             fontSize: 13,
             flexShrink: 0,
+            transform: hovered ? `translateX(calc(100% - ${squareSize}px + 8px))` : "translateX(0)",
+            transition: "transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
           }}
         >
           →
         </span>
       )}
-      {/* Label */}
+      {/* Label — slides LEFT on hover */}
       <span
         style={{
           position: "absolute",
@@ -110,7 +113,8 @@ function FillButton({
           fontWeight: 300,
           letterSpacing: letterSpacing ?? "-0.32px",
           whiteSpace: "nowrap",
-          transition: "color 200ms ease",
+          transform: hovered ? "translateX(-8px)" : "translateX(0)",
+          transition: "color 200ms ease, transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
         }}
       >
         {text}
@@ -119,15 +123,51 @@ function FillButton({
   );
 }
 
+const getInitialPage = (): "home" | "about" | "contact" => {
+  const hash = window.location.hash.replace("#", "");
+  if (hash === "about" || hash === "contact") return hash;
+  return "home";
+};
+
 export default function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact">(
-    "home"
+    getInitialPage
   );
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
 
+  // Listen to URL hash changes
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPage(getInitialPage());
+    };
+    window.addEventListener("hashchange", handleHashChange);
+    return () => window.removeEventListener("hashchange", handleHashChange);
+  }, []);
+
+  // Save scroll position per page to sessionStorage
+  useEffect(() => {
+    const saveScroll = () => {
+      sessionStorage.setItem(`scroll_${currentPage}`, window.scrollY.toString());
+    };
+    window.addEventListener("scroll", saveScroll);
+    return () => window.removeEventListener("scroll", saveScroll);
+  }, [currentPage]);
+
+  // Restore scroll position when page mounts or refreshes
+  useEffect(() => {
+    const saved = sessionStorage.getItem(`scroll_${currentPage}`);
+    if (saved) {
+      setTimeout(() => {
+        window.scrollTo({ top: parseInt(saved, 10), behavior: "instant" as ScrollBehavior });
+      }, 50);
+    }
+  }, [currentPage]);
+
   const handleNavigate = (page: "home" | "about" | "contact") => {
     setCurrentPage(page);
+    window.location.hash = page;
+    sessionStorage.setItem(`scroll_${page}`, "0");
     window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
   };
 
@@ -151,11 +191,19 @@ export default function App() {
   }, [currentPage]);
 
   if (currentPage === "about") {
-    return <AboutPage onNavigate={handleNavigate} />;
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-[#00182b]" />}>
+        <AboutPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
   }
 
   if (currentPage === "contact") {
-    return <ContactPage onNavigate={handleNavigate} />;
+    return (
+      <Suspense fallback={<div className="min-h-screen bg-[#00182b]" />}>
+        <ContactPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
   }
 
   return (
