@@ -500,22 +500,23 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
   return (
     <div className="bg-[#f4f4f4] relative size-full" data-name="Home Page">
       <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
-      <div className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[64px] top-[201px] tracking-[-1.28px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <p className="leading-[69px] mb-0">When fuel matters</p>
-        <p className="leading-[69px]">
+      <div className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+        <p className="leading-[65px] mb-0">When fuel matters</p>
+        <p className="leading-[65px]">
           the most
           <br aria-hidden />
           <br aria-hidden />
         </p>
       </div>
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-1/2 text-[#182d57] text-[32px] text-center top-[1007px] tracking-[-0.64px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100' }}>{`OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore.`}</p>
+      <div className="absolute bg-white h-[541px] left-0 top-[806px] w-[1280px]" />
+      <IsolationMode />
+      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light antialiased leading-[normal] left-1/2 text-[#182d57] text-[27px] text-center top-[1007px] tracking-[-0.54px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>{`OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore.`}</p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-582px)] text-[#182d57] text-[32px] top-[2474px] tracking-[-0.64px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100' }}>
         OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet.
       </p>
-      <IsolationMode />
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[795px] text-[#575757] text-[16px] top-[233px] tracking-[-0.32px] w-[341px]">OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts.</p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100' }}>{`Learn More `}</p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-59px)] text-[#f25b17] text-[20px] top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>{`Learn More `}</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-59px)] text-[#f25b17] text-[20px] top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
         Learn More →
       </p>
       <div className="absolute bg-white h-[1042px] left-0 top-[1347px] w-[1280px]" />
@@ -650,7 +651,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
       </div>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[20px] top-[2696px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[20px] top-[2696px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         See how we deliver →
       </p>
       <div className="absolute h-[414px] left-[619px] top-[2389px] w-[661px]">

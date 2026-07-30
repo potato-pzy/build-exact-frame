@@ -25,8 +25,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
         />
         <div className="hero-fade"></div>
         <p className="hero-quote">
-          Offshore operations can't afford a weak link in their fuel supply.
-          OEC exists to be the one link that never breaks.
+          Offshore operations can't afford a weak link in their fuel supply. OEC exists to be the one link that never breaks.
         </p>
       </section>
 
