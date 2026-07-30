@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import HomePage from "@/imports/HomePage-1/index";
 import Navbar from "@/app/components/Navbar";
+import LoadingSpinner from "@/app/components/LoadingSpinner";
 
 const AboutPage = lazy(() => import("@/app/components/AboutPage"));
 const ContactPage = lazy(() => import("@/app/components/ContactPage"));
@@ -133,8 +134,14 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact">(
     getInitialPage
   );
+  const [initialLoading, setInitialLoading] = useState(true);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setInitialLoading(false), 450);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Listen to URL hash changes
   useEffect(() => {
@@ -190,9 +197,13 @@ export default function App() {
     return () => window.removeEventListener("resize", apply);
   }, [currentPage]);
 
+  if (initialLoading) {
+    return <LoadingSpinner />;
+  }
+
   if (currentPage === "about") {
     return (
-      <Suspense fallback={<div className="min-h-screen bg-[#00182b]" />}>
+      <Suspense fallback={<LoadingSpinner />}>
         <AboutPage onNavigate={handleNavigate} />
       </Suspense>
     );
@@ -200,7 +211,7 @@ export default function App() {
 
   if (currentPage === "contact") {
     return (
-      <Suspense fallback={<div className="min-h-screen bg-[#00182b]" />}>
+      <Suspense fallback={<LoadingSpinner />}>
         <ContactPage onNavigate={handleNavigate} />
       </Suspense>
     );

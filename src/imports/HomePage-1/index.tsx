@@ -80,15 +80,27 @@ function LtRadialRepeatGt5() {
   );
 }
 
-function IsolationMode() {
+export function LogoRing({ size = 47, style = {} }: { size?: number; style?: React.CSSProperties }) {
   return (
-    <div className="-translate-x-1/2 absolute left-[calc(50%+0.5px)] overflow-clip size-[47px] top-[902px]" data-name="Isolation_Mode">
+    <div
+      className="relative overflow-clip shrink-0"
+      style={{ width: size, height: size, ...style }}
+      data-name="Logo_Ring"
+    >
       <LtRadialRepeatGt />
       <LtRadialRepeatGt1 />
       <LtRadialRepeatGt2 />
       <LtRadialRepeatGt3 />
       <LtRadialRepeatGt4 />
       <LtRadialRepeatGt5 />
+    </div>
+  );
+}
+
+function IsolationMode() {
+  return (
+    <div className="-translate-x-1/2 absolute left-[calc(50%+0.5px)] top-[902px]">
+      <LogoRing size={47} />
     </div>
   );
 }
