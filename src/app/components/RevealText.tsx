@@ -3,15 +3,15 @@ import React, { useEffect, useRef, useState } from "react";
 interface RevealTextProps {
   text: string;
   className?: string;
-  wordDelay?: number; // delay between words (seconds)
-  delayOffset?: number; // base delay before starting (seconds)
+  wordDelay?: number;
+  delayOffset?: number;
   style?: React.CSSProperties;
 }
 
 export default function RevealText({
   text,
   className = "",
-  wordDelay = 0.012,
+  wordDelay = 0.025,
   delayOffset = 0,
   style = {},
 }: RevealTextProps) {
@@ -36,36 +36,23 @@ export default function RevealText({
     return () => observer.disconnect();
   }, []);
 
-  // Split by whitespace and preserve it
-  const words = text.split(/(\s+)/);
-
-  let wordIndex = 0;
+  const words = text ? text.split(" ") : [];
 
   return (
-    <span ref={containerRef} className={className} style={{ display: "inline", ...style }}>
-      {words.map((word, idx) => {
-        if (/^\s+$/.test(word)) {
-          return word;
-        }
-
-        const currentWordIndex = wordIndex++;
-        const rawDelay = delayOffset + currentWordIndex * wordDelay;
-        const delay = Math.min(rawDelay, 0.3); // Cap delay at 300ms to keep animations snappy
-
-        return (
+    <span ref={containerRef} className={`inline-block ${className}`} style={style}>
+      {isVisible ? (
+        words.map((word, i) => (
           <span
-            key={idx}
-            className={isVisible ? "animate-word-reveal" : "inline-block opacity-0"}
-            style={{
-              animationDelay: isVisible ? `${delay}s` : "0s",
-              animationFillMode: "forwards",
-            }}
+            key={i}
+            className="animate-word-reveal mr-[0.25em]"
+            style={{ animationDelay: `${delayOffset + i * wordDelay}s` }}
           >
             {word}
           </span>
-        );
-      })}
+        ))
+      ) : (
+        <span className="opacity-0">{text}</span>
+      )}
     </span>
   );
 }
-

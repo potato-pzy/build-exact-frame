@@ -1,14 +1,14 @@
 import "./AboutPage.css";
 import heroBg from "../../../public/img/hero.webp";
 import tankerImg from "../../../public/img/tanker.webp";
-import logoImg from "../../../public/img/oec-logo.webp";
+import maskGroupImg from "../../../public/img/Mask group.jpg";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FillButton from "./FillButton";
 import RevealText from "./RevealText";
 
 interface AboutPageProps {
-  onNavigate?: (page: "home" | "about" | "contact") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
@@ -35,18 +35,19 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
 
       {/* STORY */}
       <section className="white-panel">
-        <hr className="divider" />
         <div className="story-grid">
           <div className="story-left">
             <p className="story-label">
               <RevealText text="The story" />
             </p>
-            <p className="story-heading">
+            <h2 className="story-heading">
               <RevealText text="Since 2022, OEC has built its entire operating model around one job: getting fuel to offshore sites, on time, every time. Not adapted from a broader fuel business. Built for this, from day one." />
-            </p>
+            </h2>
           </div>
           <div className="story-right">
-            <img src={tankerImg} alt="OEC offshore fuel tanker vessel operations" />
+            <div className="tanker-img-container">
+              <img src={tankerImg} alt="OEC offshore fuel tanker vessel operations" />
+            </div>
           </div>
         </div>
         <hr className="divider" />
@@ -56,7 +57,9 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="white-panel">
         <div className="apart-grid">
           <div className="apart-left">
-            <img src={logoImg} alt="Offshore Energy Consultants OEC Logo" />
+            <div className="polygon-img-container">
+              <img src={maskGroupImg} alt="Offshore Energy Consultants OEC Building" />
+            </div>
           </div>
           <div className="apart-right">
             <h2 className="apart-heading">

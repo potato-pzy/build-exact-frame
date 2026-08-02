@@ -2,8 +2,8 @@ import "./Navbar.css";
 import { Layer } from "@/imports/HomePage-1/index";
 
 interface NavbarProps {
-  onNavigate?: (page: "home" | "about" | "contact") => void;
-  currentPage?: "home" | "about" | "contact";
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
+  currentPage?: "home" | "about" | "contact" | "delivery" | "full-circle-fuel";
 }
 
 export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
@@ -42,10 +42,28 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
             </a>
           </li>
           <li>
-            <a href="#">Delivery</a>
+            <a
+              href="#"
+              style={{ fontWeight: currentPage === "delivery" ? 700 : 300 }}
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate?.("delivery");
+              }}
+            >
+              Delivery
+            </a>
           </li>
           <li>
-            <a href="#">Full Circle Fuel</a>
+            <a
+              href="#"
+              style={{ fontWeight: currentPage === "full-circle-fuel" ? 700 : 300 }}
+              onClick={(e) => {
+                e.preventDefault();
+                onNavigate?.("full-circle-fuel");
+              }}
+            >
+              Full Circle Fuel
+            </a>
           </li>
           <li>
             <a
@@ -56,14 +74,10 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
                 onNavigate?.("contact");
               }}
             >
-              {/* Rest state background & text */}
-              <span className="btn-contact-bg-text">Contact</span>
-              {/* Wipe layer that expands on hover */}
-              <span className="btn-contact-wipe-layer">
-                <span className="btn-contact-wipe-text">Contact</span>
-              </span>
-              {/* The vertical scanner wipe line */}
-              <span className="btn-contact-wipe-bar" />
+              <span className="btn-contact-bg-text">CONTACT</span>
+              <div className="btn-contact-wipe-layer">
+                <span className="btn-contact-wipe-text">CONTACT</span>
+              </div>
             </a>
           </li>
         </ul>

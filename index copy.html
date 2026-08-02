@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offshore Energy Consultants</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wdth,wght@0,18..144,75..125,300..900&family=Merriweather+Sans:wght@300;400&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Merriweather Sans', sans-serif; background: #f4f4f4; color: #182d57; min-width: 320px; }
+
+    /* ── NAV ── */
+    .oec-nav {
+      background: #f4f4f4;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 67px; height: 105px;
+    }
+    .oec-nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+    .oec-nav-logo-text {
+      font-family: 'Merriweather', serif; font-weight: 300;
+      font-size: 13px; color: #182d57; line-height: 1.35;
+    }
+    .oec-nav-links { display: flex; align-items: center; gap: 87px; list-style: none; }
+    .oec-nav-links a {
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300; font-size: 14px; color: #00182b; text-decoration: none;
+      white-space: nowrap;
+    }
+    .oec-contact-btn {
+      background: #f25b17; color: #f1f1f1;
+      font-family: 'Merriweather Sans', sans-serif;
+      font-weight: 300; font-size: 14px;
+      padding: 4px 14px; border-radius: 4px; text-decoration: none;
+      white-space: nowrap;
+    }
+    .oec-divider { height: 0.3px; background: #575757; width: 100%; }
+
+    /* ── HERO ── */
+    .oec-hero { padding: 60px 67px 60px; background: #f4f4f4; }
+    .oec-hero h1 {
+      font-family: 'Merriweather', serif; font-weight: 400;
+      font-size: clamp(22px, 2.8vw, 36px); line-height: 1.45;
+      color: #182d57; letter-spacing: -0.02em; max-width: 760px;
+      font-variation-settings: 'wdth' 100;
+    }
+
+    /* ── CONTENT SECTION ── */
+    .oec-content { background: #fff; position: relative; }
+
+    /* vertical center divider */
+    .oec-content-inner {
+      position: relative;
+      max-width: 1280px;
+    }
+    .oec-content-inner::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: calc(516px + 36px + 37px); /* matches Figma x=589 on 1280 canvas */
+      width: 0.3px;
+      background: #575757;
+      pointer-events: none;
+    }
+
+    /* each row */
+    .oec-row {
+      display: flex;
+      min-height: 473px;
+      border-bottom: 0.3px solid #575757;
+      align-items: stretch;
+    }
+    .oec-row:last-child { border-bottom: none; }
+
+    /* image cell */
+    .oec-img-cell {
+      flex: 0 0 589px; /* matches Figma center line position */
+      position: relative; overflow: hidden;
+      min-height: 446px;
+    }
+    .oec-img-cell img {
+      position: absolute; inset: 0;
+      width: calc(100% - 36px); /* 36px left margin from Figma */
+      height: 100%;
+      margin-left: 36px;
+      object-fit: cover;
+    }
+
+    /* text cell */
+    .oec-text-cell {
+      flex: 1;
+      padding: 130px 64px 60px 64px;
+      display: flex; flex-direction: column; gap: 18px;
+      min-width: 0;
+    }
+    .oec-text-cell h2 {
+      font-family: 'Merriweather', serif; font-weight: 400;
+      font-size: clamp(18px, 2vw, 28px); color: #182d57;
+      letter-spacing: -0.02em; line-height: 1.3; max-width: 360px;
+      font-variation-settings: 'wdth' 100;
+    }
+    .oec-text-cell p {
+      font-family: 'Merriweather Sans', sans-serif; font-weight: 300;
+      font-size: 14px; color: #575757; letter-spacing: -0.015em;
+      line-height: 1.65; max-width: 358px;
+    }
+
+    /* ── VESSEL BANNER ── */
+    .oec-banner {
+      background: #de5c35; padding: 55px 67px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .oec-vessel-type {
+      flex: 1; text-align: center;
+      font-family: 'Merriweather', serif; font-weight: 400;
+      font-size: clamp(18px, 2vw, 28px); color: #f1f1f1;
+      letter-spacing: -0.02em; font-variation-settings: 'wdth' 100;
+      padding: 16px 0;
+    }
+
+    /* ── CTA ── */
+    .oec-cta {
+      background: #f4f4f4; padding: 64px 67px 72px;
+      display: flex; align-items: center; justify-content: space-between; gap: 40px;
+    }
+    .oec-cta h2 {
+      font-family: 'Merriweather', serif; font-weight: 400;
+      font-size: clamp(22px, 2.8vw, 38px); color: #182d57;
+      letter-spacing: -0.02em; line-height: 1.4; max-width: 560px;
+      font-variation-settings: 'wdth' 100;
+    }
+    .oec-cta-btn { display: flex; align-items: center; gap: 12px; flex-shrink: 0; cursor: pointer; }
+    .oec-cta-icon {
+      width: 41px; height: 35px; background: #f25b17; border-radius: 4px;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .oec-cta-label {
+      font-family: 'Merriweather', serif; font-weight: 300;
+      font-size: 16px; color: #182d57; letter-spacing: -0.02em;
+      white-space: nowrap; font-variation-settings: 'wdth' 100;
+    }
+
+    /* ── FOOTER ── */
+    footer.oec-footer { background: #182d57; position: relative; overflow: hidden; }
+    .oec-footer-top {
+      padding: 60px 84px 50px;
+      display: flex; gap: 172px; align-items: flex-start;
+      position: relative; z-index: 1;
+    }
+    .oec-footer-logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+    .oec-footer-logo-text {
+      font-family: 'Merriweather', serif; font-weight: 300;
+      font-size: 12px; color: #f1f1f1; line-height: 1.4;
+    }
+    .oec-footer-cols { display: flex; gap: 172px; padding-top: 2px; }
+    .oec-footer-col { display: flex; flex-direction: column; gap: 21px; }
+    .oec-footer-col a {
+      font-family: 'Merriweather Sans', sans-serif; font-weight: 300;
+      font-size: 12px; color: #c2c2c2; text-decoration: none;
+    }
+    .oec-footer-strip { height: 177px; overflow: hidden; position: relative; z-index: 1; }
+    .oec-footer-strip img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .oec-footer-bottom {
+      padding: 16px 84px;
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 0.3px solid #5b639f; position: relative; z-index: 1;
+    }
+    .oec-footer-legal-row { display: flex; gap: 172px; }
+    .oec-footer-bottom a, .oec-footer-copy {
+      font-family: 'Merriweather Sans', sans-serif; font-weight: 300;
+      font-size: 12px; color: #5b639f; text-decoration: none;
+    }
+    /* footer orbs */
+    .oec-orb {
+      position: absolute; border-radius: 50%;
+      background: linear-gradient(180deg, #173e63 0%, #1d2d55 100%); opacity: 0.65;
+      pointer-events: none;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .oec-nav { padding: 18px 24px; height: auto; flex-wrap: wrap; gap: 12px; }
+      .oec-nav-links { gap: 20px; flex-wrap: wrap; }
+      .oec-hero { padding: 36px 24px; }
+      .oec-content-inner::after { display: none; }
+      .oec-row { flex-direction: column; }
+      .oec-img-cell { flex: none; height: 260px; min-height: unset; }
+      .oec-img-cell img { width: 100%; margin-left: 0; }
+      .oec-text-cell { padding: 32px 24px 40px; }
+      .oec-banner { flex-direction: column; padding: 36px 24px; gap: 8px; }
+      .oec-cta { flex-direction: column; padding: 40px 24px; align-items: flex-start; }
+      .oec-footer-top { flex-direction: column; gap: 28px; padding: 40px 24px 32px; }
+      .oec-footer-cols { gap: 32px; }
+      .oec-footer-bottom { flex-direction: column; gap: 12px; padding: 16px 24px; }
+      .oec-footer-legal-row { gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- ── NAV ── -->
+  <nav class="oec-nav">
+    <a href="#" class="oec-nav-logo">
+      <svg width="38" height="38" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg" style="flexShrink: 0">
+        <circle cx="24.5" cy="24.5" r="21" stroke="#182d57" stroke-width="1.4" fill="none" />
+        <line x1="24.5" y1="5" x2="24.5" y2="20.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="24.5" y1="28.5" x2="24.5" y2="44" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="5" y1="24.5" x2="20.5" y2="24.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="28.5" y1="24.5" x2="44" y2="24.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="10.5" y1="10.5" x2="20" y2="20" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="29" y1="29" x2="38.5" y2="38.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="38.5" y1="10.5" x2="29" y2="20" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <line x1="20" y1="29" x2="10.5" y2="38.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+        <circle cx="24.5" cy="24.5" r="4.2" fill="#182d57" />
+      </svg>
+      <span class="oec-nav-logo-text">Offshore Energy<br>Consultants</span>
+    </a>
+    <ul class="oec-nav-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Delivery</a></li>
+      <li><a href="#">Full Circle Fuel</a></li>
+      <li><a href="#" class="oec-contact-btn">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="oec-divider" />
+
+  <!-- ── HERO ── -->
+  <section class="oec-hero">
+    <h1>Offshore sites aren&apos;t reachable by one method.<br>OEC delivers by whichever gets there fastest,<br>truck, vessel, or pipeline.</h1>
+  </section>
+
+  <!-- ── CONTENT ROWS ── -->
+  <section class="oec-content">
+    <div class="oec-content-inner">
+
+      <div class="oec-row">
+        <div class="oec-img-cell">
+          <img src="https://images.unsplash.com/photo-1518527989017-5baca7a58d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Offshore tanker vessel" />
+        </div>
+        <div class="oec-text-cell">
+          <h2>Delivery matches the site, not a fixed fleet</h2>
+          <p>OEC charters bunker tankers, road tankers, and DP-2 supply vessels for every job, choosing whichever combination actually reaches the destination.</p>
+        </div>
+      </div>
+
+      <div class="oec-row">
+        <div class="oec-img-cell">
+          <img src="https://images.unsplash.com/photo-1538474705339-e87de81450e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Marine fuel pipes and valves" />
+        </div>
+        <div class="oec-text-cell">
+          <h2>Every major grade, ready when needed</h2>
+          <p>OEC supplies VLSFO, HSFO, and MGO, covering the full range offshore operators run on, without treating any grade as a special request.</p>
+        </div>
+      </div>
+
+      <div class="oec-row">
+        <div class="oec-img-cell">
+          <img src="https://images.unsplash.com/photo-1745192893031-2e17fa13fd89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Marine worker on offshore deck" />
+        </div>
+        <div class="oec-text-cell">
+          <h2>Every delivery follows the same standard</h2>
+          <p>OEC follows ISO 8217, the international standard for marine fuel quality, on every delivery without exception, regardless of the site.</p>
+        </div>
+      </div>
+
+      <div class="oec-row">
+        <div class="oec-img-cell">
+          <img src="https://images.unsplash.com/photo-1598193957011-39b9f2916992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80" alt="Port at dusk with vessels" />
+        </div>
+        <div class="oec-text-cell">
+          <h2>Twenty-four hours, at most major ports</h2>
+          <p>OEC can turn around a delivery within 24 hours at major bunkering ports, market availability permitting.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── VESSEL BANNER ── -->
+  <section class="oec-banner">
+    <div class="oec-vessel-type">Drilling Rigs</div>
+    <div class="oec-vessel-type">Support Vessels</div>
+    <div class="oec-vessel-type">Storage Vessels</div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="oec-cta">
+    <h2>Built to move, however the route works. Reach out when it matters.</h2>
+    <div class="oec-cta-btn">
+      <div class="oec-cta-icon">
+        <svg width="20" height="14" viewBox="0 0 22 16" fill="none">
+          <path d="M1 8H21M21 8L14 1M21 8L14 15" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+      <span class="oec-cta-label">Get in touch</span>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="oec-footer">
+    <div class="oec-orb" style="width: 270px; height: 270px; right: 80px; bottom: -80px; position: absolute;"></div>
+    <div class="oec-orb" style="width: 200px; height: 200px; right: 230px; bottom: 20px; position: absolute;"></div>
+    <div class="oec-orb" style="width: 140px; height: 140px; right: 50px; bottom: 140px; position: absolute;"></div>
+
+    <div class="oec-footer-top">
+      <div class="oec-footer-logo">
+        <svg width="38" height="38" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg" style="flexShrink: 0">
+          <circle cx="24.5" cy="24.5" r="21" stroke="#f1f1f1" stroke-width="1.4" fill="none" />
+          <line x1="24.5" y1="5" x2="24.5" y2="20.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="24.5" y1="28.5" x2="24.5" y2="44" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="5" y1="24.5" x2="20.5" y2="24.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="28.5" y1="24.5" x2="44" y2="24.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="10.5" y1="10.5" x2="20" y2="20" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="29" y1="29" x2="38.5" y2="38.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="38.5" y1="10.5" x2="29" y2="20" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <line x1="20" y1="29" x2="10.5" y2="38.5" stroke="#F25B17" stroke-width="2.2" stroke-linecap="round" />
+          <circle cx="24.5" cy="24.5" r="4.2" fill="#f1f1f1" />
+        </svg>
+        <span class="oec-footer-logo-text">Offshore Energy<br>Consultants</span>
+      </div>
+      <div class="oec-footer-cols">
+        <div class="oec-footer-col">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Delivery</a>
+        </div>
+        <div class="oec-footer-col">
+          <a href="#">One stop solution</a>
+          <a href="#">ContacT</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="oec-footer-strip">
+      <img src="https://images.unsplash.com/photo-1496347326319-2935d381b307?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1280&q=80" alt="Vessel at sea" />
+    </div>
+
+    <div class="oec-footer-bottom">
+      <div class="oec-footer-legal-row">
+        <a href="#">Terms &amp; Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <span class="oec-footer-copy">Offshore energy consultants pvt ltd 2026 - All Rights reserved</span>
+    </div>
+  </footer>
+</body>
+</html>

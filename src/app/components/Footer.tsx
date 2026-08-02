@@ -1,12 +1,11 @@
 import { useEffect, useRef } from "react";
-import mapImg from "@/imports/HomePage-1/8d3090800ee5c4269773692b859f3ffb20585a5b.webp";
 import { Layer1, Group4 } from "@/imports/HomePage-1/index";
 
 const FOOTER_DESIGN_WIDTH = 1280;
-const FOOTER_DESIGN_HEIGHT = 501;
+const FOOTER_DESIGN_HEIGHT = 380;
 
 interface FooterProps {
-  onNavigate?: (page: "home" | "about" | "contact") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
@@ -32,85 +31,97 @@ export default function Footer({ onNavigate }: FooterProps) {
   }, []);
 
   return (
-    <footer className="about-footer" ref={footerOuterRef} style={{ width: "100%", overflow: "hidden", position: "relative" }}>
+    <footer className="about-footer" ref={footerOuterRef} style={{ width: "100%", overflowX: "clip", position: "relative" }}>
       <div
         className="about-footer-canvas"
         ref={footerInnerRef}
-        style={{ width: 1280, height: 501, position: "relative", transformOrigin: "top left" }}
+        style={{ width: 1280, height: 380, position: "absolute", top: 0, left: 0, transformOrigin: "top left" }}
       >
-        {/* Navy background */}
-        <div className="absolute bg-[#182d57] h-[501px] left-0 top-0 w-[1280px]" />
+        {/* Top orange brand border line */}
+        <div className="absolute bg-[#de5c35] h-[3px] left-0 top-0 w-[1280px] z-0" />
 
-        {/* Decorative radial SVGs */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div style={{ position: "relative", width: 1280, height: 4025, marginTop: -3524 }}>
+        {/* Deep navy background */}
+        <div className="absolute bg-[#122446] h-[380px] left-0 top-0 w-[1280px]" />
+
+        {/* Decorative radial brand watermark */}
+        <div className="absolute h-[380px] left-0 top-0 w-[1280px] overflow-hidden pointer-events-none z-10">
+          <div style={{ position: "relative", width: 1280, height: 4025, marginTop: -3615 }}>
             <Group4 />
           </div>
         </div>
 
-        {/* Map band */}
-        <div className="absolute h-[177px] left-0 top-[236px] w-[1280px]">
-          <img
-            alt="OEC Global Service Delivery Map"
-            className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
-            src={mapImg}
-          />
-        </div>
-
         {/* Logo */}
         <div
-          className="absolute h-[56px] left-[84px] overflow-clip top-[55px] w-[254px] cursor-pointer"
+          className="absolute h-[56px] left-[84px] overflow-clip top-[42px] w-[254px] cursor-pointer"
           onClick={() => onNavigate?.("home")}
         >
           <Layer1 />
         </div>
 
-        {/* Divider line */}
-        <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[325px] w-[1127px]">
+        {/* Nav column 1 */}
+        <p
+          onClick={() => onNavigate?.("home")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[132px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          HOME
+        </p>
+        <p
+          onClick={() => onNavigate?.("about")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[166px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          ABOUT
+        </p>
+        <p
+          onClick={() => onNavigate?.("delivery")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[200px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          DELIVERY
+        </p>
+        <p
+          onClick={() => onNavigate?.("full-circle-fuel")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[234px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          FULL CIRCLE FUEL
+        </p>
+
+        {/* Nav column 2 */}
+        <p
+          onClick={() => onNavigate?.("about")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[132px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          ONE STOP SOLUTION
+        </p>
+        <p
+          onClick={() => onNavigate?.("contact")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[166px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        >
+          CONTACT
+        </p>
+
+        {/* Horizontal Divider Line */}
+        <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[282px] w-[1127px]">
           <div className="absolute inset-[-0.3px_0_0_0]">
             <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.3">
-              <line stroke="#5B639F" strokeWidth="0.3" x2="1127" y1="0.15" y2="0.15" />
+              <line stroke="#3b4870" strokeWidth="0.5" x2="1127" y1="0.15" y2="0.15" />
             </svg>
           </div>
         </div>
 
-        {/* Nav column 1 */}
+        {/* Legal row */}
         <p
-          onClick={() => onNavigate?.("home")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[176px] whitespace-nowrap cursor-pointer hover:text-white transition-colors"
+          onClick={() => onNavigate?.("about")}
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
         >
-          Home
+          {`TERMS & CONDITIONS`}
         </p>
         <p
           onClick={() => onNavigate?.("about")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[214px] whitespace-nowrap cursor-pointer hover:text-white transition-colors"
+          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
         >
-          About
+          PRIVACY POLICY
         </p>
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[252px] whitespace-nowrap cursor-pointer hover:text-white transition-colors">
-          Delivery
-        </p>
-
-        {/* Nav column 2 */}
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[173px] whitespace-nowrap cursor-pointer hover:text-white transition-colors">
-          One stop solution
-        </p>
-        <p
-          onClick={() => onNavigate?.("contact")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[214px] whitespace-nowrap cursor-pointer hover:text-white transition-colors"
-        >
-          Contact
-        </p>
-
-        {/* Legal row */}
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#5b639f] text-[12px] top-[355px] whitespace-nowrap">
-          {`Terms & Conditions`}
-        </p>
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#5b639f] text-[12px] top-[355px] whitespace-nowrap">
-          Privacy Policy
-        </p>
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[809px] text-[#5b639f] text-[12px] top-[355px] whitespace-nowrap">
-          Offshore energy consultants pvt ltd 2026 - All Rights reserved
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[630px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap uppercase tracking-wider">
+          OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 – ALL RIGHTS RESERVED
         </p>
       </div>
     </footer>

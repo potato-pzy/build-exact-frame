@@ -5,6 +5,8 @@ import LoadingSpinner from "@/app/components/LoadingSpinner";
 
 const AboutPage = lazy(() => import("@/app/components/AboutPage"));
 const ContactPage = lazy(() => import("@/app/components/ContactPage"));
+const DeliveryPage = lazy(() => import("@/app/components/DeliveryPage"));
+const FullCircleFuelPage = lazy(() => import("@/app/components/FullCircleFuelPage"));
 
 const DESIGN_WIDTH = 1280;
 const DESIGN_HEIGHT = 4025;
@@ -124,14 +126,14 @@ function FillButton({
   );
 }
 
-const getInitialPage = (): "home" | "about" | "contact" => {
+const getInitialPage = (): "home" | "about" | "contact" | "delivery" | "full-circle-fuel" => {
   const hash = window.location.hash.replace("#", "");
-  if (hash === "about" || hash === "contact") return hash;
+  if (hash === "about" || hash === "contact" || hash === "delivery" || hash === "full-circle-fuel") return hash;
   return "home";
 };
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact">(
+  const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact" | "delivery" | "full-circle-fuel">(
     getInitialPage
   );
   const [initialLoading, setInitialLoading] = useState(true);
@@ -171,7 +173,7 @@ export default function App() {
     }
   }, [currentPage]);
 
-  const handleNavigate = (page: "home" | "about" | "contact") => {
+  const handleNavigate = (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => {
     setCurrentPage(page);
     window.location.hash = page;
     sessionStorage.setItem(`scroll_${page}`, "0");
@@ -195,7 +197,7 @@ export default function App() {
     apply();
     window.addEventListener("resize", apply);
     return () => window.removeEventListener("resize", apply);
-  }, [currentPage]);
+  }, [currentPage, initialLoading]);
 
   if (initialLoading) {
     return <LoadingSpinner />;
@@ -217,61 +219,86 @@ export default function App() {
     );
   }
 
+  if (currentPage === "delivery") {
+    return (
+      <Suspense fallback={<LoadingSpinner />}>
+        <DeliveryPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === "full-circle-fuel") {
+    return (
+      <Suspense fallback={<LoadingSpinner />}>
+        <FullCircleFuelPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
+  }
+
   return (
-    <div
-      ref={outerRef}
-      style={{ width: "100%", overflow: "hidden", position: "relative" }}
-    >
-      {/* Navbar rendered OUTSIDE the scaled container — full viewport width */}
+    <>
+      {/* Navbar: full viewport width, sticky, outside scaled content */}
       <Navbar onNavigate={handleNavigate} currentPage="home" />
 
-      {/* Scaled canvas pushed down below the navbar */}
+      {/* outerRef: position:relative with JS-controlled height. overflow:clip hard-cuts anything outside. */}
       <div
-        ref={innerRef}
+        ref={outerRef}
         style={{
-          width: DESIGN_WIDTH,
-          height: DESIGN_HEIGHT,
-          transformOrigin: "top left",
           position: "relative",
-          marginTop: -NAVBAR_HEIGHT,
+          width: "100%",
+          overflowX: "clip",
         }}
       >
-        <HomePage onNavigate={handleNavigate} />
+        {/* innerRef: position:absolute so it is OUT of document flow.
+            A 1280px absolutely-positioned element does NOT affect scroll/layout width. */}
+        <div
+          ref={innerRef}
+          style={{
+            width: DESIGN_WIDTH,
+            height: DESIGN_HEIGHT,
+            transformOrigin: "top left",
+            position: "absolute",
+            top: -NAVBAR_HEIGHT,
+            left: 0,
+          }}
+        >
+          <HomePage onNavigate={handleNavigate} />
 
-        {/* Hero — "Learn More" (orange square + text) */}
-        <FillButton
-          top={305}
-          left={793}
-          squareSize={36}
-          height={32}
-          totalWidth={160}
-          squareColor="#f25b17"
-          restBg="#f4f4f4"
-          textLeft={46}
-          text="Learn More"
-          textColor="#f25b17"
-          fontSize={16}
-          fontFamily="'Merriweather', serif"
-          onClick={() => handleNavigate("about")}
-        />
+          {/* Hero — "Learn More" (orange square + text) */}
+          <FillButton
+            top={305}
+            left={793}
+            squareSize={36}
+            height={32}
+            totalWidth={160}
+            squareColor="#f25b17"
+            restBg="#f4f4f4"
+            textLeft={46}
+            text="Learn More"
+            textColor="#f25b17"
+            fontSize={16}
+            fontFamily="'Merriweather', serif"
+            onClick={() => handleNavigate("about")}
+          />
 
-        {/* Footer CTA — "Contact Us" (blue square + white text on orange bg) */}
-        <FillButton
-          top={3341}
-          left={818}
-          squareSize={36}
-          height={32}
-          totalWidth={155}
-          squareColor="#182d57"
-          restBg="#de5c35"
-          textLeft={46}
-          text="Contact Us"
-          textColor="#f1f1f1"
-          fontSize={16}
-          fontFamily="'Merriweather Sans', sans-serif"
-          onClick={() => handleNavigate("contact")}
-        />
+          {/* Footer CTA — "Contact Us" (blue square + white text on orange bg) */}
+          <FillButton
+            top={3341}
+            left={818}
+            squareSize={36}
+            height={32}
+            totalWidth={155}
+            squareColor="#182d57"
+            restBg="#de5c35"
+            textLeft={46}
+            text="Contact Us"
+            textColor="#f1f1f1"
+            fontSize={16}
+            fontFamily="'Merriweather Sans', sans-serif"
+            onClick={() => handleNavigate("contact")}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

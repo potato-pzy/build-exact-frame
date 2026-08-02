@@ -6,7 +6,7 @@ import RevealText from "./RevealText";
 import "./ContactPage.css";
 
 interface ContactPageProps {
-  onNavigate?: (page: "home" | "about" | "contact") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
 }
 
 export default function ContactPage({ onNavigate }: ContactPageProps) {

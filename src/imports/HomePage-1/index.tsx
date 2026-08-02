@@ -1,11 +1,12 @@
 import svgPaths from "./svg-hsfh0kwwsp";
 import imgRectangle3 from "./a3769218c4c5a01624ac9804b1ed2ffef91f1c71.webp";
-import imgImage3 from "./cc999a5ba4b6802d6eab44c1d7937aa20a701725.webp";
-import imgImage8 from "./4e10b6ba3ded133f635912426fb9c5ff2df73af9.webp";
+import svgMoney from "/svg/Money.svg";
+import svgShip from "/svg/Ship.svg";
 import imgRectangle11 from "./687e2d1a8a490f002a858b824dcf1b359ed3afa1.webp";
 import imgRectangle12 from "./8d3090800ee5c4269773692b859f3ffb20585a5b.webp";
 import Navbar from "@/app/components/Navbar";
 import RevealText from "@/app/components/RevealText";
+import CountUp from "@/app/components/CountUp";
 
 
 function LtRadialRepeatGt() {
@@ -516,10 +517,10 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
       <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         <p className="leading-[65px] mb-0">
-          <RevealText text="When fuel matters" />
+          <RevealText text="When fuel matters" wordDelay={0.15} />
         </p>
         <p className="leading-[65px]">
-          <RevealText text="the most" />
+          <RevealText text="the most" delayOffset={0.45} wordDelay={0.15} />
           <br aria-hidden />
           <br aria-hidden />
         </p>
@@ -535,10 +536,10 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[795px] text-[#575757] text-[16px] top-[233px] tracking-[-0.32px] w-[341px]">
         <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
       </p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
         <RevealText text="Learn More" />
       </p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[calc(50%-59px)] text-[#f25b17] text-[20px] top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
+      <p onClick={() => onNavigate?.("about")} className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-1/2 text-[#f25b17] text-[20px] text-center top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
         <RevealText text="Learn More →" />
       </p>
       <div className="absolute bg-white h-[1042px] left-0 top-[1347px] w-[1280px]" />
@@ -559,13 +560,13 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <RevealText text="Name for Brand Strengths" />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="1 M+" />
+        <CountUp end={1} suffix=" M+" duration={1200} />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="24 hour" />
+        <CountUp end={24} suffix=" hour" duration={1600} />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+26px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="10+" />
+        <CountUp end={10} suffix="+" duration={1400} />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
         <RevealText text="Global" />
@@ -679,24 +680,24 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         </div>
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[1496px] w-[77px]" data-name="image 3">
-        <img alt="OEC fuel supply solution icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
-        <img alt="OEC marine fuel logistics icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
-        <img alt="OEC vessel chartering icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
-        <img alt="OEC custom fuel financing icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
-        <img alt="OEC compliance and security icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage3} />
+        <img alt="OEC fuel supply solution icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
       </div>
       <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
-        <img alt="Offshore supply vessel and fuel tanker operations" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImage8} />
+        <img alt="Offshore supply vessel and fuel tanker operations" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgShip} />
       </div>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[20px] top-[2696px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
+        <img alt="OEC marine fuel logistics icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
+        <img alt="OEC vessel chartering icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
+        <img alt="OEC custom fuel financing icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+      </div>
+      <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
+        <img alt="OEC compliance and security icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+      </div>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[16px] top-[2696px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100' }}>
         <RevealText text="See how we deliver →" />
       </p>
       <div className="absolute h-[414px] left-[619px] top-[2389px] w-[661px]">
@@ -714,17 +715,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <RevealText text="No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot." />
       </p>
       <Group3 />
-      <div className="absolute flex h-[495px] items-center justify-center left-[737px] top-[3027px] w-0">
-        <div className="flex-none rotate-90">
-          <div className="h-0 relative w-[495px]">
-            <div className="absolute inset-[-0.3px_0_0_0]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 495 0.3">
-                <line id="Line 8" stroke="var(--stroke-0, white)" strokeWidth="0.3" x2="495" y1="0.15" y2="0.15" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div className="absolute bg-white/40 h-[495px] left-[737px] top-[3029px] w-[1px]" />
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-556px)] text-[#f1f1f1] text-[32px] top-[3140px] tracking-[-0.64px] w-[591px]" style={{ fontVariationSettings: '"wdth" 100' }}>
         <RevealText text="“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”" />
       </p>
@@ -736,28 +727,37 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <RevealText text="Director, OEC" />
         </p>
       </div>
-      <div className="absolute bg-[#182d57] h-[501px] left-0 top-[3524px] w-[1280px]" />
-      <Group4 />
-
-      <div className="absolute h-[177px] left-0 top-[3760px] w-[1280px]">
-        <img alt="OEC Global Fuel Supply Network map" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle12} />
+      <div className="absolute bg-[#de5c35] h-[3px] left-0 top-[3524px] w-[1280px] z-0" />
+      <div className="absolute bg-[#122446] h-[380px] left-0 top-[3524px] w-[1280px]" />
+      <div className="absolute h-[380px] left-0 top-[3524px] w-[1280px] overflow-hidden pointer-events-none z-10">
+        <div style={{ position: "relative", width: 1280, height: 3904, marginTop: -3615 }}>
+          <Group4 />
+        </div>
       </div>
-      <Layer1 />
-      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[3849px] w-[1127px]">
+
+      <div onClick={() => onNavigate?.("home")} className="absolute h-[56px] left-[84px] overflow-clip top-[3566px] w-[254px] cursor-pointer">
+        <Layer1 />
+      </div>
+
+      <p onClick={() => onNavigate?.("home")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3656px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">HOME</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3690px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">ABOUT</p>
+      <p onClick={() => onNavigate?.("delivery" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3724px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">DELIVERY</p>
+      <p onClick={() => onNavigate?.("full-circle-fuel" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3758px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">FULL CIRCLE FUEL</p>
+
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[3656px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">ONE STOP SOLUTION</p>
+      <p onClick={() => onNavigate?.("contact" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[3690px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">CONTACT</p>
+
+      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[3806px] w-[1127px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.3">
-            <line id="Line 10" stroke="var(--stroke-0, #5B639F)" strokeWidth="0.3" x2="1127" y1="0.15" y2="0.15" />
+            <line id="Line 10" stroke="#3b4870" strokeWidth="0.5" x2="1127" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
-      <p onClick={() => onNavigate?.("home")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3700px] whitespace-nowrap cursor-pointer">Home</p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3738px] whitespace-nowrap cursor-pointer">About</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#c2c2c2] text-[12px] top-[3776px] whitespace-nowrap">Delivery</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">{`Terms & Conditions`}</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">Privacy Policy</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[809px] text-[#5b639f] text-[12px] top-[3879px] whitespace-nowrap">Offshore energy consultants pvt ltd 2026 - All Rights reserved</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[3738px] whitespace-nowrap">ContacT</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[3697px] whitespace-nowrap">One stop solution</p>
+
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">{`TERMS & CONDITIONS`}</p>
+      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">PRIVACY POLICY</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[630px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap uppercase tracking-wider">OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 – ALL RIGHTS RESERVED</p>
     </div>
   );
 }

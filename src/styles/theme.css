@@ -39,6 +39,22 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Offshore Energy Consultants brand palette */
+  --oec-navy: #182d57;
+  --oec-navy-deep: #1d2d55;
+  --oec-navy-mid: #1a365c;
+  --oec-navy-teal: #173e63;
+  --oec-blue: #264b7f;
+  --oec-orange: #f25b17;
+  --oec-coral: #de5c35;
+  --oec-grey-bg: #f4f4f4;
+  --oec-body: #575757;
+  --oec-light: #f1f1f1;
+  --oec-muted: #c2c2c2;
+  --oec-footer-line: #5b639f;
+  --brand-serif: "Merriweather", serif;
+  --brand-sans: "Merriweather Sans", sans-serif;
 }
 
 .dark {
@@ -119,6 +135,22 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  --color-oec-navy: var(--oec-navy);
+  --color-oec-navy-deep: var(--oec-navy-deep);
+  --color-oec-navy-mid: var(--oec-navy-mid);
+  --color-oec-navy-teal: var(--oec-navy-teal);
+  --color-oec-blue: var(--oec-blue);
+  --color-oec-orange: var(--oec-orange);
+  --color-oec-coral: var(--oec-coral);
+  --color-oec-grey-bg: var(--oec-grey-bg);
+  --color-oec-body: var(--oec-body);
+  --color-oec-light: var(--oec-light);
+  --color-oec-muted: var(--oec-muted);
+  --color-oec-footer-line: var(--oec-footer-line);
+
+  --font-serif-brand: var(--brand-serif);
+  --font-sans-brand: var(--brand-sans);
 }
 
 @layer base {
@@ -199,6 +231,40 @@
   display: inline-block;
   opacity: 0;
   animation: fadeInUpWord 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes linearBgShift {
+  0% {
+    background-color: #ffffff;
+  }
+  100% {
+    background-color: #f7f6f2;
+  }
+}
+
+.animate-bg-linear {
+  animation: linearBgShift 0.45s linear forwards;
+}
+
+/* Animated left-to-right underline on hover */
+.hover-underline-left-to-right {
+  display: inline-block;
+  text-decoration: none;
+}
+
+.hover-underline-left-to-right::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1.5px;
+  bottom: -2px;
+  left: 0;
+  background-color: #f25b17;
+  transition: width 0.3s ease-in-out;
+}
+
+.hover-underline-left-to-right:hover::after {
+  width: 100%;
 }
 
 @keyframes spinLogoRing {
