@@ -9,7 +9,7 @@ const DeliveryPage = lazy(() => import("@/app/components/DeliveryPage"));
 const FullCircleFuelPage = lazy(() => import("@/app/components/FullCircleFuelPage"));
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 4025;
+const DESIGN_HEIGHT = 3904;
 const NAVBAR_HEIGHT = 110;
 
 interface FillButtonProps {
@@ -264,23 +264,6 @@ export default function App() {
         >
           <HomePage onNavigate={handleNavigate} />
 
-          {/* Hero — "Learn More" (orange square + text) */}
-          <FillButton
-            top={305}
-            left={793}
-            squareSize={36}
-            height={32}
-            totalWidth={160}
-            squareColor="#f25b17"
-            restBg="#f4f4f4"
-            textLeft={46}
-            text="Learn More"
-            textColor="#f25b17"
-            fontSize={16}
-            fontFamily="'Merriweather', serif"
-            onClick={() => handleNavigate("about")}
-          />
-
           {/* Footer CTA — "Contact Us" (blue square + white text on orange bg) */}
           <FillButton
             top={3341}
@@ -294,7 +277,7 @@ export default function App() {
             text="Contact Us"
             textColor="#f1f1f1"
             fontSize={16}
-            fontFamily="'Merriweather Sans', sans-serif"
+            fontFamily="'Merriweather', serif"
             onClick={() => handleNavigate("contact")}
           />
         </div>

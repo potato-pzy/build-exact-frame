@@ -1,128 +1,97 @@
-import { useEffect, useRef } from "react";
-import { Layer1, Group4 } from "@/imports/HomePage-1/index";
-
-const FOOTER_DESIGN_WIDTH = 1280;
-const FOOTER_DESIGN_HEIGHT = 380;
+import { Layer1 } from "@/imports/HomePage-1/index";
+import { FooterFlare } from "./brand/FooterFlare";
 
 interface FooterProps {
   onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
-  const footerOuterRef = useRef<HTMLElement>(null);
-  const footerInnerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const outer = footerOuterRef.current;
-    const inner = footerInnerRef.current;
-    if (!outer || !inner) return;
-
-    const apply = () => {
-      const w = outer.getBoundingClientRect().width || window.innerWidth;
-      if (!w) return;
-      const scale = w / FOOTER_DESIGN_WIDTH;
-      inner.style.transform = `scale(${scale})`;
-      outer.style.height = `${FOOTER_DESIGN_HEIGHT * scale}px`;
-    };
-
-    apply();
-    window.addEventListener("resize", apply);
-    return () => window.removeEventListener("resize", apply);
-  }, []);
-
   return (
-    <footer className="about-footer" ref={footerOuterRef} style={{ width: "100%", overflowX: "clip", position: "relative" }}>
-      <div
-        className="about-footer-canvas"
-        ref={footerInnerRef}
-        style={{ width: 1280, height: 380, position: "absolute", top: 0, left: 0, transformOrigin: "top left" }}
-      >
-        {/* Top orange brand border line */}
-        <div className="absolute bg-[#de5c35] h-[3px] left-0 top-0 w-[1280px] z-0" />
+    <footer className="relative w-full bg-[#122446] overflow-hidden" style={{ borderTop: "3px solid #de5c35" }}>
+      {/* Canvas container matching exact Figma frame bounds 1280px x 380px */}
+      <div className="relative w-full max-w-[1280px] mx-auto h-[380px] overflow-hidden">
+        {/* Decorative circular emblem on bottom right */}
+        <div className="absolute right-[10px] bottom-[-20px] w-[350px] h-[335px] pointer-events-none opacity-90 z-0">
+          <FooterFlare className="w-full h-full" />
+        </div>
 
-        {/* Deep navy background */}
-        <div className="absolute bg-[#122446] h-[380px] left-0 top-0 w-[1280px]" />
+        {/* Rectangle 12 — Bottom Linear Gradient Overlay */}
+        <div
+          className="absolute left-0 top-[203px] w-[1280px] h-[177px] pointer-events-none z-[1]"
+          style={{
+            background: "linear-gradient(180deg, rgba(18, 36, 70, 0) 0%, rgba(18, 36, 70, 1) 100%)",
+          }}
+        />
 
-        {/* Decorative radial brand watermark */}
-        <div className="absolute h-[380px] left-0 top-0 w-[1280px] overflow-hidden pointer-events-none z-10">
-          <div style={{ position: "relative", width: 1280, height: 4025, marginTop: -3615 }}>
-            <Group4 />
+        {/* Top Left OEC Logo (x: 84px, y: 42px) */}
+        <div
+          onClick={() => onNavigate?.("home")}
+          className="absolute left-[84px] top-[42px] w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity z-10 overflow-hidden"
+        >
+          <div style={{ position: "relative", width: 254, height: 56, marginTop: -3579, marginLeft: -84 }}>
+            <Layer1 />
           </div>
         </div>
 
-        {/* Logo */}
-        <div
-          className="absolute h-[56px] left-[84px] overflow-clip top-[42px] w-[254px] cursor-pointer"
+        {/* Column 1 Links (x: 93px) */}
+        <button
           onClick={() => onNavigate?.("home")}
-        >
-          <Layer1 />
-        </div>
-
-        {/* Nav column 1 */}
-        <p
-          onClick={() => onNavigate?.("home")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[132px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[93px] top-[176px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           HOME
-        </p>
-        <p
+        </button>
+        <button
           onClick={() => onNavigate?.("about")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[166px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[93px] top-[214px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           ABOUT
-        </p>
-        <p
+        </button>
+        <button
           onClick={() => onNavigate?.("delivery")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[200px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[93px] top-[252px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           DELIVERY
-        </p>
-        <p
-          onClick={() => onNavigate?.("full-circle-fuel")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[234px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
-        >
-          FULL CIRCLE FUEL
-        </p>
+        </button>
 
-        {/* Nav column 2 */}
-        <p
-          onClick={() => onNavigate?.("about")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[132px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+        {/* Column 2 Links (x: 265px) */}
+        <button
+          onClick={() => onNavigate?.("full-circle-fuel")}
+          className="absolute left-[265px] top-[173px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           ONE STOP SOLUTION
-        </p>
-        <p
+        </button>
+        <button
           onClick={() => onNavigate?.("contact")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[166px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[265px] top-[214px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           CONTACT
-        </p>
+        </button>
 
-        {/* Horizontal Divider Line */}
-        <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[282px] w-[1127px]">
+        {/* Horizontal Divider Line (x: 77px, y: 325px, w: 1127px) */}
+        <div className="absolute left-[77px] top-[325px] w-[1127px] h-0 z-10">
           <div className="absolute inset-[-0.3px_0_0_0]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.3">
-              <line stroke="#3b4870" strokeWidth="0.5" x2="1127" y1="0.15" y2="0.15" />
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.5">
+              <line stroke="#5a629f" strokeWidth="0.5" x2="1127" y1="0.25" y2="0.25" />
             </svg>
           </div>
         </div>
 
-        {/* Legal row */}
-        <p
+        {/* Legal Row (y: 355px) */}
+        <button
           onClick={() => onNavigate?.("about")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[92px] top-[355px] text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
-          {`TERMS & CONDITIONS`}
-        </p>
-        <p
+          TERMS &amp; CONDITIONS
+        </button>
+        <button
           onClick={() => onNavigate?.("about")}
-          className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider"
+          className="absolute left-[265px] top-[355px] text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
         >
           PRIVACY POLICY
-        </p>
-        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[630px] text-[#6b789e] text-[11px] top-[312px] whitespace-nowrap uppercase tracking-wider">
-          OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 – ALL RIGHTS RESERVED
-        </p>
+        </button>
+        <span className="absolute left-[809px] top-[355px] text-[#5a629f] text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal z-10">
+          OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 &ndash; ALL RIGHTS RESERVED
+        </span>
       </div>
     </footer>
   );

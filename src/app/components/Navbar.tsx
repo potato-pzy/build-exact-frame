@@ -20,49 +20,45 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
           <li>
             <a
               href="#"
-              style={{ fontWeight: currentPage === "home" ? 700 : 300 }}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("home");
               }}
             >
-              Home
+              HOME
             </a>
           </li>
           <li>
             <a
               href="#"
-              style={{ fontWeight: currentPage === "about" ? 700 : 300 }}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("about");
               }}
             >
-              About
+              ABOUT
             </a>
           </li>
           <li>
             <a
               href="#"
-              style={{ fontWeight: currentPage === "delivery" ? 700 : 300 }}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("delivery");
               }}
             >
-              Delivery
+              DELIVERY
             </a>
           </li>
           <li>
             <a
               href="#"
-              style={{ fontWeight: currentPage === "full-circle-fuel" ? 700 : 300 }}
               onClick={(e) => {
                 e.preventDefault();
                 onNavigate?.("full-circle-fuel");
               }}
             >
-              Full Circle Fuel
+              FULL CIRCLE FUEL
             </a>
           </li>
           <li>

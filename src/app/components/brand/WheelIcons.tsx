@@ -1,3 +1,8 @@
+import svgReadyFinancing from "/svg/Ready Financing.svg";
+import svgOffshoreFocus from "/svg/offsshore focus.svg";
+import svgAnywhereDelivery from "/svg/Anywhere Delivery.svg";
+import svgFairPricing from "/svg/Fair pricing.svg";
+import svgProjectKnowHow from "/svg/Project know how.svg";
 import svgPaths from "../../../imports/BrandStrengths/svg-wgo26ydiex";
 
 type IconProps = { className?: string };
@@ -6,99 +11,32 @@ const ORANGE = "#F25B17";
 
 /** Ready Financing — the coin / cycle mark. */
 export function ReadyFinancingIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 74.9996 74" aria-hidden>
-      <path d={svgPaths.p39e71000} fill={ORANGE} />
-      <path d={svgPaths.p23c9bc00} fill={ORANGE} />
-    </svg>
-  );
+  return <img src={svgReadyFinancing} alt="Ready Financing" className={`object-contain ${className}`} />;
 }
 
 /** Offshore Focus — the platform mark. */
 export function OffshoreFocusIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 94 112" aria-hidden>
-      <g clipPath="url(#oec-clip-offshore)">
-        <path d={svgPaths.p3c5ef6d0} fill={ORANGE} />
-        <path d={svgPaths.pec3d700} fill={ORANGE} />
-        <path d={svgPaths.p16571400} fill={ORANGE} />
-      </g>
-      <defs>
-        <clipPath id="oec-clip-offshore">
-          <rect fill="white" height="112" width="94" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
+  return <img src={svgOffshoreFocus} alt="Offshore Focus" className={`object-contain ${className}`} />;
 }
 
 /** Anywhere Delivery — the vessel mark. */
 export function AnywhereDeliveryIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 73.0002 88.9939" aria-hidden>
-      <path d={svgPaths.p167ab480} fill={ORANGE} />
-      <path d={svgPaths.p1c87de80} fill={ORANGE} />
-      <path d={svgPaths.p13256900} fill={ORANGE} />
-      <path d={svgPaths.p32675230} fill={ORANGE} />
-      <path d={svgPaths.p2394a6c0} fill={ORANGE} />
-      <path d={svgPaths.p2441900} fill={ORANGE} />
-      <path d={svgPaths.p37a0ff00} fill={ORANGE} />
-      <path d={svgPaths.p15495200} fill={ORANGE} />
-      <path d={svgPaths.p26fa2380} fill={ORANGE} />
-      <path d={svgPaths.p65d7a40} fill={ORANGE} />
-      <path d={svgPaths.p232c1d80} fill={ORANGE} />
-    </svg>
-  );
+  return <img src={svgAnywhereDelivery} alt="Anywhere Delivery" className={`object-contain ${className}`} />;
 }
 
 /** Fair Pricing — the bar / scale mark. */
 export function FairPricingIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 75 85" aria-hidden>
-      <g clipPath="url(#oec-clip-pricing)">
-        <path d={svgPaths.p2a68a770} fill={ORANGE} />
-        <path d={svgPaths.p9e83080} fill={ORANGE} />
-      </g>
-      <defs>
-        <clipPath id="oec-clip-pricing">
-          <rect fill="white" height="85" width="75" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
+  return <img src={svgFairPricing} alt="Fair Pricing" className={`object-contain ${className}`} />;
 }
 
 /** Direct Access — the handshake mark. */
 export function DirectAccessIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 83 79" aria-hidden>
-      <g clipPath="url(#oec-clip-access)">
-        <path d={svgPaths.p1b691800} fill={ORANGE} />
-        <path d={svgPaths.p32cc17f1} fill={ORANGE} />
-        <path d={svgPaths.pc2af670} fill={ORANGE} />
-        <path d={svgPaths.p4d14a80} fill={ORANGE} />
-        <path d={svgPaths.p11164580} fill={ORANGE} />
-        <path d={svgPaths.p3a433500} fill={ORANGE} />
-        <path d={svgPaths.p39077f00} fill={ORANGE} />
-      </g>
-      <defs>
-        <clipPath id="oec-clip-access">
-          <rect fill="white" height="79" width="83" />
-        </clipPath>
-      </defs>
-    </svg>
-  );
+  return <img src={svgProjectKnowHow} alt="Direct Access" className={`object-contain ${className}`} />;
 }
 
 /** Project Know-How — the rosette mark. */
 export function ProjectKnowHowIcon({ className = "" }: IconProps) {
-  return (
-    <svg className={className} fill="none" viewBox="0 0 74.5044 97.1215" aria-hidden>
-      <path d={svgPaths.p5311af0} fill={ORANGE} />
-      <path d={svgPaths.p1f2f9d00} fill={ORANGE} />
-      <path d={svgPaths.p101ba180} fill={ORANGE} />
-    </svg>
-  );
+  return <img src={svgProjectKnowHow} alt="Project Know How" className={`object-contain ${className}`} />;
 }
 
 /** The small six-petal mark that sits directly above the "Full Circle fuel" wordmark. */

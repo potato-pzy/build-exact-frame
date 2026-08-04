@@ -2,11 +2,19 @@ import svgPaths from "./svg-hsfh0kwwsp";
 import imgRectangle3 from "./a3769218c4c5a01624ac9804b1ed2ffef91f1c71.webp";
 import svgMoney from "/svg/Money.svg";
 import svgShip from "/svg/Ship.svg";
+import svgReadyFinancing from "/svg/Ready Financing.svg";
+import svgAnywhereDelivery from "/svg/Anywhere Delivery.svg";
+import svgFairPricing from "/svg/Fair pricing.svg";
+import svgProjectKnowHow from "/svg/Project know how.svg";
+import svgOffshoreFocus from "/svg/offsshore focus.svg";
+import svgIsolationMode from "/svg/Isolation_Mode.svg";
 import imgRectangle11 from "./687e2d1a8a490f002a858b824dcf1b359ed3afa1.webp";
 import imgRectangle12 from "./8d3090800ee5c4269773692b859f3ffb20585a5b.webp";
 import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 import RevealText from "@/app/components/RevealText";
 import CountUp from "@/app/components/CountUp";
+import FillButton from "@/app/components/FillButton";
 
 
 function LtRadialRepeatGt() {
@@ -530,30 +538,33 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light antialiased leading-[normal] left-1/2 text-[#182d57] text-[27px] text-center top-[1007px] tracking-[-0.54px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
         <RevealText text="OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore." />
       </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-582px)] text-[#182d57] text-[32px] top-[2474px] tracking-[-0.64px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[1.35] left-[calc(50%-582px)] text-[#182d57] text-[28.8px] top-[2474px] tracking-[-0.58px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
         <RevealText text="OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet." />
       </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[795px] text-[#575757] text-[16px] top-[233px] tracking-[-0.32px] w-[341px]">
-        <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
-      </p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-[836px] text-[#f25b17] text-[16px] top-[311px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
-        <RevealText text="Learn More" />
-      </p>
-      <p onClick={() => onNavigate?.("about")} className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light italic leading-[normal] left-1/2 text-[#f25b17] text-[20px] text-center top-[1205px] tracking-[-0.4px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100', fontStyle: 'italic', fontWeight: 300 }}>
-        <RevealText text="Learn More →" />
-      </p>
-      <div className="absolute bg-white h-[1042px] left-0 top-[1347px] w-[1280px]" />
+      {/* Right Hero Section Container — single div for paragraph text + Learn More button */}
+      <div className="hero-right-container absolute left-[795px] top-[215px] w-[341px] flex flex-col gap-3 z-10">
+        <p className="[word-break:break-word] font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] text-[#575757] text-[16px] tracking-[-0.32px]">
+          <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
+        </p>
+
+        <FillButton
+          squareSize={36}
+          height={32}
+          width={160}
+          squareColor="#f25b17"
+          restBg="#f4f4f4"
+          text="Learn More"
+          textColor="#f25b17"
+          fontSize={16}
+          fontFamily="'Merriweather', serif"
+          onClick={() => onNavigate?.("about")}
+        />
+      </div>
+
+      {/* Main hero vessel image */}
       <div className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <img alt="Offshore energy vessel tanker background" className="absolute h-[203.21%] left-0 max-w-none top-[-56.72%] w-full" src={imgRectangle3} />
-        </div>
-      </div>
-      <div className="absolute bg-[#f25b17] h-[26px] left-[796px] rounded-[4px] top-[308px] w-[30px]" />
-      <div className="absolute h-0 left-[805px] top-[321px] w-[10px]">
-        <div className="absolute inset-[-3.68px_-5%_-3.68px_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 10.5 7.36396">
-            <path d={svgPaths.pb3a500} fill="var(--stroke-0, white)" id="Arrow 1" />
-          </svg>
         </div>
       </div>
       <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
@@ -582,7 +593,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <div className="h-0 relative w-[1042px]">
             <div className="absolute inset-[-0.3px_0_0_0]">
               <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 0.3">
-                <line id="Line 2" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="1042" y1="0.15" y2="0.15" />
+                <line id="Line 2" stroke="#575757" strokeWidth="0.3" x2="1042" y1="0.15" y2="0.15" />
               </svg>
             </div>
           </div>
@@ -601,7 +612,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <RevealText text="Project Know-How" />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2056px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Project Know-How" />
+        <RevealText text="Direct Access" />
       </p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2216px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         <RevealText text="Offshore Focus" />
@@ -637,65 +648,64 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <RevealText text="When years of offshore focus mean this has already been solved before" />
       </p>
       <div className="absolute h-0 left-[620px] top-[1603px] w-[660px]">
-
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-0 left-[620px] top-[1743px] w-[660px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-0 left-[620px] top-[1883px] w-[660px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-0 left-[620px] top-[2023px] w-[660px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-0 left-[620px] top-[2158px] w-[660px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-0 left-0 top-[2389px] w-[1280px]">
         <div className="absolute inset-[-0.3px_0_0_0]">
           <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 0.3">
-            <line id="Line 7" stroke="var(--stroke-0, #575757)" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+            <line id="Line 7" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
           </svg>
         </div>
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[1496px] w-[77px]" data-name="image 3">
-        <img alt="OEC fuel supply solution icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+        <img alt="Ready Financing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgReadyFinancing} />
       </div>
       <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
-        <img alt="Offshore supply vessel and fuel tanker operations" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgShip} />
+        <img alt="Anywhere Delivery icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgAnywhereDelivery} />
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
-        <img alt="OEC marine fuel logistics icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+        <img alt="Fair Pricing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgFairPricing} />
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
-        <img alt="OEC vessel chartering icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+        <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
-        <img alt="OEC custom fuel financing icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+        <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
       </div>
       <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
-        <img alt="OEC compliance and security icon" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={svgMoney} />
+        <img alt="Offshore Focus icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgOffshoreFocus} />
       </div>
       <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[16px] top-[2696px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100' }}>
         <RevealText text="See how we deliver →" />
@@ -727,37 +737,9 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <RevealText text="Director, OEC" />
         </p>
       </div>
-      <div className="absolute bg-[#de5c35] h-[3px] left-0 top-[3524px] w-[1280px] z-0" />
-      <div className="absolute bg-[#122446] h-[380px] left-0 top-[3524px] w-[1280px]" />
-      <div className="absolute h-[380px] left-0 top-[3524px] w-[1280px] overflow-hidden pointer-events-none z-10">
-        <div style={{ position: "relative", width: 1280, height: 3904, marginTop: -3615 }}>
-          <Group4 />
-        </div>
+      <div className="absolute left-0 top-[3524px] w-[1280px]">
+        <Footer onNavigate={onNavigate} />
       </div>
-
-      <div onClick={() => onNavigate?.("home")} className="absolute h-[56px] left-[84px] overflow-clip top-[3566px] w-[254px] cursor-pointer">
-        <Layer1 />
-      </div>
-
-      <p onClick={() => onNavigate?.("home")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3656px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">HOME</p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3690px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">ABOUT</p>
-      <p onClick={() => onNavigate?.("delivery" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3724px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">DELIVERY</p>
-      <p onClick={() => onNavigate?.("full-circle-fuel" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[93px] text-[#a0abc0] text-[13px] top-[3758px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">FULL CIRCLE FUEL</p>
-
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[3656px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">ONE STOP SOLUTION</p>
-      <p onClick={() => onNavigate?.("contact" as any)} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#a0abc0] text-[13px] top-[3690px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">CONTACT</p>
-
-      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[3806px] w-[1127px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.3">
-            <line id="Line 10" stroke="#3b4870" strokeWidth="0.5" x2="1127" y1="0.15" y2="0.15" />
-          </svg>
-        </div>
-      </div>
-
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[92px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">{`TERMS & CONDITIONS`}</p>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[275px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap cursor-pointer hover:text-white transition-colors uppercase tracking-wider">PRIVACY POLICY</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[630px] text-[#6b789e] text-[11px] top-[3836px] whitespace-nowrap uppercase tracking-wider">OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 – ALL RIGHTS RESERVED</p>
     </div>
   );
 }
