@@ -112,27 +112,17 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <FillButton
             squareSize={40}
             height={48}
-            width={72}
+            width={180}
             squareColor="#f25b17"
             restBg="#ffffff"
-            text=""
-            icon={
-              <svg
-                width="26"
-                height="18"
-                viewBox="0 0 26 18"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1 9H25M25 9L17 1M25 9L17 17"
-                  stroke="white"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            }
+            text="Contact Us"
+            textColor="#182d57"
+            hoverTextColor="#ffffff"
+            fontSize={16}
+            fontFamily="'Merriweather', serif"
+            fontWeight={400}
+            letterSpacing="-0.32px"
+            rounded={4}
             onClick={() => onNavigate?.("contact")}
           />
         </div>

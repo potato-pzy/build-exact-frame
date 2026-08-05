@@ -20,7 +20,7 @@ export default function FullCircleFuelPage({ onNavigate }: FullCircleFuelPagePro
         <Hero />
         <FullCircleWheel />
         <CapabilityList />
-        <CtaBand />
+        <CtaBand onNavigate={onNavigate} />
       </main>
 
       {/* Shared Footer */}

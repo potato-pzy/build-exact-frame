@@ -55,7 +55,6 @@
   width: 100%;
   position: relative;
   background: #fff;
-  min-height: 400vh;
 }
 
 .sticky-delivery-section::after {
@@ -77,9 +76,9 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  padding: 40px 56px 40px 67px;
+  padding: 142px 56px 40px 67px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   z-index: 2;
 }
@@ -87,9 +86,9 @@
 .sticky-image-container {
   position: relative;
   width: 100%;
-  max-width: 520px;
-  height: 460px;
-  max-height: 65vh;
+  max-width: 720px;
+  height: 560px;
+  max-height: 567vh;
   border-radius: 4px;
   overflow: hidden;
 }
@@ -126,7 +125,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 35vh;
-  padding-bottom: 35vh;
+  padding-bottom: 10vh;
 }
 
 .sticky-text-block {
@@ -241,6 +240,12 @@
   transform: translateY(0);
 }
 
+/* PANEL 4: last panel — content anchored so it never scrolls above image top */
+.sticky-text-block.last-panel {
+  justify-content: flex-start;
+  padding-top: 142px;
+}
+
 /* PANEL 4: Typewriter & Ambient Glow */
 @keyframes ambientGlowPulse {
   0% { filter: brightness(1.02); }
@@ -318,45 +323,7 @@
   animation: ctaPulseKeyframe 0.5s ease-in-out 0.6s 1;
 }
 
-/* ── METHODOLOGY: HOW WE WORK ── */
-.how-we-work-section {
-  background: #f4f4f4;
-  padding: 80px 67px;
-  border-top: 0.5px solid #575757;
-}
 
-.how-we-work-inner {
-  max-width: 860px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.how-we-work-label {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  color: #de5c35;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.how-we-work-heading {
-  font-family: 'Merriweather', serif;
-  font-size: clamp(24px, 3vw, 36px);
-  font-weight: 400;
-  color: #182d57;
-  letter-spacing: -0.02em;
-  margin-bottom: 20px;
-}
-
-.how-we-work-body {
-  font-family: 'Merriweather Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  color: #575757;
-  line-height: 1.7;
-}
 
 /* ── VESSEL BANNER ── */
 .delivery-page-container .delivery-banner {
@@ -393,7 +360,7 @@
 .delivery-page-container .delivery-cta h2 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
-  font-size: clamp(22px, 2.8vw, 38px);
+  font-size: clamp(22px, 2.8vw, 34px);
   color: #182d57;
   letter-spacing: -0.02em;
   line-height: 1.4;

@@ -184,28 +184,19 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                 <div className="submit-row">
                   <FillButton
                     type="submit"
-                    squareSize={30}
-                    height={32}
-                    width={145}
-                    squareColor="#F25B17"
-                    restBg="#f4f4f4"
+                    squareSize={36}
+                    height={40}
+                    width={150}
+                    squareColor="#f25b17"
+                    restBg="transparent"
                     text="Submit"
-                    textColor="#F25B17"
+                    textColor="#f25b17"
                     hoverTextColor="#ffffff"
                     fontSize={16}
                     fontFamily="'Merriweather', serif"
-                    fontWeight={500}
-                    icon={
-                      <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-                        <path
-                          d="M1 5h10M7 1l4 4-4 4"
-                          stroke="white"
-                          strokeWidth="1.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    }
+                    fontWeight={400}
+                    letterSpacing="-0.32px"
+                    rounded={4}
                   />
                 </div>
               </form>

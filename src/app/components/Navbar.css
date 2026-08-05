@@ -60,7 +60,6 @@
 
 .main-navbar .nav-links a {
   font-family: 'Merriweather Sans', sans-serif;
-  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.06em;
   color: #00182b;
@@ -91,8 +90,8 @@
 }
 
 .main-navbar .btn-contact-bg-text {
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.06em;
   color: #ffffff;
@@ -121,8 +120,8 @@
 }
 
 .main-navbar .btn-contact-wipe-text {
-  font-family: 'Merriweather', serif;
-  font-weight: 400;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-weight: 300;
   font-size: 13px;
   letter-spacing: 0.06em;
   color: #f25b17;

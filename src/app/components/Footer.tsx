@@ -7,91 +7,99 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="relative w-full bg-[#122446] overflow-hidden" style={{ borderTop: "3px solid #de5c35" }}>
-      {/* Canvas container matching exact Figma frame bounds 1280px x 380px */}
-      <div className="relative w-full max-w-[1280px] mx-auto h-[380px] overflow-hidden">
-        {/* Decorative circular emblem on bottom right */}
-        <div className="absolute right-[10px] bottom-[-20px] w-[350px] h-[335px] pointer-events-none opacity-90 z-0">
-          <FooterFlare className="w-full h-full" />
-        </div>
+    <footer className="relative w-full h-[380px] bg-[#122446] overflow-hidden" style={{ borderTop: "3px solid #de5c35" }}>
+      {/* Decorative circular emblem */}
+      <div className="absolute left-[64%] w-[30%] bottom-[-80px] pointer-events-none opacity-60 z-0">
+        <FooterFlare className="w-full h-auto" />
+      </div>
 
-        {/* Rectangle 12 — Bottom Linear Gradient Overlay */}
-        <div
-          className="absolute left-0 top-[203px] w-[1280px] h-[177px] pointer-events-none z-[1]"
-          style={{
-            background: "linear-gradient(180deg, rgba(18, 36, 70, 0) 0%, rgba(18, 36, 70, 1) 100%)",
-          }}
-        />
+      {/* Bottom Linear Gradient Overlay */}
+      <div
+        className="absolute left-0 bottom-0 w-full h-[177px] pointer-events-none z-[1]"
+        style={{
+          background: "linear-gradient(180deg, rgba(18, 36, 70, 0) 0%, rgba(18, 36, 70, 1) 100%)",
+        }}
+      />
 
-        {/* Top Left OEC Logo (x: 84px, y: 42px) */}
-        <div
-          onClick={() => onNavigate?.("home")}
-          className="absolute left-[84px] top-[42px] w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity z-10 overflow-hidden"
-        >
-          <div style={{ position: "relative", width: 254, height: 56, marginTop: -3579, marginLeft: -84 }}>
-            <Layer1 />
+      {/* Content Container */}
+      <div className="relative w-full h-full px-[7%] mx-auto z-10 flex flex-col">
+        {/* Top section: Logo */}
+        <div className="pt-[54px]">
+          <div
+            onClick={() => onNavigate?.("home")}
+            className="w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity overflow-hidden"
+          >
+            <div style={{ position: "relative", width: 254, height: 56, marginTop: -3579, marginLeft: -84 }}>
+              <Layer1 />
+            </div>
           </div>
         </div>
 
-        {/* Column 1 Links (x: 93px) */}
-        <button
-          onClick={() => onNavigate?.("home")}
-          className="absolute left-[93px] top-[176px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          HOME
-        </button>
-        <button
-          onClick={() => onNavigate?.("about")}
-          className="absolute left-[93px] top-[214px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          ABOUT
-        </button>
-        <button
-          onClick={() => onNavigate?.("delivery")}
-          className="absolute left-[93px] top-[252px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          DELIVERY
-        </button>
-
-        {/* Column 2 Links (x: 265px) */}
-        <button
-          onClick={() => onNavigate?.("full-circle-fuel")}
-          className="absolute left-[265px] top-[173px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          ONE STOP SOLUTION
-        </button>
-        <button
-          onClick={() => onNavigate?.("contact")}
-          className="absolute left-[265px] top-[214px] text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          CONTACT
-        </button>
-
-        {/* Horizontal Divider Line (x: 77px, y: 325px, w: 1127px) */}
-        <div className="absolute left-[77px] top-[325px] w-[1127px] h-0 z-10">
-          <div className="absolute inset-[-0.3px_0_0_0]">
-            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1127 0.5">
-              <line stroke="#5a629f" strokeWidth="0.5" x2="1127" y1="0.25" y2="0.25" />
-            </svg>
+        {/* Nav section */}
+        <div className="flex mt-[48px] pl-[9px]">
+          {/* Column 1 */}
+          <div className="flex flex-col gap-[24px] w-[240px]">
+            <button
+              onClick={() => onNavigate?.("home")}
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              HOME
+            </button>
+            <button
+              onClick={() => onNavigate?.("about")}
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              ABOUT
+            </button>
+            <button
+              onClick={() => onNavigate?.("delivery")}
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              DELIVERY
+            </button>
+          </div>
+          {/* Column 2 */}
+          <div className="flex flex-col gap-[24px]">
+            <button
+              onClick={() => onNavigate?.("full-circle-fuel")}
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              ONE STOP SOLUTION
+            </button>
+            <button
+              onClick={() => onNavigate?.("contact")}
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              CONTACT
+            </button>
           </div>
         </div>
 
-        {/* Legal Row (y: 355px) */}
-        <button
-          onClick={() => onNavigate?.("about")}
-          className="absolute left-[92px] top-[355px] text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          TERMS &amp; CONDITIONS
-        </button>
-        <button
-          onClick={() => onNavigate?.("about")}
-          className="absolute left-[265px] top-[355px] text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal transition-colors bg-transparent border-0 p-0 cursor-pointer z-10"
-        >
-          PRIVACY POLICY
-        </button>
-        <span className="absolute left-[809px] top-[355px] text-[#5a629f] text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-normal z-10">
-          OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 &ndash; ALL RIGHTS RESERVED
-        </span>
+        {/* Horizontal Divider Line */}
+        <div className="w-full h-[0.5px] bg-[#5a629f] mt-[52px]"></div>
+
+        {/* Legal Row */}
+        <div className="flex justify-between items-center mt-[14px] pl-[9px]">
+          <div className="flex items-center">
+            <div className="w-[240px]">
+              <button
+                onClick={() => onNavigate?.("about")}
+                className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+              >
+                TERMS &amp; CONDITIONS
+              </button>
+            </div>
+            <button
+              onClick={() => onNavigate?.("about")}
+              className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
+            >
+              PRIVACY POLICY
+            </button>
+          </div>
+          <span className="text-[#5a629f] text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight">
+            OFFSHORE ENERGY CONSULTANTS PVT LTD 2026 &ndash; ALL RIGHTS RESERVED
+          </span>
+        </div>
       </div>
     </footer>
   );

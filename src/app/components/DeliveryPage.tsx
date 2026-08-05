@@ -110,9 +110,9 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
           ease: "none",
           scrollTrigger: {
             trigger: textBlock,
-            start: "top 80%", // sweep starts as text rises from bottom
-            end: "top 25%",   // sweep finishes when text reaches top-middle
-            scrub: true,      // 1-to-1 direct scroll scrubbing!
+            start: "top 90%",
+            end: "center center",
+            scrub: true,
           },
         }
       );
@@ -292,7 +292,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
           </div>
 
           {/* TEXT BLOCK 4 */}
-          <div ref={t4Ref} className={`sticky-text-block panel-4 ${panel4View ? "in-view" : ""}`}>
+          <div ref={t4Ref} className={`sticky-text-block last-panel panel-4 ${panel4View ? "in-view" : ""}`}>
             <h2 className="panel-4-headline">
               {panel4Text.split("").map((char, i) => (
                 <span
@@ -323,20 +323,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
         </div>
       </section>
 
-      {/* ── METHODOLOGY: HOW WE WORK ── */}
-      <section className="how-we-work-section">
-        <div className="how-we-work-inner">
-          <p className="how-we-work-label">
-            <RevealText text="HOW WE WORK" />
-          </p>
-          <h2 className="how-we-work-heading">
-            <RevealText text="A consultative approach" />
-          </h2>
-          <p className="how-we-work-body">
-            <RevealText text="Based on your assets, capabilities, and operational goals, OEC develops custom fuel supply strategies tailored to your project timeline, risk tolerance, and compliance standards." />
-          </p>
-        </div>
-      </section>
+
 
       {/* ── VESSEL BANNER ── */}
       <section className="delivery-banner">
@@ -359,27 +346,17 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
         <FillButton
           squareSize={40}
           height={48}
-          width={72}
+          width={180}
           squareColor="#f25b17"
-          restBg="#ffffff"
-          text=""
-          icon={
-            <svg
-              width="26"
-              height="18"
-              viewBox="0 0 26 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 9H25M25 9L17 1M25 9L17 17"
-                stroke="white"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          }
+          restBg="#f4f4f4"
+          text="Contact Us"
+          textColor="#182d57"
+          hoverTextColor="#ffffff"
+          fontSize={16}
+          fontFamily="'Merriweather', serif"
+          fontWeight={400}
+          letterSpacing="-0.32px"
+          rounded={4}
           onClick={() => onNavigate?.("contact")}
         />
       </section>
