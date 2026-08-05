@@ -6,14 +6,15 @@ interface RevealTextProps {
   wordDelay?: number;
   delayOffset?: number;
   style?: React.CSSProperties;
+  children?: React.ReactNode;
 }
 
 export default function RevealText({
   text,
   className = "",
-  wordDelay = 0.025,
-  delayOffset = 0,
+  delayOffset = 0.15,
   style = {},
+  children,
 }: RevealTextProps) {
   const containerRef = useRef<HTMLSpanElement>(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -26,7 +27,7 @@ export default function RevealText({
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.05 }
+      { threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
     );
 
     if (containerRef.current) {
@@ -36,23 +37,20 @@ export default function RevealText({
     return () => observer.disconnect();
   }, []);
 
-  const words = text ? text.split(" ") : [];
+  const content = children || text;
 
   return (
-    <span ref={containerRef} className={`inline-block ${className}`} style={style}>
-      {isVisible ? (
-        words.map((word, i) => (
-          <span
-            key={i}
-            className="animate-word-reveal mr-[0.25em]"
-            style={{ animationDelay: `${delayOffset + i * wordDelay}s` }}
-          >
-            {word}
-          </span>
-        ))
-      ) : (
-        <span className="opacity-0">{text}</span>
-      )}
+    <span
+      ref={containerRef}
+      className={`inline-block transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+      } ${className}`}
+      style={{
+        transitionDelay: `${delayOffset}s`,
+        ...style,
+      }}
+    >
+      {content}
     </span>
   );
 }
