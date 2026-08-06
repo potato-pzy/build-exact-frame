@@ -1,5 +1,7 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import svgPaths from "./svg-hsfh0kwwsp";
-import imgRectangle3 from "./a3769218c4c5a01624ac9804b1ed2ffef91f1c71.webp";
+import heroBg from "../../../public/img/hero.webp";
 import svgMoney from "/svg/Money.svg";
 import svgShip from "/svg/Ship.svg";
 import svgReadyFinancing from "/svg/Ready Financing.svg";
@@ -520,6 +522,15 @@ export function Layer1() {
 }
 
 export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about") => void }) {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress: heroScroll } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  // Limit parallax range to prevent free space. 15% of 140% height = 21%, covered by scale 1.1 + top -20%
+  const heroY = useTransform(heroScroll, [0, 1], ["0%", "15%"]);
+
   return (
     <div className="bg-[#f4f4f4] relative size-full" data-name="Home Page">
       <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
@@ -562,9 +573,14 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       </div>
 
       {/* Main hero vessel image */}
-      <div className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
+      <div ref={heroRef} className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="Offshore energy vessel tanker background" className="absolute h-[203.21%] left-0 max-w-none top-[-56.72%] w-full" src={imgRectangle3} />
+          <motion.img 
+            alt="Offshore energy vessel tanker background" 
+            className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-[center_35%]" 
+            src={heroBg} 
+            style={{ y: heroY, scale: 1.25 }}
+          />
         </div>
       </div>
       <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>

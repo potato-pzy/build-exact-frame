@@ -1,7 +1,9 @@
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "motion/react";
 import "./AboutPage.css";
 import heroBg from "../../../public/img/hero.webp";
-import tankerImg from "../../../public/img/tanker.webp";
-import maskGroupImg from "../../../public/img/Mask group.jpg";
+import shipImg from "../../../public/img/ship.png";
+import oecLogoImg from "../../../public/img/oec-logo.webp";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FillButton from "./FillButton";
@@ -12,17 +14,27 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress: heroScroll } = useScroll({
+    target: heroRef,
+    offset: ["start start", "end start"],
+  });
+  // Limit parallax range to prevent free space. 15% of 140% height = 21%, covered by scale 1.25 + top -20%
+  const heroY = useTransform(heroScroll, [0, 1], ["0%", "15%"]);
+
   return (
     <div className="about-page-container">
       {/* NAV */}
       <Navbar onNavigate={onNavigate} currentPage="about" />
 
       {/* HERO */}
-      <section className="hero">
-        <img
+      <section ref={heroRef} className="hero">
+        <motion.img
           className="hero-bg"
           src={heroBg}
           alt="Offshore oil platform at sea"
+          style={{ y: heroY, scale: 1.25 }}
         />
       </section>
 
@@ -46,7 +58,10 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
           <div className="story-right">
             <div className="tanker-img-container">
-              <img src={tankerImg} alt="OEC offshore fuel tanker vessel operations" />
+              <img
+                src={shipImg}
+                alt="OEC offshore fuel tanker vessel operations"
+              />
             </div>
           </div>
         </div>
@@ -57,8 +72,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="white-panel">
         <div className="apart-grid">
           <div className="apart-left">
-            <div className="polygon-img-container">
-              <img src={maskGroupImg} alt="Offshore Energy Consultants OEC Building" />
+            <div className="apart-img-container">
+              <img
+                src={oecLogoImg}
+                alt="Offshore Energy Consultants OEC Building"
+              />
             </div>
           </div>
           <div className="apart-right">

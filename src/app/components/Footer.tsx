@@ -7,7 +7,7 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="relative w-full h-[380px] bg-[#122446] overflow-hidden" style={{ borderTop: "3px solid #de5c35" }}>
+    <footer className="relative w-full h-[380px] bg-[#122446] overflow-hidden">
       {/* Decorative circular emblem */}
       <div className="absolute left-[64%] w-[30%] bottom-[-80px] pointer-events-none opacity-60 z-0">
         <FooterFlare className="w-full h-auto" />

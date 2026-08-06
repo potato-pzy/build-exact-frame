@@ -11,11 +11,12 @@ import {
 } from 'lucide-react';
 import RevealText from './RevealText';
 
-function SolutionFillButton({ text }: { text: string }) {
+function SolutionFillButton({ text, onClick }: { text: string; onClick?: () => void }) {
   const [hovered, setHovered] = useState(false);
   const squareSize = 40;
   return (
     <div
+      onClick={onClick}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       style={{
@@ -209,7 +210,7 @@ const tracksData = [
   }
 ];
 
-export default function SolutionTracks() {
+export default function SolutionTracks({ onNavigate }: { onNavigate?: (page: string) => void }) {
   return (
     <div className="min-h-screen bg-[#fafaf9] font-['Merriweather_Sans',sans-serif] text-slate-800 p-6 md:p-12 lg:p-20 selection:bg-orange-200">
       <div className="max-w-7xl mx-auto space-y-12">
@@ -295,7 +296,7 @@ export default function SolutionTracks() {
               </div>
            </div>
            
-           <SolutionFillButton text="Explore All Tracks" />
+           <SolutionFillButton text="Explore All Tracks" onClick={() => onNavigate?.("contact")} />
         </div>
 
       </div>
