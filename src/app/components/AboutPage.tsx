@@ -93,13 +93,31 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
             </div>
             <ul className="apart-items">
               <li>
-                <RevealText text="No call center layers between you and a decision." />
+                <span className="apart-check-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#f25b17" />
+                    <path d="M8 12L11 15L16 9" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span>No call center layers between you and a decision.</span>
               </li>
               <li>
-                <RevealText text="No attention split across fleets. Offshore is our whole business." />
+                <span className="apart-check-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#f25b17" />
+                    <path d="M8 12L11 15L16 9" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span>No attention split across fleets. Offshore is our whole business.</span>
               </li>
               <li>
-                <RevealText text="No distractions. Just fuel, where it needs to be, when it needs to be there." />
+                <span className="apart-check-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="10" fill="#f25b17" />
+                    <path d="M8 12L11 15L16 9" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
+                <span>No distractions. Just fuel, where it needs to be, when it needs to be there.</span>
               </li>
             </ul>
           </div>
@@ -110,13 +128,41 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="stats-bar">
         <div className="stats-inner">
           <div className="stat">
-            <RevealText text="Founded in 2022" />
+            <div className="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <p className="stat-text">Founded in 2022</p>
           </div>
+
+          <div className="stat-divider" />
+
           <div className="stat">
-            <RevealText text="Headquartered in Singapore" />
+            <div className="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+            <p className="stat-text">Headquartered in Singapore</p>
           </div>
+
+          <div className="stat-divider" />
+
           <div className="stat">
-            <RevealText text="Offshore upstream fuel supply, exclusively" />
+            <div className="stat-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 21h20" />
+                <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.64 2.62 7.85" />
+                <path d="M12 10V4" />
+                <path d="M8 7h8" />
+              </svg>
+            </div>
+            <p className="stat-text">Offshore upstream fuel supply, exclusively</p>
           </div>
         </div>
       </section>
@@ -130,11 +176,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           <FillButton
             squareSize={40}
             height={48}
-            width={180}
+            width={170}
             squareColor="#f25b17"
-            restBg="#ffffff"
-            text="Contact Us"
-            textColor="#182d57"
+            restBg="#f25b17"
+            text="Get in touch"
+            textColor="#ffffff"
             hoverTextColor="#ffffff"
             fontSize={16}
             fontFamily="'Merriweather', serif"

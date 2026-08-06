@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
+import "./HomePage.css";
 import svgPaths from "./svg-hsfh0kwwsp";
 import heroBg from "../../../public/img/hero.webp";
 import svgMoney from "/svg/Money.svg";
@@ -521,7 +522,7 @@ export function Layer1() {
   );
 }
 
-export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about") => void }) {
+export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void }) {
   const heroRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress: heroScroll } = useScroll({
@@ -533,227 +534,458 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
 
   return (
     <div className="bg-[#f4f4f4] relative size-full" data-name="Home Page">
-      <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
-      <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <p className="leading-[65px] mb-0">
-          <RevealText text="When fuel matters" wordDelay={0.15} />
+      {/* DESKTOP CANVAS WRAPPER */}
+      <div className="home-desktop-wrapper">
+        <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
+        <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[67px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <p className="leading-[65px] mb-0">
+            <RevealText text="When fuel matters" wordDelay={0.15} />
+          </p>
+          <p className="leading-[65px]">
+            <RevealText text="the most" delayOffset={0.45} wordDelay={0.15} />
+            <br aria-hidden />
+            <br aria-hidden />
+          </p>
+        </h1>
+        <div className="absolute bg-white h-[541px] left-0 top-[806px] w-[1280px]" />
+        <IsolationMode />
+        <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light antialiased leading-[normal] left-1/2 text-[#182d57] text-[27px] text-center top-[1007px] tracking-[-0.54px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
+          <RevealText text="OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore." />
         </p>
-        <p className="leading-[65px]">
-          <RevealText text="the most" delayOffset={0.45} wordDelay={0.15} />
-          <br aria-hidden />
-          <br aria-hidden />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[1.35] left-[calc(50%-582px)] text-[#182d57] text-[28.8px] top-[2474px] tracking-[-0.58px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
+          <RevealText text="OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet." />
         </p>
-      </h1>
-      <div className="absolute bg-white h-[541px] left-0 top-[806px] w-[1280px]" />
-      <IsolationMode />
-      <p className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light antialiased leading-[normal] left-1/2 text-[#182d57] text-[27px] text-center top-[1007px] tracking-[-0.54px] w-[792px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
-        <RevealText text="OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore." />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[1.35] left-[calc(50%-582px)] text-[#182d57] text-[28.8px] top-[2474px] tracking-[-0.58px] w-[511px]" style={{ fontVariationSettings: '"wdth" 100', fontWeight: 300 }}>
-        <RevealText text="OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet." />
-      </p>
-      {/* Right Hero Section Container — single div for paragraph text + Learn More button */}
-      <div className="hero-right-container absolute left-[795px] top-[215px] w-[341px] flex flex-col gap-3 z-10">
-        <p className="[word-break:break-word] font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] text-[#575757] text-[16px] tracking-[-0.32px]">
-          <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
-        </p>
+        {/* Right Hero Section Container — single div for paragraph text + Learn More button */}
+        <div className="hero-right-container absolute left-[795px] top-[215px] w-[341px] flex flex-col gap-3 z-10">
+          <p className="[word-break:break-word] font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] text-[#575757] text-[16px] tracking-[-0.32px]">
+            <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
+          </p>
 
-        <FillButton
-          squareSize={36}
-          height={32}
-          width={160}
-          squareColor="#f25b17"
-          restBg="#f4f4f4"
-          text="Learn More"
-          textColor="#f25b17"
-          fontSize={16}
-          fontFamily="'Merriweather', serif"
-          onClick={() => onNavigate?.("about")}
-        />
-      </div>
-
-      {/* Main hero vessel image */}
-      <div ref={heroRef} className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <motion.img 
-            alt="Offshore energy vessel tanker background" 
-            className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-[center_35%]" 
-            src={heroBg} 
-            style={{ y: heroY, scale: 1.25 }}
+          <FillButton
+            squareSize={36}
+            height={32}
+            width={160}
+            squareColor="#f25b17"
+            restBg="#f4f4f4"
+            text="Learn More"
+            textColor="#f25b17"
+            fontSize={16}
+            fontFamily="'Merriweather', serif"
+            onClick={() => onNavigate?.("about")}
           />
         </div>
-      </div>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Name for Brand Strengths" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <CountUp end={1} suffix=" M+" duration={1200} />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <CountUp end={24} suffix=" hour" duration={1600} />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+26px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <CountUp end={10} suffix="+" duration={1400} />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Global" />
-      </p>
-      <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[62px] text-[#f25b17] text-[20px] top-[1448px] tracking-[-0.4px] whitespace-nowrap">
-        <p className="leading-[normal] mb-0 whitespace-pre">
-          <RevealText text="WHY OEC" />
+
+        {/* Main hero vessel image */}
+        <div ref={heroRef} className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <motion.img 
+              alt="Offshore energy vessel tanker background" 
+              className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-[center_35%]" 
+              src={heroBg} 
+              style={{ y: heroY, scale: 1.25 }}
+            />
+          </div>
+        </div>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Name for Brand Strengths" />
         </p>
-        <p className="leading-[normal] whitespace-pre">​</p>
-      </div>
-      <div className="absolute flex h-[1042px] items-center justify-center left-[619px] top-[1347px] w-0">
-        <div className="flex-none rotate-90">
-          <div className="h-px relative w-[1042px]">
-            <div className="absolute inset-0">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 1">
-                <line id="Line 2" stroke="#575757" strokeWidth="0.3" x2="1042" y1="0.5" y2="0.5" />
-              </svg>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <CountUp end={1} suffix=" M+" duration={1200} />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <CountUp end={24} suffix=" hour" duration={1600} />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+26px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <CountUp end={10} suffix="+" duration={1400} />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%+302px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Global" />
+        </p>
+        <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[62px] text-[#f25b17] text-[20px] top-[1448px] tracking-[-0.4px] whitespace-nowrap">
+          <p className="leading-[normal] mb-0 whitespace-pre">
+            <RevealText text="WHY OEC" />
+          </p>
+          <p className="leading-[normal] whitespace-pre">​</p>
+        </div>
+        <div className="absolute flex h-[1042px] items-center justify-center left-[619px] top-[1347px] w-0">
+          <div className="flex-none rotate-90">
+            <div className="h-px relative w-[1042px]">
+              <div className="absolute inset-0">
+                <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 1">
+                  <line id="Line 2" stroke="#575757" strokeWidth="0.3" x2="1042" y1="0.5" y2="0.5" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1501px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Ready Financing" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1641px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Anywhere Delivery" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1781px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Fair Pricing" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1921px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Project Know-How" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2056px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Direct Access" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2216px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Offshore Focus" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1538px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When the project runs before the payment does" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1678px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When it has to arrive by truck, vessel, or pipeline, anywhere in the world" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[100px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[150px]">
-        <RevealText text="MT of fuel delivered since 2022" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[338px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px]">
-        <RevealText text="turnaround at major bunkering ports" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[666px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px] whitespace-pre-wrap">
-        <RevealText text="years of experience in offshore bunkering" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[942px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[235px]">
-        <RevealText text="Active across Singapore, Malaysia, Vietnam, Thailand, the Middle East, and the Americas." />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1818px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When the market moves, the terms don't punish you for it" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1958px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When the fuel plan is as complex as the drilling plan" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2093px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When the fuel plan is as complex as the drilling plan" />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2253px] tracking-[-0.28px] w-[234px]">
-        <RevealText text="When years of offshore focus mean this has already been solved before" />
-      </p>
-      <div className="absolute h-px left-[620px] top-[1603px] w-[660px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-px left-[620px] top-[1743px] w-[660px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-px left-[620px] top-[1883px] w-[660px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-px left-[620px] top-[2023px] w-[660px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-px left-[620px] top-[2158px] w-[660px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-px left-0 top-[2389px] w-[1280px]">
-        <div className="absolute inset-0">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 1">
-            <line id="Line 7" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
-          </svg>
-        </div>
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[1496px] w-[77px]" data-name="image 3">
-        <img alt="Ready Financing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgReadyFinancing} />
-      </div>
-      <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
-        <img alt="Anywhere Delivery icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgAnywhereDelivery} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
-        <img alt="Fair Pricing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgFairPricing} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
-        <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
-        <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
-      </div>
-      <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
-        <img alt="Offshore Focus icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgOffshoreFocus} />
-      </div>
-      <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[16px] top-[2696px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="See how we deliver →" />
-      </p>
-      <div className="absolute h-[414px] left-[619px] top-[2389px] w-[661px]">
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <img alt="OEC fuel delivery tanker vessel at sea" className="absolute h-full left-[-5.54%] max-w-none top-0 w-[113.03%]" src={imgRectangle11} />
-        </div>
-      </div>
-      <div className="absolute bg-[#de5c35] h-[495px] left-0 top-[3029px] w-[1280px]" />
-      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[102px] leading-[normal] left-[calc(50%+181px)] text-[#f1f1f1] text-[40px] top-[3162px] tracking-[-0.8px] w-[367px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="Talk to someone who can say yes." />
-        <br aria-hidden />
-        <br aria-hidden />
-      </p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[821px] text-[#f1f1f1] text-[14px] top-[3278px] tracking-[-0.28px] w-[373px]">
-        <RevealText text="No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot." />
-      </p>
-      <Group3 />
-      <div className="absolute bg-white/40 h-[495px] left-[737px] top-[3029px] w-[1px]" />
-      <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-556px)] text-[#f1f1f1] text-[32px] top-[3140px] tracking-[-0.64px] w-[591px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <RevealText text="“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”" />
-      </p>
-      <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[84px] text-[#f1f1f1] text-[0px] top-[3378px] tracking-[-0.32px] w-[419px]">
-        <p className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] mb-0 text-[16px]">
-          <RevealText text="Rajiv Chada" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1501px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Ready Financing" />
         </p>
-        <p className="leading-[normal] text-[16px]">
-          <RevealText text="Director, OEC" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1641px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Anywhere Delivery" />
         </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1781px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Fair Pricing" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[1921px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Project Know-How" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2056px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Direct Access" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[670px] text-[#264b7f] text-[20px] top-[2216px] tracking-[-0.4px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Offshore Focus" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1538px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When the project runs before the payment does" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1678px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When it has to arrive by truck, vessel, or pipeline, anywhere in the world" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[100px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[150px]">
+          <RevealText text="MT of fuel delivered since 2022" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[338px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px]">
+          <RevealText text="turnaround at major bunkering ports" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[666px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[161px] whitespace-pre-wrap">
+          <RevealText text="years of experience in offshore bunkering" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[942px] text-[14px] text-black top-[2930px] tracking-[-0.28px] w-[235px]">
+          <RevealText text="Active across Singapore, Malaysia, Vietnam, Thailand, the Middle East, and the Americas." />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1818px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When the market moves, the terms don't punish you for it" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[1958px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When the fuel plan is as complex as the drilling plan" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2093px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When the fuel plan is as complex as the drilling plan" />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2253px] tracking-[-0.28px] w-[234px]">
+          <RevealText text="When years of offshore focus mean this has already been solved before" />
+        </p>
+        <div className="absolute h-px left-[620px] top-[1603px] w-[660px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+              <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-px left-[620px] top-[1743px] w-[660px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+              <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-px left-[620px] top-[1883px] w-[660px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+              <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-px left-[620px] top-[2023px] w-[660px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+              <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-px left-[620px] top-[2158px] w-[660px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+              <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-px left-0 top-[2389px] w-[1280px]">
+          <div className="absolute inset-0">
+            <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 1">
+              <line id="Line 7" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
+            </svg>
+          </div>
+        </div>
+        <div className="absolute h-[74px] left-[1036px] top-[1496px] w-[77px]" data-name="image 3">
+          <img alt="Ready Financing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgReadyFinancing} />
+        </div>
+        <div className="absolute left-[1030px] size-[83px] top-[1632px]" data-name="image 8">
+          <img alt="Anywhere Delivery icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgAnywhereDelivery} />
+        </div>
+        <div className="absolute h-[74px] left-[1036px] top-[1776px] w-[77px]" data-name="image 5">
+          <img alt="Fair Pricing icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgFairPricing} />
+        </div>
+        <div className="absolute h-[74px] left-[1036px] top-[1916px] w-[77px]" data-name="image 6">
+          <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
+        </div>
+        <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
+          <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
+        </div>
+        <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
+          <img alt="Offshore Focus icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgOffshoreFocus} />
+        </div>
+        <p onClick={() => onNavigate?.("about")} className="[word-break:break-word] absolute font-['Merriweather:Light_Italic',sans-serif] font-light !italic leading-[normal] left-[calc(50%-582px)] text-[#f25b17] text-[16px] top-[2696px] tracking-[-0.32px] whitespace-nowrap cursor-pointer hover-underline-left-to-right" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="See how we deliver →" />
+        </p>
+        <div className="absolute h-[414px] left-[619px] top-[2389px] w-[661px]">
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <img alt="OEC fuel delivery tanker vessel at sea" className="absolute h-full left-[-5.54%] max-w-none top-0 w-[113.03%]" src={imgRectangle11} />
+          </div>
+        </div>
+        <div className="absolute bg-[#de5c35] h-[495px] left-0 top-[3029px] w-[1280px]" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[102px] leading-[normal] left-[calc(50%+181px)] text-[#f1f1f1] text-[40px] top-[3162px] tracking-[-0.8px] w-[367px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Talk to someone who can say yes." />
+          <br aria-hidden />
+          <br aria-hidden />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[821px] text-[#f1f1f1] text-[14px] top-[3278px] tracking-[-0.28px] w-[373px]">
+          <RevealText text="No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot." />
+        </p>
+        <Group3 />
+        <div className="absolute bg-white/40 h-[495px] left-[737px] top-[3029px] w-[1px]" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-556px)] text-[#f1f1f1] text-[32px] top-[3140px] tracking-[-0.64px] w-[591px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”" />
+        </p>
+        <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[84px] text-[#f1f1f1] text-[0px] top-[3378px] tracking-[-0.32px] w-[419px]">
+          <p className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] mb-0 text-[16px]">
+            <RevealText text="Rajiv Chada" />
+          </p>
+          <p className="leading-[normal] text-[16px]">
+            <RevealText text="Director, OEC" />
+          </p>
+        </div>
+        <div className="absolute left-0 top-[3524px] w-[1280px]">
+          <Footer onNavigate={onNavigate} />
+        </div>
       </div>
-      <div className="absolute left-0 top-[3524px] w-[1280px]">
+
+      {/* MOBILE RESPONSIVE WRAPPER (rendered on screen widths <= 840px) */}
+      <div className="home-mobile-wrapper">
+        {/* MOBILE HERO SECTION */}
+        <section className="mobile-hero-section">
+          <h1 className="mobile-hero-title">
+            When fuel matters<br />the most
+          </h1>
+
+          <p className="mobile-hero-subtitle">
+            OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts.
+          </p>
+
+          <div className="mobile-hero-btn">
+            <FillButton
+              squareSize={36}
+              height={32}
+              width={160}
+              squareColor="#f25b17"
+              restBg="#f4f4f4"
+              text="Learn More"
+              textColor="#f25b17"
+              fontSize={16}
+              fontFamily="'Merriweather', serif"
+              onClick={() => onNavigate?.("about")}
+            />
+          </div>
+        </section>
+
+        {/* HERO IMAGE */}
+        <div className="mobile-hero-img-container">
+          <img src={heroBg} alt="Offshore oil platform at sea" />
+        </div>
+
+        {/* CENTERED REASON SECTION BELOW IMAGE */}
+        <section className="mobile-hero-reason-section">
+          <div className="mobile-hero-logo-ring">
+            <LogoRing size={47} />
+          </div>
+
+          <p className="mobile-hero-reason-text">
+            OEC exists for one reason: offshore projects can't afford a weak link in their fuel supply. No green pivot, no split focus across a dozen vessel types. Just fuel, financing, and delivery, built specifically for offshore.
+          </p>
+
+          <p className="mobile-hero-learn-more-link" onClick={() => onNavigate?.("about")}>
+            Learn More →
+          </p>
+        </section>
+
+        {/* WHY OEC SECTION */}
+        <section className="mobile-why-section">
+          <div className="mobile-why-tag">WHY OEC</div>
+          <h2 className="mobile-why-title">Name for Brand Strengths</h2>
+          <div className="mobile-why-orange-line" />
+
+          <div className="mobile-strengths-list">
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgReadyFinancing} alt="Ready Financing" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Ready Financing</h4>
+                <p>When the project runs before the payments do.</p>
+              </div>
+            </div>
+
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgAnywhereDelivery} alt="Anywhere Delivery" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Anywhere Delivery</h4>
+                <p>When it has to arrive by truck, vessel, or pipeline, anywhere in the world.</p>
+              </div>
+            </div>
+
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgFairPricing} alt="Fair Pricing" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Fair Pricing</h4>
+                <p>When the market moves, the terms don't punish you for it.</p>
+              </div>
+            </div>
+
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgProjectKnowHow} alt="Project Know-How" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Project Know-How</h4>
+                <p>When the fuel plan is as complex as the drilling plan.</p>
+              </div>
+            </div>
+
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgIsolationMode} alt="Direct Access" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Direct Access</h4>
+                <p>Your call gets answered by someone who decides.</p>
+              </div>
+            </div>
+
+            <div className="mobile-strength-item">
+              <div className="mobile-strength-icon-box">
+                <img src={svgOffshoreFocus} alt="Offshore Focus" />
+              </div>
+              <div className="mobile-strength-text">
+                <h4>Offshore Focus</h4>
+                <p>When years of offshore focus mean this has already been solved before.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* DELIVERY CHARTER SECTION */}
+        <section className="mobile-delivery-section">
+          <p className="mobile-delivery-text">
+            OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet.
+          </p>
+          <img src={imgRectangle11} alt="OEC fuel delivery tanker vessel at sea" className="mobile-delivery-img" />
+          <p className="mobile-hero-learn-more-link" onClick={() => onNavigate?.("about")}>
+            See how we deliver →
+          </p>
+        </section>
+
+        {/* STATS SECTION (SINGLE COLUMN VERTICALLY STACKED & CENTERED) */}
+        <section className="mobile-stats-section">
+          <div className="mobile-stat-item">
+            <div className="mobile-stat-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#182d57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                <circle cx="9" cy="7" r="4" />
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+              </svg>
+            </div>
+            <h3>1 M+</h3>
+            <p>MT of fuel delivered since 2022</p>
+          </div>
+
+          <div className="mobile-stat-divider" />
+
+          <div className="mobile-stat-item">
+            <div className="mobile-stat-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#182d57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+            </div>
+            <h3>24 hour</h3>
+            <p>turnaround at major bunkering ports</p>
+          </div>
+
+          <div className="mobile-stat-divider" />
+
+          <div className="mobile-stat-item">
+            <div className="mobile-stat-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#182d57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                <line x1="16" y1="2" x2="16" y2="6" />
+                <line x1="8" y1="2" x2="8" y2="6" />
+                <line x1="3" y1="10" x2="21" y2="10" />
+              </svg>
+            </div>
+            <h3>10+</h3>
+            <p>years of experience in offshore bunkering</p>
+          </div>
+
+          <div className="mobile-stat-divider" />
+
+          <div className="mobile-stat-item">
+            <div className="mobile-stat-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#182d57" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <line x1="2" y1="12" x2="22" y2="12" />
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+              </svg>
+            </div>
+            <h3>Global</h3>
+            <p>Active across Singapore, Malaysia, Vietnam, Thailand, the Middle East, and the Americas.</p>
+          </div>
+        </section>
+
+        {/* QUOTE / TESTIMONIAL BANNER */}
+        <section className="mobile-quote-banner">
+          <div className="mobile-quote-icon">
+            <svg width="36" height="28" viewBox="0 0 36 28" fill="rgba(255, 255, 255, 0.4)">
+              <path d="M14.4 0L9.6 28H0L7.2 0H14.4ZM36 0L31.2 28H21.6L28.8 0H36Z" />
+            </svg>
+          </div>
+          <p className="mobile-quote-text">
+            “We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”
+          </p>
+          <div className="mobile-quote-line" />
+          <div className="mobile-quote-author">
+            <span className="author-name">Rajiv Chada</span>
+            <span className="author-title">Director, OEC</span>
+          </div>
+        </section>
+
+        {/* CONTACT CTA BANNER */}
+        <section className="mobile-contact-banner">
+          <h2>Talk to someone who can say yes.</h2>
+          <p>No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot.</p>
+          
+          <div className="mobile-contact-btn">
+            <FillButton
+              squareSize={36}
+              height={44}
+              width={160}
+              squareColor="#de5c35"
+              restBg="#de5c35"
+              text="Contact Us"
+              textColor="#ffffff"
+              fontSize={16}
+              fontFamily="'Merriweather', serif"
+              onClick={() => onNavigate?.("contact")}
+            />
+          </div>
+        </section>
+
+        {/* FOOTER */}
         <Footer onNavigate={onNavigate} />
       </div>
     </div>

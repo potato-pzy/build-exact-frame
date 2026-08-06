@@ -40,7 +40,7 @@
 .delivery-page-container .delivery-hero h1 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
-  font-size: clamp(22px, 2.8vw, 36px);
+  font-size: clamp(1.375rem, 1rem + 2.5vw, 2.25rem);
   line-height: 1.45;
   color: #182d57;
   letter-spacing: -0.02em;
@@ -126,6 +126,7 @@
   flex-direction: column;
   padding-top: 35vh;
   padding-bottom: 10vh;
+  overflow-x: clip;
 }
 
 .sticky-text-block {
@@ -135,6 +136,7 @@
   flex-direction: column;
   justify-content: center;
   gap: 18px;
+  overflow-x: clip;
 }
 
 .sticky-text-block h2 {
@@ -184,13 +186,13 @@
 /* PANEL 2: Headline Slide Right & Parallax Tilt */
 .panel-2-headline {
   opacity: 0;
-  transform: translateX(30px);
+  transform: translateY(20px);
   transition: opacity 0.6s ease-out 0.1s, transform 0.6s ease-out 0.1s;
 }
 
 .panel-2.in-view .panel-2-headline {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateY(0);
 }
 
 .sticky-img-wrapper.tilted img {
@@ -287,6 +289,7 @@
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease-out 0.4s, color 0.35s ease-out;
+  min-height: 44px;
 }
 
 .delivery-cta-link.in-view {
@@ -360,7 +363,7 @@
 .delivery-page-container .delivery-cta h2 {
   font-family: 'Merriweather', serif;
   font-weight: 400;
-  font-size: clamp(22px, 2.8vw, 34px);
+  font-size: clamp(1.375rem, 1rem + 2.5vw, 2.25rem);
   color: #182d57;
   letter-spacing: -0.02em;
   line-height: 1.4;
@@ -383,38 +386,129 @@
 }
 
 /* ── RESPONSIVE ── */
+.mobile-delivery-cards-section {
+  display: none;
+}
+
 @media (max-width: 900px) {
+  .delivery-page-container .delivery-hero {
+    padding: 36px 20px 32px;
+  }
+  .delivery-page-container .delivery-hero h1 {
+    font-size: 22px;
+    line-height: 1.4;
+  }
+
+  /* Hide 2-column sticky section on mobile to avoid overlapping */
   .sticky-delivery-section {
+    display: none !important;
+  }
+
+  /* Show responsive mobile cards layout with full image visibility */
+  .mobile-delivery-cards-section {
+    display: flex;
     flex-direction: column;
+    gap: 36px;
+    padding: 32px 20px 48px;
+    background: #ffffff;
   }
-  .sticky-delivery-section::after {
-    display: none;
+
+  .mobile-delivery-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid #eeeeee;
   }
-  .sticky-left-col {
-    position: relative;
-    top: auto;
+
+  .mobile-delivery-card:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .mobile-card-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 260px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+  .mobile-card-img-wrapper img {
     width: 100%;
-    height: 320px;
-    padding: 24px;
-  }
-  .sticky-image-container {
     height: 100%;
+    object-fit: cover;
   }
-  .scrollable-right-col {
-    width: 100%;
+
+  .mobile-card-checkmark {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   }
-  .sticky-text-block {
-    min-height: auto;
-    padding: 32px 24px 48px;
+
+  .mobile-delivery-card h2 {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.35;
+    color: #182d57;
+    margin: 0;
   }
+
+  .mobile-delivery-card p {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #575757;
+    margin: 0;
+  }
+
+  .mobile-delivery-card .cta-link {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-size: 15px;
+    color: #f25b17;
+    font-weight: 400;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+
   .delivery-page-container .delivery-banner {
-    flex-direction: column;
-    padding: 36px 24px;
-    gap: 8px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 28px 12px;
+    gap: 6px;
+    background: #de5c35;
   }
+
+  .delivery-page-container .delivery-vessel-type {
+    font-size: 14px;
+    padding: 8px 4px;
+    white-space: nowrap;
+    text-align: center;
+  }
+
   .delivery-page-container .delivery-cta {
     flex-direction: column;
-    padding: 40px 24px;
+    padding: 40px 20px;
     align-items: flex-start;
+    gap: 24px;
+  }
+
+  .delivery-page-container .delivery-cta h2 {
+    font-size: 26px;
+    line-height: 1.3;
   }
 }

@@ -30,7 +30,7 @@ const rightColumn: Capability[] = [
 function Spoke({ label, Icon, iconClass }: Omit<Capability, "id">) {
   return (
     <div className="flex flex-col items-center gap-6 text-center">
-      <p className="font-sans-brand font-light text-oec-blue text-[20px] lg:text-[24px] tracking-[-0.48px]">
+      <p className="font-sans-brand font-light text-oec-blue text-[clamp(1rem,3.5vw,1.5rem)] tracking-[-0.48px]">
         {label}
       </p>
       <Icon className={iconClass} />
@@ -63,7 +63,7 @@ export function FullCircleWheel() {
             </p>
 
             <div className="mt-[100px] flex flex-col items-center gap-6 text-center">
-              <p className="font-sans-brand font-light text-oec-blue text-[24px] tracking-[-0.48px]">
+              <p className="font-sans-brand font-light text-oec-blue text-[clamp(1rem,3.5vw,1.5rem)] tracking-[-0.48px]">
                 Project Know-How
               </p>
               <ProjectKnowHowIcon className="h-[97px] w-[75px]" />
@@ -77,31 +77,56 @@ export function FullCircleWheel() {
           </div>
         </div>
 
-        {/* Narrow screens: the ring can't survive, so it becomes a simple grid
-            under the brand mark. */}
-        <div className="lg:hidden flex flex-col items-center">
-          <PetalMark className="h-[28px] w-[31px]" />
-          <p
-            className="font-serif-brand font-normal text-oec-blue text-[34px] sm:text-[40px] tracking-[-0.8px] text-center mt-4"
-            style={{ fontVariationSettings: '"wdth" 100' }}
-          >
-            Full Circle fuel
-          </p>
+        {/* Narrow screens: circular graphic layout matching screenshot */}
+        <div className="lg:hidden relative w-[340px] h-[360px] mx-auto my-4 flex items-center justify-center">
+          {/* Circular dashed guide ring */}
+          <div className="absolute inset-[35px] rounded-full border border-dashed border-gray-300 pointer-events-none" />
 
-          <div className="grid grid-cols-2 gap-x-8 gap-y-14 mt-14 w-full max-w-[520px]">
-            {[
-              { id: "ready-financing", label: "Ready Financing", Icon: ReadyFinancingIcon, iconClass: "h-[64px] w-[65px]" },
-              ...leftColumn,
-              ...rightColumn,
-              { id: "project-know-how", label: "Project Know-How", Icon: ProjectKnowHowIcon, iconClass: "h-[82px] w-[63px]" },
-            ].map(({ id, label, Icon, iconClass }) => (
-              <div key={id} className="flex flex-col items-center gap-4 text-center">
-                <p className="font-sans-brand font-light text-oec-blue text-[18px] tracking-[-0.36px]">
-                  {label}
-                </p>
-                <Icon className={iconClass} />
-              </div>
-            ))}
+          {/* Center Circle */}
+          <div className="z-10 w-[130px] h-[130px] rounded-full bg-white border border-gray-100 shadow-md flex flex-col items-center justify-center p-3 text-center">
+            <PetalMark className="h-5 w-5 mb-1" />
+            <span
+              className="font-serif-brand text-oec-navy font-semibold text-[15px] leading-tight"
+              style={{ fontVariationSettings: '"wdth" 100' }}
+            >
+              Full Circle<br />Fuel
+            </span>
+          </div>
+
+          {/* 1. Top: Ready Financing */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Ready Financing</span>
+            <ReadyFinancingIcon className="w-10 h-10" />
+          </div>
+
+          {/* 2. Top Right: Anywhere Delivery */}
+          <div className="absolute top-[60px] right-[5px] flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Anywhere Delivery</span>
+            <AnywhereDeliveryIcon className="w-10 h-10" />
+          </div>
+
+          {/* 3. Bottom Right: Fair Pricing */}
+          <div className="absolute bottom-[60px] right-[10px] flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Fair Pricing</span>
+            <FairPricingIcon className="w-10 h-10" />
+          </div>
+
+          {/* 4. Bottom: Project Know-How */}
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Project Know-How</span>
+            <ProjectKnowHowIcon className="w-10 h-10" />
+          </div>
+
+          {/* 5. Bottom Left: Direct Access */}
+          <div className="absolute bottom-[60px] left-[10px] flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Direct Access</span>
+            <DirectAccessIcon className="w-10 h-10" />
+          </div>
+
+          {/* 6. Top Left: Offshore Focus */}
+          <div className="absolute top-[60px] left-[5px] flex flex-col items-center text-center z-10">
+            <span className="font-sans-brand text-[11px] font-medium text-oec-navy mb-1">Offshore Focus</span>
+            <OffshoreFocusIcon className="w-10 h-10" />
           </div>
         </div>
       </div>

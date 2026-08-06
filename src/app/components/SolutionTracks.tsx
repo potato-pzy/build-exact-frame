@@ -220,13 +220,13 @@ export default function SolutionTracks({ onNavigate }: { onNavigate?: (page: str
           {/* Badge */}
           <div className="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-[#FF5A00]/30 bg-white shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#FF5A00] mr-2"></span>
-            <span className="text-xs font-bold tracking-wider text-[#FF5A00] uppercase font-['Merriweather:Regular',serif]">
+            <span className="text-xs font-bold tracking-wider text-[#FF5A00] uppercase font-serif">
               <RevealText text="Our Solution Tracks" />
             </span>
           </div>
           
           {/* Main Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight text-slate-900 font-['Merriweather:Regular',serif]">
+          <h1 className="text-[clamp(1.75rem,5vw,3.75rem)] font-normal tracking-tight text-slate-900 font-serif">
              <RevealText text="Solutions for " />
              <span className="text-[#FF5A00]">
                <RevealText text="Every Security Function" />
@@ -253,7 +253,7 @@ export default function SolutionTracks({ onNavigate }: { onNavigate?: (page: str
               
               {/* Content */}
               <div className="flex-grow z-10">
-                <h3 className="text-xl font-normal text-slate-900 mb-3 group-hover:text-[#FF5A00] transition-colors font-['Merriweather:Regular',serif]">
+                <h3 className="text-xl font-normal text-slate-900 mb-3 group-hover:text-[#FF5A00] transition-colors font-serif">
                   <RevealText text={track.title} />
                 </h3>
                 <p className="text-slate-500 leading-relaxed text-[16px] font-['Merriweather_Sans:Light',sans-serif] font-light pr-12">
@@ -265,7 +265,7 @@ export default function SolutionTracks({ onNavigate }: { onNavigate?: (page: str
               <div className="mt-8 z-10 flex items-center">
                  <a 
                    href={track.link} 
-                   className="inline-flex items-center text-sm font-semibold text-[#FF5A00] group-hover:underline underline-offset-4 font-['Merriweather_Sans:Regular',sans-serif] !italic"
+                   className="inline-flex items-center min-h-[44px] text-sm font-semibold text-[#FF5A00] group-hover:underline underline-offset-4 font-['Merriweather_Sans:Regular',sans-serif] !italic"
                  >
                    <RevealText text="Learn more" />
                    <ArrowRight className="w-4 h-4 ml-1 transform group-hover:translate-x-1 transition-transform" />
@@ -288,7 +288,7 @@ export default function SolutionTracks({ onNavigate }: { onNavigate?: (page: str
               </div>
               <div>
                  <p className="text-slate-700 text-sm md:text-base font-['Merriweather_Sans:Light',sans-serif] font-light">
-                    <span className="font-normal text-slate-900 font-['Merriweather:Regular',serif]">
+                    <span className="font-normal text-slate-900 font-serif">
                       <RevealText text="One Platform. Every Function. Real Impact." />
                     </span>{" "}
                     <RevealText text="Unify your security programs and drive continuous improvement across people, process and technology." />

@@ -1,0 +1,25 @@
+.full-circle-fuel-page-container {
+  font-family: 'Merriweather Sans', sans-serif;
+  background: #f4f4f4;
+  color: #182d57;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.full-circle-fuel-page-container *,
+.full-circle-fuel-page-container *::before,
+.full-circle-fuel-page-container *::after {
+  box-sizing: border-box;
+}
+
+@media (max-width: 840px) {
+  .full-circle-fuel-page-container main {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .full-circle-fuel-page-container main {
+    padding: 0;
+  }
+}

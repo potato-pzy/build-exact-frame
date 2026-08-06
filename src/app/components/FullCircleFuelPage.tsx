@@ -4,6 +4,7 @@ import { Hero } from "./Hero";
 import { FullCircleWheel } from "./FullCircleWheel";
 import { CapabilityList } from "./CapabilityList";
 import { CtaBand } from "./CtaBand";
+import "./FullCircleFuelPage.css";
 
 interface FullCircleFuelPageProps {
   onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;

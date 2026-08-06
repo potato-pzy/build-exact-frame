@@ -189,7 +189,21 @@ export default function App() {
     const apply = () => {
       const w = outer.getBoundingClientRect().width || window.innerWidth;
       if (!w) return;
-      const scale = w / DESIGN_WIDTH;
+      if (w <= 840) {
+        inner.style.transform = "none";
+        inner.style.width = "100%";
+        inner.style.height = "auto";
+        inner.style.position = "relative";
+        inner.style.top = "0";
+        outer.style.height = "auto";
+        return;
+      }
+      inner.style.width = `${DESIGN_WIDTH}px`;
+      inner.style.height = `${DESIGN_HEIGHT}px`;
+      inner.style.position = "absolute";
+      inner.style.top = `-${NAVBAR_HEIGHT}px`;
+      const scale = Math.max(w / DESIGN_WIDTH, 0.45);
+      inner.style.transformOrigin = "top left";
       inner.style.transform = `scale(${scale})`;
       outer.style.height = `${-NAVBAR_HEIGHT + DESIGN_HEIGHT * scale}px`;
     };
@@ -269,7 +283,7 @@ export default function App() {
             top={3341}
             left={818}
             squareSize={36}
-            height={32}
+            height={44}
             totalWidth={155}
             squareColor="#182d57"
             restBg="#de5c35"

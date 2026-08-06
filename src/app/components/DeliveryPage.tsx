@@ -119,7 +119,12 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
       if (tween.scrollTrigger) triggers.push(tween.scrollTrigger);
     });
 
+    const refreshTimer = setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 250);
+
     return () => {
+      clearTimeout(refreshTimer);
       triggers.forEach((t) => t.kill());
     };
   }, []);
@@ -323,7 +328,98 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
         </div>
       </section>
 
+      {/* ── MOBILE DELIVERY CARDS SECTION (Rendered on mobile <= 900px) ── */}
+      <section className="mobile-delivery-cards-section">
+        {/* CARD 1 */}
+        <div className="mobile-delivery-card">
+          <div className="mobile-card-img-wrapper">
+            <img src={images[0].src} alt={images[0].alt} />
+          </div>
+          <h2>Delivery matches the site, not a fixed fleet</h2>
+          <p>
+            OEC charters bunker tankers, road tankers, and DP-2 supply vessels for every job, choosing whichever combination actually reaches the destination.
+          </p>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate?.("contact");
+            }}
+            className="cta-link"
+          >
+            <span>→</span> <span>Know more</span>
+          </a>
+        </div>
 
+        {/* CARD 2 */}
+        <div className="mobile-delivery-card">
+          <div className="mobile-card-img-wrapper">
+            <img src={images[1].src} alt={images[1].alt} />
+          </div>
+          <h2>Every major grade, ready when needed</h2>
+          <p>
+            OEC supplies VLSFO, HSFO, and MGO, covering the full range offshore operators run on, without treating any grade as a special request.
+          </p>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate?.("contact");
+            }}
+            className="cta-link"
+          >
+            <span>→</span> <span>Know more</span>
+          </a>
+        </div>
+
+        {/* CARD 3 */}
+        <div className="mobile-delivery-card">
+          <div className="mobile-card-img-wrapper">
+            <img src={images[2].src} alt={images[2].alt} />
+            <div className="mobile-card-checkmark">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" fill="#f25b17" fillOpacity="0.9" />
+                <path d="M7 12L10.5 15.5L17 8.5" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </div>
+          </div>
+          <h2>Every delivery follows the same standard</h2>
+          <p>
+            OEC follows ISO 8217, the international standard for marine fuel quality, on every delivery without exception, regardless of the site.
+          </p>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate?.("contact");
+            }}
+            className="cta-link"
+          >
+            <span>→</span> <span>Know more</span>
+          </a>
+        </div>
+
+        {/* CARD 4 */}
+        <div className="mobile-delivery-card">
+          <div className="mobile-card-img-wrapper">
+            <img src={images[3].src} alt={images[3].alt} />
+          </div>
+          <h2>Twenty-four hours, at most major ports</h2>
+          <p>
+            OEC can turn around a delivery within 24 hours at major bunkering ports, market availability permitting.
+          </p>
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              onNavigate?.("contact");
+            }}
+            className="cta-link"
+          >
+            <span>→</span> <span>Know more</span>
+          </a>
+        </div>
+      </section>
 
       {/* ── VESSEL BANNER ── */}
       <section className="delivery-banner">
