@@ -238,7 +238,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
                 }`}
               >
                 <span className="arrow">→</span>
-                <span>Explore</span>
+                <span>Know more</span>
               </a>
             </div>
           </div>
@@ -263,7 +263,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
                 }`}
               >
                 <span className="arrow">→</span>
-                <span>Explore</span>
+                <span>Know more</span>
               </a>
             </div>
           </div>
@@ -286,7 +286,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
                 className={`delivery-cta-link no-pulse ${panel3View ? "in-view" : ""}`}
               >
                 <span className="arrow">→</span>
-                <span>Explore</span>
+                <span>Know more</span>
               </a>
             </div>
           </div>
@@ -316,7 +316,7 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
                 className={`delivery-cta-link no-pulse ${panel4View ? "in-view" : ""}`}
               >
                 <span className="arrow">→</span>
-                <span>Explore</span>
+                <span>Know more</span>
               </a>
             </div>
           </div>

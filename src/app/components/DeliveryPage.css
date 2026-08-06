@@ -76,9 +76,9 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  padding: 142px 56px 40px 67px;
+  padding: 0 56px 0 67px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   z-index: 2;
 }
