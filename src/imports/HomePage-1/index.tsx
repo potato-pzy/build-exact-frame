@@ -590,10 +590,10 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       </div>
       <div className="absolute flex h-[1042px] items-center justify-center left-[619px] top-[1347px] w-0">
         <div className="flex-none rotate-90">
-          <div className="h-0 relative w-[1042px]">
-            <div className="absolute inset-[-0.3px_0_0_0]">
-              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 0.3">
-                <line id="Line 2" stroke="#575757" strokeWidth="0.3" x2="1042" y1="0.15" y2="0.15" />
+          <div className="h-px relative w-[1042px]">
+            <div className="absolute inset-0">
+              <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1042 1">
+                <line id="Line 2" stroke="#575757" strokeWidth="0.3" x2="1042" y1="0.5" y2="0.5" />
               </svg>
             </div>
           </div>
@@ -647,45 +647,45 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[670px] text-[14px] text-black top-[2253px] tracking-[-0.28px] w-[234px]">
         <RevealText text="When years of offshore focus mean this has already been solved before" />
       </p>
-      <div className="absolute h-0 left-[620px] top-[1603px] w-[660px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-[620px] top-[1603px] w-[660px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-[620px] top-[1743px] w-[660px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-[620px] top-[1743px] w-[660px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-[620px] top-[1883px] w-[660px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-[620px] top-[1883px] w-[660px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-[620px] top-[2023px] w-[660px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-[620px] top-[2023px] w-[660px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-[620px] top-[2158px] w-[660px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 0.3">
-            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-[620px] top-[2158px] w-[660px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 660 1">
+            <line id="Line 3" stroke="#575757" strokeWidth="0.3" x2="660" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[2389px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 0.3">
-            <line id="Line 7" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[2389px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" preserveAspectRatio="none" viewBox="0 0 1280 1">
+            <line id="Line 7" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>

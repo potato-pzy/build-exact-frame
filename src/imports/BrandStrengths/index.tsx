@@ -632,54 +632,54 @@ export default function BrandStrengths() {
     <div className="bg-[#f4f4f4] relative size-full" data-name="Brand Strengths">
       <div className="absolute bg-gradient-to-b from-[#1d2d55] h-[482px] left-0 to-[#173e63] to-[91.346%] top-[110px] via-[#1a365c] via-[75.481%] w-[1280px]" />
       <div className="absolute bg-white h-[3056px] left-0 top-[1439px] w-[1280px]" />
-      <div className="absolute h-0 left-0 top-[1739px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[1739px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[2491px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[2491px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[2992px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[2992px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[3493px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[3493px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[3994px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[3994px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
-      <div className="absolute h-0 left-0 top-[4495px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[4495px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 16" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
       <div className="absolute flex h-[3056px] items-center justify-center left-[1089px] top-[1439px] w-0">
         <div className="flex-none rotate-90">
-          <div className="h-0 relative w-[3056px]">
-            <div className="absolute inset-[-0.3px_0_0_0]">
-              <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 3056 0.3" width="3056">
-                <line id="Line 17" stroke="#575757" strokeWidth="0.3" x2="3056" y1="0.15" y2="0.15" />
+          <div className="h-px relative w-[3056px]">
+            <div className="absolute inset-0">
+              <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 3056 1" width="3056">
+                <line id="Line 17" stroke="#575757" strokeWidth="0.3" x2="3056" y1="0.5" y2="0.5" />
               </svg>
             </div>
           </div>
@@ -692,10 +692,10 @@ export default function BrandStrengths() {
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[993px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">Full Circle Fuel</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[1136px] text-[#f1f1f1] text-[14px] top-[52px] whitespace-nowrap">Contact</p>
       <Layer />
-      <div className="absolute h-0 left-0 top-[110px] w-[1280px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1280 0.3" width="1280">
-            <line id="Line 1" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.15" y2="0.15" />
+      <div className="absolute h-px left-0 top-[110px] w-[1280px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1280 1" width="1280">
+            <line id="Line 1" stroke="#575757" strokeWidth="0.3" x2="1280" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
@@ -804,10 +804,10 @@ export default function BrandStrengths() {
         <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgRectangle17} />
       </div>
       <Frame />
-      <div className="-translate-x-1/2 absolute h-0 left-[calc(50%+0.5px)] top-[5102px] w-[1127px]">
-        <div className="absolute inset-[-0.3px_0_0_0]">
-          <svg className="block size-full" fill="none" height="0.3" preserveAspectRatio="none" viewBox="0 0 1127 0.3" width="1127">
-            <line id="Line 11" stroke="#5B639F" strokeWidth="0.3" x2="1127" y1="0.15" y2="0.15" />
+      <div className="-translate-x-1/2 absolute h-px left-[calc(50%+0.5px)] top-[5102px] w-[1127px]">
+        <div className="absolute inset-0">
+          <svg className="block size-full" fill="none" height="1" preserveAspectRatio="none" viewBox="0 0 1127 1" width="1127">
+            <line id="Line 11" stroke="#5B639F" strokeWidth="0.3" x2="1127" y1="0.5" y2="0.5" />
           </svg>
         </div>
       </div>
