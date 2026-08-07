@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./AboutPage.css";
-import heroBg from "/img/Bunker_tanker_underway_on_water_202607251138.webp";
+import heroBg from "../../../public/img/Bunker_tanker_underway_on_water_202607251138.webp";
 import shipImg from "../../../public/img/ship.png";
 import oecLogoImg from "../../../public/img/oec-logo.webp";
 import Navbar from "./Navbar";
@@ -14,14 +14,9 @@ interface AboutPageProps {
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
-  const heroRef = useRef<HTMLDivElement>(null);
-
-  const { scrollYProgress: heroScroll } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"],
-  });
-  // Limit parallax range to prevent free space.
-  const heroY = useTransform(heroScroll, [0, 1], ["0%", "15%"]);
+  const { scrollY } = useScroll();
+  // Smooth parallax translation from -30px to 90px as user scrolls 0 to 600px
+  const heroY = useTransform(scrollY, [0, 600], ["-30px", "90px"]);
 
   return (
     <div className="about-page-container">
@@ -29,12 +24,12 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <Navbar onNavigate={onNavigate} currentPage="about" />
 
       {/* HERO */}
-      <section ref={heroRef} className="hero">
+      <section className="hero">
         <motion.img
           className="hero-bg"
           src={heroBg}
           alt="Offshore oil platform at sea"
-          style={{ y: heroY }}
+          style={{ y: heroY, scale: 1.25 }}
         />
       </section>
 
