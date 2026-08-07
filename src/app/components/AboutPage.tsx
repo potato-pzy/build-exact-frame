@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./AboutPage.css";
-import heroBg from "../../../public/img/hero.webp";
+import heroBg from "/img/Bunker_tanker_underway_on_water_202607251138.webp";
 import shipImg from "../../../public/img/ship.png";
 import oecLogoImg from "../../../public/img/oec-logo.webp";
 import Navbar from "./Navbar";
@@ -20,7 +20,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
     target: heroRef,
     offset: ["start start", "end start"],
   });
-  // Limit parallax range to prevent free space. 15% of 140% height = 21%, covered by scale 1.25 + top -20%
+  // Limit parallax range to prevent free space.
   const heroY = useTransform(heroScroll, [0, 1], ["0%", "15%"]);
 
   return (
@@ -34,7 +34,7 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           className="hero-bg"
           src={heroBg}
           alt="Offshore oil platform at sea"
-          style={{ y: heroY, scale: 1.25 }}
+          style={{ y: heroY }}
         />
       </section>
 
