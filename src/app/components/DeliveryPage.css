@@ -351,13 +351,13 @@
 /* ── CTA ── */
 .delivery-page-container .delivery-cta {
   background: #f4f4f4;
-  padding: 64px 67px 72px;
+  padding: 64px 7% 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 40px;
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .delivery-page-container .delivery-cta h2 {
@@ -369,6 +369,7 @@
   line-height: 1.4;
   max-width: 560px;
   margin: 0;
+  padding-left: 0px;
 }
 
 /* ── ACCESSIBILITY / PREFERS REDUCED MOTION ── */
@@ -391,12 +392,22 @@
 }
 
 @media (max-width: 900px) {
+  .delivery-page-container {
+    padding-top: 72px;
+  }
+
   .delivery-page-container .delivery-hero {
-    padding: 36px 20px 32px;
+    min-height: 35vh;
+    padding: 28px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
   }
   .delivery-page-container .delivery-hero h1 {
-    font-size: 22px;
-    line-height: 1.4;
+    font-size: 20px;
+    line-height: 1.38;
+    max-width: 100%;
   }
 
   /* Hide 2-column sticky section on mobile to avoid overlapping */

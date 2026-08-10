@@ -4,7 +4,6 @@ import { Hero } from "./Hero";
 import { FullCircleWheel } from "./FullCircleWheel";
 import { CapabilityList } from "./CapabilityList";
 import { CtaBand } from "./CtaBand";
-import "./FullCircleFuelPage.css";
 
 interface FullCircleFuelPageProps {
   onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
@@ -12,7 +11,7 @@ interface FullCircleFuelPageProps {
 
 export default function FullCircleFuelPage({ onNavigate }: FullCircleFuelPageProps) {
   return (
-    <div className="full-circle-fuel-page-container min-h-screen bg-oec-grey-bg flex flex-col">
+    <div className="full-circle-fuel-page-container min-h-screen bg-oec-grey-bg flex flex-col pt-[72px] lg:pt-0">
       {/* Shared Navbar */}
       <Navbar onNavigate={onNavigate} currentPage="full-circle-fuel" />
 

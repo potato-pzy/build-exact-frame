@@ -1,5 +1,6 @@
-import { Logo } from "./brand/Logo";
+import { Layer1 } from "@/imports/HomePage-1/index";
 import { FooterFlare } from "./brand/FooterFlare";
+import { Logo } from "./brand/Logo";
 
 interface FooterProps {
   onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
@@ -21,15 +22,17 @@ export default function Footer({ onNavigate }: FooterProps) {
         }}
       />
 
-      {/* Desktop Footer Content Container (hidden on mobile) */}
+      {/* ── DESKTOP FOOTER CONTAINER (exact Figma spec from git) ── */}
       <div className="hidden md:flex relative w-full h-full px-[7%] mx-auto z-10 flex-col">
         {/* Top section: Logo */}
         <div className="pt-[54px]">
           <div
             onClick={() => onNavigate?.("home")}
-            className="w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity"
+            className="w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity overflow-hidden"
           >
-            <Logo variant="light" className="w-[254px] h-[56px]" />
+            <div style={{ position: "relative", width: 254, height: 56, marginTop: -3579, marginLeft: -84 }}>
+              <Layer1 />
+            </div>
           </div>
         </div>
 
@@ -39,19 +42,19 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="flex flex-col gap-[24px] w-[240px]">
             <button
               onClick={() => onNavigate?.("home")}
-              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               HOME
             </button>
             <button
               onClick={() => onNavigate?.("about")}
-              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               ABOUT
             </button>
             <button
               onClick={() => onNavigate?.("delivery")}
-              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               DELIVERY
             </button>
@@ -60,13 +63,13 @@ export default function Footer({ onNavigate }: FooterProps) {
           <div className="flex flex-col gap-[24px]">
             <button
               onClick={() => onNavigate?.("full-circle-fuel")}
-              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               ONE STOP SOLUTION
             </button>
             <button
               onClick={() => onNavigate?.("contact")}
-              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               CONTACT
             </button>
@@ -77,19 +80,19 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="w-full h-[0.5px] bg-[#5a629f] mt-[52px]"></div>
 
         {/* Legal Row */}
-        <div className="flex flex-row justify-between items-center mt-[14px] pl-[9px]">
+        <div className="flex justify-between items-center mt-[14px] pl-[9px]">
           <div className="flex items-center">
             <div className="w-[240px]">
               <button
                 onClick={() => onNavigate?.("about")}
-                className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+                className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
               >
                 TERMS &amp; CONDITIONS
               </button>
             </div>
             <button
               onClick={() => onNavigate?.("about")}
-              className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer min-h-[44px] inline-flex items-center"
+              className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               PRIVACY POLICY
             </button>
@@ -100,9 +103,8 @@ export default function Footer({ onNavigate }: FooterProps) {
         </div>
       </div>
 
-      {/* ── MOBILE FOOTER DESIGN (shown on screen width < 768px / md) ── */}
+      {/* ── MOBILE FOOTER CONTAINER (screens < 768px) ── */}
       <div className="block md:hidden w-full px-6 pt-10 pb-12 relative z-10">
-        {/* Top Row: Logo + Scroll to top chevron button */}
         <div className="flex items-center justify-between mb-8">
           <div
             onClick={() => {
@@ -124,7 +126,6 @@ export default function Footer({ onNavigate }: FooterProps) {
           </button>
         </div>
 
-        {/* Main Navigation Links with > chevrons */}
         <div className="flex flex-col border-t border-white/10">
           <div
             onClick={() => {
@@ -192,33 +193,8 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        {/* Centered Social Buttons */}
-        <div className="flex items-center justify-center gap-4 my-8 pb-4 border-b border-white/10">
-          {/* LinkedIn */}
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:border-white transition-colors"
-            aria-label="LinkedIn"
-          >
-            <span className="font-semibold text-[15px] font-sans">in</span>
-          </a>
 
-          {/* Email */}
-          <a
-            href="mailto:contact@offshoreenergy.sg"
-            className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:border-white transition-colors"
-            aria-label="Email"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-              <rect x="2" y="4" width="20" height="16" rx="2" />
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-            </svg>
-          </a>
-        </div>
 
-        {/* Secondary Legal Links */}
         <div className="flex flex-col mb-8">
           <div
             onClick={() => onNavigate?.("contact")}
@@ -241,7 +217,6 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
         </div>
 
-        {/* Copyright */}
         <p className="text-white/50 text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light">
           © Offshore Energy Consultants Pvt Ltd 2026 – All Rights Reserved
         </p>
@@ -249,4 +224,3 @@ export default function Footer({ onNavigate }: FooterProps) {
     </footer>
   );
 }
-

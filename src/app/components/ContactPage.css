@@ -186,14 +186,16 @@
 /* ── Orange CTA Banner ── */
 .contact-page-container .orange-banner {
   background: #de5c35;
-  padding: 64px 32px;
+  padding: 64px 7%;
   width: 100%;
   box-sizing: border-box;
 }
 
 .contact-page-container .orange-banner-inner {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .contact-page-container .orange-banner p {
@@ -212,6 +214,10 @@
    MOBILE OVERRIDES (≤840px)
    ══════════════════════════════════════ */
 @media (max-width: 840px) {
+  .contact-page-container {
+    padding-top: 72px;
+  }
+
   /* Main wrapper */
   .contact-page-container main {
     max-width: 100%;

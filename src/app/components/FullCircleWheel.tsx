@@ -30,7 +30,7 @@ const rightColumn: Capability[] = [
 function Spoke({ label, Icon, iconClass }: Omit<Capability, "id">) {
   return (
     <div className="flex flex-col items-center gap-6 text-center">
-      <p className="font-sans-brand font-light text-oec-blue text-[clamp(1rem,3.5vw,1.5rem)] tracking-[-0.48px]">
+      <p className="font-sans-brand font-light text-oec-blue text-[20px] lg:text-[24px] tracking-[-0.48px]">
         {label}
       </p>
       <Icon className={iconClass} />
@@ -63,7 +63,7 @@ export function FullCircleWheel() {
             </p>
 
             <div className="mt-[100px] flex flex-col items-center gap-6 text-center">
-              <p className="font-sans-brand font-light text-oec-blue text-[clamp(1rem,3.5vw,1.5rem)] tracking-[-0.48px]">
+              <p className="font-sans-brand font-light text-oec-blue text-[24px] tracking-[-0.48px]">
                 Project Know-How
               </p>
               <ProjectKnowHowIcon className="h-[97px] w-[75px]" />
@@ -77,13 +77,10 @@ export function FullCircleWheel() {
           </div>
         </div>
 
-        {/* Narrow screens: circular graphic layout matching screenshot */}
+        {/* Narrow screens: circular graphic layout matching mobile design */}
         <div className="lg:hidden relative w-[340px] h-[360px] mx-auto my-4 flex items-center justify-center">
-          {/* Circular dashed guide ring */}
-          <div className="absolute inset-[35px] rounded-full border border-dashed border-gray-300 pointer-events-none" />
-
           {/* Center Circle */}
-          <div className="z-10 w-[130px] h-[130px] rounded-full bg-white border border-gray-100 shadow-md flex flex-col items-center justify-center p-3 text-center">
+          <div className="z-10 w-[130px] h-[130px] rounded-full flex flex-col items-center justify-center p-3 text-center">
             <PetalMark className="h-5 w-5 mb-1" />
             <span
               className="font-serif-brand text-oec-navy font-semibold text-[15px] leading-tight"

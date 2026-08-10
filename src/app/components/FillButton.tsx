@@ -23,7 +23,7 @@ export interface FillButtonProps {
 
 export default function FillButton({
   squareSize = 36,
-  height = 44,
+  height = 36,
   width = 160,
   squareColor = "#f25b17",
   restBg = "#f4f4f4",
@@ -66,7 +66,6 @@ export default function FillButton({
         position: "relative",
         width,
         height,
-        minHeight: 44,
         cursor: "pointer",
         display: "inline-flex",
         alignItems: "center",

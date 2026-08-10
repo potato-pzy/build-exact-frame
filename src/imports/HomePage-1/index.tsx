@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./HomePage.css";
 import svgPaths from "./svg-hsfh0kwwsp";
-import heroBg from "../../../public/img/Hero.webp";
+import heroBg from "../../../public/img/ChatGPT Image Aug 10, 2026, 12_22_37 PM.webp";
 import svgMoney from "/svg/Money.svg";
 import svgShip from "/svg/Ship.svg";
 import svgReadyFinancing from "/svg/Ready Financing.svg";
@@ -524,8 +524,10 @@ export function Layer1() {
 
 export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void }) {
   const { scrollY } = useScroll();
-  // Smooth parallax translation from -40px to 80px as user scrolls 0 to 800px
-  const heroY = useTransform(scrollY, [0, 800], ["-40px", "80px"]);
+  // Smooth parallax translation starting at -300px for desktop canvas
+  const heroY = useTransform(scrollY, [0, 800], ["-300px", "-100px"]);
+  // Mobile parallax transform starting at 0px so image is fully visible on load
+  const mobileHeroY = useTransform(scrollY, [0, 500], ["0px", "-40px"]);
 
   return (
     <div className="bg-[#f4f4f4] relative size-full" data-name="Home Page">
@@ -571,15 +573,13 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         </div>
 
         {/* Main hero vessel image */}
-        <div className="absolute h-[378px] left-0 top-[428px] w-[1280px]">
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <motion.img 
-              alt="Offshore energy vessel tanker background" 
-              className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-[center_35%]" 
-              src={heroBg} 
-              style={{ y: heroY, scale: 1.25 }}
-            />
-          </div>
+        <div className="absolute h-[378px] left-0 top-[428px] w-[1280px] overflow-hidden">
+          <motion.img
+            alt="Offshore energy vessel tanker background"
+            className="w-full h-auto min-h-full object-cover object-center pointer-events-none"
+            src={heroBg}
+            style={{ y: heroY }}
+          />
         </div>
         <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
           <RevealText text="Name for Brand Strengths" />
@@ -785,12 +785,12 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         </section>
 
         {/* HERO IMAGE */}
-        <div className="mobile-hero-img-container overflow-hidden relative">
-          <motion.img 
-            src={heroBg} 
-            alt="Offshore oil platform at sea" 
-            style={{ y: heroY, scale: 1.25 }}
-            className="absolute top-[-20%] left-0 w-full h-[140%] object-cover object-[center_35%]"
+        <div className="mobile-hero-img-container relative flex items-center justify-center overflow-hidden">
+          <motion.img
+            src={heroBg}
+            alt="Offshore oil platform at sea"
+            style={{ y: mobileHeroY }}
+            className="w-full h-auto min-h-full object-cover object-center"
           />
         </div>
 
@@ -968,7 +968,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <section className="mobile-contact-banner">
           <h2>Talk to someone who can say yes.</h2>
           <p>No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot.</p>
-          
+
           <div className="mobile-contact-btn">
             <FillButton
               squareSize={36}

@@ -2,8 +2,8 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./AboutPage.css";
 import heroBg from "../../../public/img/Bunker_tanker_underway_on_water_202607251138.webp";
-import shipImg from "../../../public/img/ship.png";
-import oecLogoImg from "../../../public/img/oec-logo.webp";
+import shipImg from "../../../public/img/Ship image About page.webp";
+import oecLogoImg from "../../../public/img/OEC Building.webp";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import FillButton from "./FillButton";
@@ -123,40 +123,14 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
       <section className="stats-bar">
         <div className="stats-inner">
           <div className="stat">
-            <div className="stat-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                <line x1="16" y1="2" x2="16" y2="6" />
-                <line x1="8" y1="2" x2="8" y2="6" />
-                <line x1="3" y1="10" x2="21" y2="10" />
-              </svg>
-            </div>
             <p className="stat-text">Founded in 2022</p>
           </div>
 
-          <div className="stat-divider" />
-
           <div className="stat">
-            <div className="stat-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                <circle cx="12" cy="10" r="3" />
-              </svg>
-            </div>
             <p className="stat-text">Headquartered in Singapore</p>
           </div>
 
-          <div className="stat-divider" />
-
           <div className="stat">
-            <div className="stat-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 21h20" />
-                <path d="M19.38 20A11.6 11.6 0 0 0 21 14l-9-4-9 4c0 2.9.94 5.64 2.62 7.85" />
-                <path d="M12 10V4" />
-                <path d="M8 7h8" />
-              </svg>
-            </div>
             <p className="stat-text">Offshore upstream fuel supply, exclusively</p>
           </div>
         </div>

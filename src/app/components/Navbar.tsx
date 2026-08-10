@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Logo } from "./brand/Logo";
+import { Layer } from "@/imports/HomePage-1/index";
 
 type Page = "home" | "about" | "contact" | "delivery" | "full-circle-fuel";
 
@@ -10,10 +10,10 @@ interface NavbarProps {
 }
 
 const NAV_ITEMS: { label: string; page: Page }[] = [
-  { label: "Home", page: "home" },
-  { label: "About", page: "about" },
-  { label: "Delivery", page: "delivery" },
-  { label: "Full Circle Fuel", page: "full-circle-fuel" },
+  { label: "HOME", page: "home" },
+  { label: "ABOUT", page: "about" },
+  { label: "DELIVERY", page: "delivery" },
+  { label: "FULL CIRCLE FUEL", page: "full-circle-fuel" },
 ];
 
 export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
@@ -24,13 +24,17 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
     onNavigate?.(page);
   };
 
-  // Lock body scroll when menu is open
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [menuOpen]);
 
-  // ESC to close
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && setMenuOpen(false);
     window.addEventListener("keydown", onKey);
@@ -39,53 +43,57 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
 
   return (
     <>
-      {/* Backdrop */}
+      {/* Mobile Backdrop */}
       <div
         className={`nav-backdrop ${menuOpen ? "open" : ""}`}
         onClick={() => setMenuOpen(false)}
         aria-hidden="true"
       />
 
-      <nav className="main-navbar" aria-label="Main navigation">
+      <nav className="main-navbar">
         <div className="nav-inner">
+          <div className="logo" onClick={() => handleNavClick("home")}>
+            <Layer />
+          </div>
 
-          {/* ── Logo ── */}
-          <button
-            className="nav-logo"
-            onClick={() => handleNavClick("home")}
-            aria-label="Go to home"
-          >
-            <Logo variant="dark" className="nav-logo-svg" />
-          </button>
-
-          {/* ── Desktop nav links ── */}
-          <ul className="nav-desktop-links" role="list">
+          {/* Desktop Links */}
+          <ul className="nav-links">
             {NAV_ITEMS.map(({ label, page }) => (
               <li key={page}>
-                <button
-                  className={`nav-desktop-link ${currentPage === page ? "active" : ""}`}
-                  onClick={() => handleNavClick(page)}
+                <a
+                  href="#"
+                  className={currentPage === page ? "active" : ""}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavClick(page);
+                  }}
                 >
                   {label}
-                </button>
+                </a>
               </li>
             ))}
             <li>
-              <button
-                className={`nav-cta-btn ${currentPage === "contact" ? "active" : ""}`}
-                onClick={() => handleNavClick("contact")}
+              <a
+                href="#"
+                className={`btn-contact-wipe ${currentPage === "contact" ? "active" : ""}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleNavClick("contact");
+                }}
               >
-                Contact
-              </button>
+                <span className="btn-contact-bg-text">CONTACT</span>
+                <div className="btn-contact-wipe-layer">
+                  <span className="btn-contact-wipe-text">CONTACT</span>
+                </div>
+              </a>
             </li>
           </ul>
 
-          {/* ── Hamburger — mobile only ── */}
+          {/* Mobile Hamburger */}
           <button
             className={`nav-hamburger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label={menuOpen ? "Close menu" : "Open menu"}
-            aria-expanded={menuOpen}
           >
             <span className="hb-line" />
             <span className="hb-line" />
@@ -94,45 +102,42 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
         </div>
       </nav>
 
-      {/* ── Mobile drawer ── */}
-      <div className={`nav-drawer ${menuOpen ? "open" : ""}`} role="dialog" aria-modal="true" aria-label="Navigation menu">
+      {/* Mobile Drawer */}
+      <div className={`nav-drawer ${menuOpen ? "open" : ""}`}>
+        <div className="nav-drawer-header">
+          <button
+            className="nav-drawer-close-btn"
+            onClick={() => setMenuOpen(false)}
+            aria-label="Close menu"
+          >
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+        </div>
         <div className="nav-drawer-inner">
-
-          {/* Links */}
-          <ul className="nav-drawer-links" role="list">
+          <ul className="nav-drawer-links">
             {NAV_ITEMS.map(({ label, page }, i) => (
-              <li key={page} className="nav-drawer-item" style={{ "--i": i } as React.CSSProperties}>
+              <li key={page}>
                 <button
                   className={`nav-drawer-link ${currentPage === page ? "active" : ""}`}
                   onClick={() => handleNavClick(page)}
                 >
                   <span className="drawer-link-number">{String(i + 1).padStart(2, "0")}</span>
                   <span className="drawer-link-label">{label}</span>
-                  <svg className="drawer-link-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <line x1="5" y1="12" x2="19" y2="12" />
-                    <polyline points="12 5 19 12 12 19" />
-                  </svg>
                 </button>
               </li>
             ))}
           </ul>
-
-          {/* Contact CTA */}
-          <div className="nav-drawer-cta" style={{ "--i": NAV_ITEMS.length } as React.CSSProperties}>
+          <div className="nav-drawer-cta">
             <button
               className={`nav-drawer-cta-btn ${currentPage === "contact" ? "active" : ""}`}
               onClick={() => handleNavClick("contact")}
             >
-              <span>Get in Touch</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                <line x1="5" y1="12" x2="19" y2="12" />
-                <polyline points="12 5 19 12 12 19" />
-              </svg>
+              Get in Touch
             </button>
           </div>
-
-          {/* Footer note */}
-          <p className="nav-drawer-footer">Offshore Energy Consultants Pte Ltd</p>
         </div>
       </div>
     </>

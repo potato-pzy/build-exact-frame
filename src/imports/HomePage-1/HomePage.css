@@ -15,6 +15,7 @@
     width: 100%;
     background: #f4f4f4;
     overflow-x: hidden;
+    padding-top: 72px;
   }
 
   /* MOBILE HERO SECTION */
@@ -50,16 +51,17 @@
   /* HERO IMAGE */
   .mobile-hero-img-container {
     width: 100%;
-    height: 340px;
-    overflow: hidden;
+    aspect-ratio: 2000 / 1116;
+    height: auto;
     position: relative;
+    overflow: hidden;
   }
 
   .mobile-hero-img-container img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center;
   }
 
   /* CENTERED REASON SECTION */
@@ -163,7 +165,7 @@
     width: 64px;
     height: 64px;
     border-radius: 12px;
-    background: #f2f4f7;
+    background: transparent;
     display: flex;
     align-items: center;
     justify-content: center;

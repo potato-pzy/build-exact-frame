@@ -13,21 +13,26 @@ interface DeliveryPageProps {
   onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
 }
 
+import delivery1Img from "../../../public/img/Delivery 1.webp";
+import delivery2Img from "../../../public/img/Delivery 2.webp";
+import delivery3Img from "../../../public/img/Delivery 3.webp";
+import delivery4Img from "../../../public/img/Delivery 4.webp";
+
 const images = [
   {
-    src: "https://images.unsplash.com/photo-1518527989017-5baca7a58d3c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1200&q=80",
+    src: delivery1Img,
     alt: "Offshore supply vessel at sea",
   },
   {
-    src: "https://images.unsplash.com/photo-1538474705339-e87de81450e8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80",
+    src: delivery2Img,
     alt: "Marine fuel pipes and valves",
   },
   {
-    src: "https://images.unsplash.com/photo-1745192893031-2e17fa13fd89?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80",
+    src: delivery3Img,
     alt: "Marine worker on offshore deck",
   },
   {
-    src: "https://images.unsplash.com/photo-1598193957011-39b9f2916992?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=800&q=80",
+    src: delivery4Img,
     alt: "Port at dusk with vessels",
   },
 ];

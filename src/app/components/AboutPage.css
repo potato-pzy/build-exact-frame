@@ -281,12 +281,14 @@
 /* CTA */
 .about-page-container .cta-section {
   background: #ffffff;
-  padding: 82px 68px 90px;
+  padding: 82px 7% 90px;
 }
 
 .about-page-container .cta-inner {
-  max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
+  padding-left: 0px;
+  padding-right: 0px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -340,6 +342,10 @@
 
 /* Mobile Responsiveness for About Page */
 @media (max-width: 840px) {
+  .about-page-container {
+    padding-top: 72px;
+  }
+
   .about-page-container .hero {
     height: 320px;
   }
