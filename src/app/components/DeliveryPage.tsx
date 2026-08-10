@@ -381,12 +381,6 @@ export default function DeliveryPage({ onNavigate }: DeliveryPageProps) {
         <div className="mobile-delivery-card">
           <div className="mobile-card-img-wrapper">
             <img src={images[2].src} alt={images[2].alt} />
-            <div className="mobile-card-checkmark">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" fill="#f25b17" fillOpacity="0.9" />
-                <path d="M7 12L10.5 15.5L17 8.5" stroke="#ffffff" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </div>
           </div>
           <h2>Every delivery follows the same standard</h2>
           <p>

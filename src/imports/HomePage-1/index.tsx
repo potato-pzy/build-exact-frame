@@ -582,7 +582,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           />
         </div>
         <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-          <RevealText text="Name for Brand Strengths" />
+          <RevealText text="Full circle fuel" />
         </p>
         <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
           <CountUp end={1} suffix=" M+" duration={1200} />
@@ -812,7 +812,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         {/* WHY OEC SECTION */}
         <section className="mobile-why-section">
           <div className="mobile-why-tag">WHY OEC</div>
-          <h2 className="mobile-why-title">Name for Brand Strengths</h2>
+          <h2 className="mobile-why-title">Full circle fuel</h2>
           <div className="mobile-why-orange-line" />
 
           <div className="mobile-strengths-list">

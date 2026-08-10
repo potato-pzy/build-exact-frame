@@ -196,7 +196,7 @@ function CapabilityRow({
 }
 
 export function CapabilityList() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0); // First item open by default
+  const [openIndex, setOpenIndex] = useState<number | null>(null); // All items closed by default
 
   const toggleRow = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
