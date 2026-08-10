@@ -3,7 +3,7 @@ import { FooterFlare } from "./brand/FooterFlare";
 import { Logo } from "./brand/Logo";
 
 interface FooterProps {
-  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
@@ -62,10 +62,10 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Column 2 */}
           <div className="flex flex-col gap-[24px]">
             <button
-              onClick={() => onNavigate?.("full-circle-fuel")}
+              onClick={() => onNavigate?.("integrated-fuel-solution")}
               className="text-left text-[#c1c1c1] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
-              ONE STOP SOLUTION
+              INTEGRATED FUEL SOLUTION
             </button>
             <button
               onClick={() => onNavigate?.("contact")}
@@ -168,12 +168,12 @@ export default function Footer({ onNavigate }: FooterProps) {
 
           <div
             onClick={() => {
-              onNavigate?.("full-circle-fuel");
+              onNavigate?.("integrated-fuel-solution");
               window.scrollTo({ top: 0, behavior: "smooth" });
             }}
             className="flex items-center justify-between py-4 border-b border-white/10 text-white font-['Merriweather_Sans:Light',sans-serif] text-[17px] font-light cursor-pointer hover:text-orange-400 transition-colors"
           >
-            <span>One Stop Solution</span>
+            <span>Integrated Fuel Solution</span>
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-60">
               <polyline points="9 18 15 12 9 6" />
             </svg>

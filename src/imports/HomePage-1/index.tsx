@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform } from "motion/react";
 import "./HomePage.css";
 import svgPaths from "./svg-hsfh0kwwsp";
-import heroBg from "../../../public/img/ChatGPT Image Aug 10, 2026, 12_22_37 PM.webp";
+import heroBg from "/img/ChatGPT Image Aug 10, 2026, 12_22_37 PM.webp";
 import svgMoney from "/svg/Money.svg";
 import svgShip from "/svg/Ship.svg";
 import svgReadyFinancing from "/svg/Ready Financing.svg";
@@ -95,16 +95,21 @@ function LtRadialRepeatGt5() {
 export function LogoRing({ size = 47, style = {} }: { size?: number; style?: React.CSSProperties }) {
   return (
     <div
-      className="relative overflow-clip shrink-0"
+      className="relative flex items-center justify-center shrink-0"
       style={{ width: size, height: size, ...style }}
       data-name="Logo_Ring"
     >
-      <LtRadialRepeatGt />
-      <LtRadialRepeatGt1 />
-      <LtRadialRepeatGt2 />
-      <LtRadialRepeatGt3 />
-      <LtRadialRepeatGt4 />
-      <LtRadialRepeatGt5 />
+      <svg width={size} height={size} viewBox="0 0 32 32" fill="none" aria-hidden>
+        <circle
+          cx="16"
+          cy="16"
+          r="12"
+          stroke="#F25B17"
+          strokeWidth="3.5"
+          strokeDasharray="4.5 4.5"
+          strokeLinecap="round"
+        />
+      </svg>
     </div>
   );
 }
@@ -522,7 +527,7 @@ export function Layer1() {
   );
 }
 
-export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void }) {
+export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void }) {
   const { scrollY } = useScroll();
   // Smooth parallax translation starting at -300px for desktop canvas
   const heroY = useTransform(scrollY, [0, 800], ["-300px", "-100px"]);
@@ -582,7 +587,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           />
         </div>
         <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[normal] left-[calc(50%-578px)] text-[#182d57] text-[32px] top-[1489px] tracking-[-0.64px] w-[323px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-          <RevealText text="Full circle fuel" />
+          <RevealText text="Integrated Fuel Solution" />
         </p>
         <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-540px)] text-[#264b7f] text-[53px] top-[2863px] tracking-[-1.06px] w-[238px]" style={{ fontVariationSettings: '"wdth" 100' }}>
           <CountUp end={1} suffix=" M+" duration={1200} />
@@ -716,7 +721,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
         </div>
         <div className="absolute h-[74px] left-[1036px] top-[2051px] w-[77px]" data-name="image 9">
-          <img alt="Project Know How icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgProjectKnowHow} />
+          <img alt="Direct Access icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgIsolationMode} />
         </div>
         <div className="absolute h-[74px] left-[1036px] top-[2211px] w-[77px]" data-name="image 7">
           <img alt="Offshore Focus icon" className="absolute inset-0 max-w-none object-contain pointer-events-none size-full" src={svgOffshoreFocus} />
@@ -812,7 +817,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         {/* WHY OEC SECTION */}
         <section className="mobile-why-section">
           <div className="mobile-why-tag">WHY OEC</div>
-          <h2 className="mobile-why-title">Full circle fuel</h2>
+          <h2 className="mobile-why-title">Integrated Fuel Solution</h2>
           <div className="mobile-why-orange-line" />
 
           <div className="mobile-strengths-list">

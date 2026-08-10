@@ -1,8 +1,9 @@
-import svgReadyFinancing from "/svg/Ready Financing.svg";
-import svgOffshoreFocus from "/svg/offsshore focus.svg";
-import svgAnywhereDelivery from "/svg/Anywhere Delivery.svg";
-import svgFairPricing from "/svg/Fair pricing.svg";
-import svgProjectKnowHow from "/svg/Project know how.svg";
+import svgReadyFinancing from "/svg/1.svg";
+import svgOffshoreFocus from "/svg/5-1.svg";
+import svgAnywhereDelivery from "/svg/2.svg";
+import svgFairPricing from "/svg/3.svg";
+import svgProjectKnowHow from "/svg/4.svg";
+import svgIsolationMode from "/svg/5.svg";
 import svgPaths from "../../../imports/BrandStrengths/svg-wgo26ydiex";
 
 type IconProps = { className?: string };
@@ -29,9 +30,9 @@ export function FairPricingIcon({ className = "" }: IconProps) {
   return <img src={svgFairPricing} alt="Fair Pricing" className={`object-contain ${className}`} />;
 }
 
-/** Direct Access — the handshake mark. */
+/** Direct Access — the phone / person mark. */
 export function DirectAccessIcon({ className = "" }: IconProps) {
-  return <img src={svgProjectKnowHow} alt="Direct Access" className={`object-contain ${className}`} />;
+  return <img src={svgIsolationMode} alt="Direct Access" className={`object-contain ${className}`} />;
 }
 
 /** Project Know-How — the rosette mark. */
@@ -39,16 +40,19 @@ export function ProjectKnowHowIcon({ className = "" }: IconProps) {
   return <img src={svgProjectKnowHow} alt="Project Know How" className={`object-contain ${className}`} />;
 }
 
-/** The small six-petal mark that sits directly above the "Full Circle fuel" wordmark. */
+/** The small six-petal mark that sits directly above the "Integrated Fuel Solutions" wordmark. */
 export function PetalMark({ className = "" }: IconProps) {
   return (
-    <svg className={className} fill="none" viewBox="0 0 32 29" aria-hidden>
-      <path d={svgPaths.p195f200} fill={ORANGE} transform="translate(10.4 23.6)" />
-      <path d={svgPaths.p19d09f71} fill={ORANGE} transform="translate(0.7 15.2)" />
-      <path d={svgPaths.p244b6800} fill={ORANGE} transform="translate(0 3.7)" />
-      <path d={svgPaths.p2fdba380} fill={ORANGE} transform="translate(11 0)" />
-      <path d={svgPaths.pd806500} fill={ORANGE} transform="translate(22.8 3.2)" />
-      <path d={svgPaths.p22eac800} fill={ORANGE} transform="translate(23.2 15.2)" />
+    <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
+      <circle
+        cx="16"
+        cy="16"
+        r="12"
+        stroke={ORANGE}
+        strokeWidth="3.5"
+        strokeDasharray="4.5 4.5"
+        strokeLinecap="round"
+      />
     </svg>
   );
 }

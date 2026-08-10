@@ -115,9 +115,6 @@ function CapabilityRow({
     >
       {/* Mobile Row Layout */}
       <div className="lg:hidden p-5 flex items-start gap-4 border-b border-gray-100 bg-white">
-        <div className="w-12 h-12 flex items-center justify-center flex-shrink-0 mt-0.5">
-          <Icon className="w-6 h-6 object-contain" />
-        </div>
         <div className="flex-1 min-w-0 pr-2">
           <h2
             className="font-serif-brand font-semibold text-[#182d57] text-[16px] leading-[1.3] mb-1"

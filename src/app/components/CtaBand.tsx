@@ -1,7 +1,7 @@
 import FillButton from "./FillButton";
 
 interface CtaBandProps {
-  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void;
 }
 
 export function CtaBand({ onNavigate }: CtaBandProps) {

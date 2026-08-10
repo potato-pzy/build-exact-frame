@@ -689,7 +689,7 @@ export default function BrandStrengths() {
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[723px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">Home</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[810px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">About</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[897px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">Delivery</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[993px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">Full Circle Fuel</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[993px] text-[#00182b] text-[14px] top-[52px] whitespace-nowrap">Integrated Fuel Solution</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[1136px] text-[#f1f1f1] text-[14px] top-[52px] whitespace-nowrap">Contact</p>
       <Layer />
       <div className="absolute h-px left-0 top-[110px] w-[1280px]">
@@ -699,7 +699,7 @@ export default function BrandStrengths() {
           </svg>
         </div>
       </div>
-      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[55px] left-[calc(50%-573px)] text-[#f1f1f1] text-[39px] top-[241px] tracking-[-0.78px] w-[985px]" style={{ fontVariationSettings: '"wdth" 100' }}>{`Full Circle Fuel isn't a label sitting on top of the business, it's the shape of it. Six capabilities, working as one, because a project can't afford a weak link anywhere in the chain.`}</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[55px] left-[calc(50%-573px)] text-[#f1f1f1] text-[39px] top-[241px] tracking-[-0.78px] w-[985px]" style={{ fontVariationSettings: '"wdth" 100' }}>{`Integrated Fuel Solution isn't a label sitting on top of the business, it's the shape of it. Six capabilities, working as one, because a project can't afford a weak link anywhere in the chain.`}</p>
       <div className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light h-[54px] leading-[0] left-[calc(50%+0.5px)] text-[#264b7f] text-[24px] text-center top-[725.19px] tracking-[-0.48px] w-[213px]">
         <p className="leading-[normal] mb-0">Ready Financing</p>
         <p className="leading-[normal]">​</p>
@@ -709,7 +709,7 @@ export default function BrandStrengths() {
         <p className="leading-[normal]">​</p>
       </div>
       <div className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[81px] leading-[0] left-[calc(50%+0.5px)] text-[#264b7f] text-[48px] text-center top-[963.16px] tracking-[-0.96px] w-[243px]" style={{ fontVariationSettings: '"wdth" 100' }}>
-        <p className="leading-[normal] mb-0">Full Circle fuel</p>
+        <p className="leading-[normal] mb-0">Integrated Fuel Solution</p>
         <p className="leading-[normal]">​</p>
       </div>
       <div className="-translate-x-1/2 [word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light h-[53px] leading-[0] left-[calc(50%+345px)] text-[#264b7f] text-[24px] text-center top-[823.19px] tracking-[-0.48px] w-[316px]">
@@ -818,7 +818,7 @@ export default function BrandStrengths() {
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#5b639f] text-[12px] top-[5132px] whitespace-nowrap">Privacy Policy</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[809px] text-[#5b639f] text-[12px] top-[5132px] whitespace-nowrap">Offshore energy consultants pvt ltd 2026 - All Rights reserved</p>
       <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[4991px] whitespace-nowrap">ContacT</p>
-      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[4950px] whitespace-nowrap">One stop solution</p>
+      <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[265px] text-[#c2c2c2] text-[12px] top-[4950px] whitespace-nowrap">Integrated Fuel Solution</p>
       <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[1103px] text-[#f1f1f1] text-[16px] top-[4637px] tracking-[-0.32px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
         Get in touch
       </p>

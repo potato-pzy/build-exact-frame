@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import "./Navbar.css";
 import { Layer } from "@/imports/HomePage-1/index";
 
-type Page = "home" | "about" | "contact" | "delivery" | "full-circle-fuel";
+type Page = "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution";
 
 interface NavbarProps {
   onNavigate?: (page: Page) => void;
@@ -13,7 +13,7 @@ const NAV_ITEMS: { label: string; page: Page }[] = [
   { label: "HOME", page: "home" },
   { label: "ABOUT", page: "about" },
   { label: "DELIVERY", page: "delivery" },
-  { label: "FULL CIRCLE FUEL", page: "full-circle-fuel" },
+  { label: "INTEGRATED FUEL SOLUTION", page: "integrated-fuel-solution" },
 ];
 
 export default function Navbar({ onNavigate, currentPage }: NavbarProps) {

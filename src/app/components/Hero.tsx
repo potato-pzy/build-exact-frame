@@ -38,7 +38,7 @@ export function Hero() {
           className="font-serif-brand font-normal text-oec-light text-[26px] leading-[38px] lg:text-[39px] lg:leading-[55px] tracking-[-0.78px] max-w-[985px]"
           style={{ fontVariationSettings: '"wdth" 100' }}
         >
-          {`Full Circle Fuel isn't a label sitting on top of the business, it's the shape of it. Six capabilities, working as one, because a project can't afford a weak link anywhere in the chain.`}
+          {`Integrated Fuel Solution isn't a label sitting on top of the business, it's the shape of it. Six capabilities, working as one, because a project can't afford a weak link anywhere in the chain.`}
         </p>
       </div>
     </section>

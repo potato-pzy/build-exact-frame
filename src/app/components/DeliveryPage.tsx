@@ -10,7 +10,7 @@ import RevealText from "./RevealText";
 gsap.registerPlugin(ScrollTrigger);
 
 interface DeliveryPageProps {
-  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void;
 }
 
 import delivery1Img from "../../../public/img/Delivery 1.webp";

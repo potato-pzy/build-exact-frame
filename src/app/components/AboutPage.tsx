@@ -10,7 +10,7 @@ import FillButton from "./FillButton";
 import RevealText from "./RevealText";
 
 interface AboutPageProps {
-  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => void;
+  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void;
 }
 
 export default function AboutPage({ onNavigate }: AboutPageProps) {
@@ -127,11 +127,11 @@ export default function AboutPage({ onNavigate }: AboutPageProps) {
           </div>
 
           <div className="stat">
-            <p className="stat-text">Headquartered in Singapore</p>
+            <p className="stat-text">Headquartered in<br />Singapore</p>
           </div>
 
           <div className="stat">
-            <p className="stat-text">Offshore upstream fuel supply, exclusively</p>
+            <p className="stat-text">Offshore upstream fuel supply,<br />exclusively</p>
           </div>
         </div>
       </section>

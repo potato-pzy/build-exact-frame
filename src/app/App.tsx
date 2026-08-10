@@ -126,14 +126,14 @@ function FillButton({
   );
 }
 
-const getInitialPage = (): "home" | "about" | "contact" | "delivery" | "full-circle-fuel" => {
+const getInitialPage = (): "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution" => {
   const hash = window.location.hash.replace("#", "");
-  if (hash === "about" || hash === "contact" || hash === "delivery" || hash === "full-circle-fuel") return hash;
+  if (hash === "about" || hash === "contact" || hash === "delivery" || hash === "integrated-fuel-solution") return hash;
   return "home";
 };
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact" | "delivery" | "full-circle-fuel">(
+  const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact" | "delivery" | "integrated-fuel-solution">(
     getInitialPage
   );
   const [initialLoading, setInitialLoading] = useState(true);
@@ -173,7 +173,7 @@ export default function App() {
     }
   }, [currentPage]);
 
-  const handleNavigate = (page: "home" | "about" | "contact" | "delivery" | "full-circle-fuel") => {
+  const handleNavigate = (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => {
     setCurrentPage(page);
     window.location.hash = page;
     sessionStorage.setItem(`scroll_${page}`, "0");
@@ -241,7 +241,7 @@ export default function App() {
     );
   }
 
-  if (currentPage === "full-circle-fuel") {
+  if (currentPage === "integrated-fuel-solution") {
     return (
       <Suspense fallback={<LoadingSpinner />}>
         <FullCircleFuelPage onNavigate={handleNavigate} />
@@ -285,7 +285,7 @@ export default function App() {
             squareSize={36}
             height={44}
             totalWidth={155}
-            squareColor="#182d57"
+            squareColor="#de5c35"
             restBg="#de5c35"
             textLeft={46}
             text="Contact Us"
