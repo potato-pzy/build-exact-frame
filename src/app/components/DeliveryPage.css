@@ -33,7 +33,7 @@
 
 /* ── HERO ── */
 .delivery-page-container .delivery-hero {
-  padding: 60px 67px 60px;
+  padding: 60px 68px 60px;
   background: #f4f4f4;
 }
 
@@ -76,7 +76,7 @@
   position: sticky;
   top: 0;
   height: 100vh;
-  padding: 0 56px 0 67px;
+  padding: 0 56px 0 68px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -331,7 +331,7 @@
 /* ── VESSEL BANNER ── */
 .delivery-page-container .delivery-banner {
   background: #de5c35;
-  padding: 55px 67px;
+  padding: 55px 68px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -351,7 +351,7 @@
 /* ── CTA ── */
 .delivery-page-container .delivery-cta {
   background: #f4f4f4;
-  padding: 64px 7% 72px;
+  padding: 64px 68px 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;

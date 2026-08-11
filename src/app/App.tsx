@@ -2,140 +2,47 @@ import { useEffect, useRef, useState, lazy, Suspense } from "react";
 import HomePage from "@/imports/HomePage-1/index";
 import Navbar from "@/app/components/Navbar";
 import LoadingSpinner from "@/app/components/LoadingSpinner";
+import Footer from "@/app/components/Footer";
 
 const AboutPage = lazy(() => import("@/app/components/AboutPage"));
 const ContactPage = lazy(() => import("@/app/components/ContactPage"));
 const DeliveryPage = lazy(() => import("@/app/components/DeliveryPage"));
 const FullCircleFuelPage = lazy(() => import("@/app/components/FullCircleFuelPage"));
+const PrivacyPolicyPage = lazy(() => import("@/app/components/PrivacyPolicyPage"));
+const TermsConditionsPage = lazy(() => import("@/app/components/TermsConditionsPage"));
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 3904;
+const DESIGN_HEIGHT = 3029;
 const NAVBAR_HEIGHT = 110;
 
-interface FillButtonProps {
-  top: number;
-  left: number;
-  squareSize: number;
-  height: number;
-  totalWidth: number;
-  squareColor: string;
-  restBg: string;
-  textLeft: number;
-  text: string;
-  textColor: string;
-  fontSize: number;
-  fontFamily: string;
-  letterSpacing?: string;
-  rounded?: number;
-  arrow?: boolean;
-  onClick?: () => void;
-}
+import RevealText from "@/app/components/RevealText";
+import FillButton from "@/app/components/FillButton";
 
-function FillButton({
-  top,
-  left,
-  squareSize,
-  height,
-  totalWidth,
-  squareColor,
-  restBg,
-  textLeft,
-  text,
-  textColor,
-  fontSize,
-  fontFamily,
-  letterSpacing,
-  rounded = 4,
-  arrow = true,
-  onClick,
-}: FillButtonProps) {
-  const [hovered, setHovered] = useState(false);
+export type Page =
+  | "home"
+  | "about"
+  | "contact"
+  | "delivery"
+  | "integrated-fuel-solution"
+  | "privacy-policy"
+  | "terms-and-conditions";
 
-  return (
-    <div
-      onClick={onClick}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
-      style={{
-        position: "absolute",
-        top,
-        left,
-        width: totalWidth,
-        height,
-        cursor: "pointer",
-        display: "flex",
-        alignItems: "center",
-        borderRadius: rounded,
-        overflow: "hidden",
-        background: restBg,
-      }}
-    >
-      {/* Animated fill layer: extends to totalWidth on hover, retracts back to squareSize on unhover without overlay shading */}
-      <div
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          background: squareColor,
-          width: hovered ? totalWidth : squareSize,
-          borderRadius: rounded,
-          transition: "width 380ms cubic-bezier(0.4, 0, 0.2, 1)",
-          pointerEvents: "none",
-        }}
-      />
-      {/* Arrow inside square — slides RIGHT on hover */}
-      {arrow && (
-        <span
-          style={{
-            position: "relative",
-            zIndex: 1,
-            width: squareSize,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            color: "white",
-            fontSize: 13,
-            flexShrink: 0,
-            transform: hovered ? `translateX(calc(100% - ${squareSize}px + 8px))` : "translateX(0)",
-            transition: "transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
-          }}
-        >
-          →
-        </span>
-      )}
-      {/* Label — slides LEFT on hover */}
-      <span
-        style={{
-          position: "absolute",
-          left: textLeft,
-          zIndex: 1,
-          color: hovered ? "white" : textColor,
-          fontSize,
-          fontFamily,
-          fontWeight: 300,
-          letterSpacing: letterSpacing ?? "-0.32px",
-          whiteSpace: "nowrap",
-          transform: hovered ? "translateX(-8px)" : "translateX(0)",
-          transition: "color 200ms ease, transform 380ms cubic-bezier(0.4, 0, 0.2, 1)",
-        }}
-      >
-        {text}
-      </span>
-    </div>
-  );
-}
-
-const getInitialPage = (): "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution" => {
+const getInitialPage = (): Page => {
   const hash = window.location.hash.replace("#", "");
-  if (hash === "about" || hash === "contact" || hash === "delivery" || hash === "integrated-fuel-solution") return hash;
+  if (
+    hash === "about" ||
+    hash === "contact" ||
+    hash === "delivery" ||
+    hash === "integrated-fuel-solution" ||
+    hash === "privacy-policy" ||
+    hash === "terms-and-conditions"
+  )
+    return hash as Page;
   return "home";
 };
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<"home" | "about" | "contact" | "delivery" | "integrated-fuel-solution">(
-    getInitialPage
-  );
+  const [currentPage, setCurrentPage] = useState<Page>(getInitialPage);
   const [initialLoading, setInitialLoading] = useState(true);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
@@ -173,7 +80,7 @@ export default function App() {
     }
   }, [currentPage]);
 
-  const handleNavigate = (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => {
+  const handleNavigate = (page: Page) => {
     setCurrentPage(page);
     window.location.hash = page;
     sessionStorage.setItem(`scroll_${page}`, "0");
@@ -201,11 +108,11 @@ export default function App() {
       inner.style.width = `${DESIGN_WIDTH}px`;
       inner.style.height = `${DESIGN_HEIGHT}px`;
       inner.style.position = "absolute";
-      inner.style.top = `-${NAVBAR_HEIGHT}px`;
+      inner.style.top = "0px";
       const scale = Math.max(w / DESIGN_WIDTH, 0.45);
       inner.style.transformOrigin = "top left";
       inner.style.transform = `scale(${scale})`;
-      outer.style.height = `${-NAVBAR_HEIGHT + DESIGN_HEIGHT * scale}px`;
+      outer.style.height = `${DESIGN_HEIGHT * scale}px`;
     };
 
     apply();
@@ -249,53 +156,76 @@ export default function App() {
     );
   }
 
+  if (currentPage === "privacy-policy") {
+    return (
+      <Suspense fallback={<LoadingSpinner />}>
+        <PrivacyPolicyPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
+  }
+
+  if (currentPage === "terms-and-conditions") {
+    return (
+      <Suspense fallback={<LoadingSpinner />}>
+        <TermsConditionsPage onNavigate={handleNavigate} />
+      </Suspense>
+    );
+  }
+
   return (
-    <>
-      {/* Navbar: full viewport width, sticky, outside scaled content */}
+    <div className="home-page-container min-h-screen bg-oec-grey-bg flex flex-col pt-[72px] lg:pt-0">
       <Navbar onNavigate={handleNavigate} currentPage="home" />
 
-      {/* outerRef: position:relative with JS-controlled height. overflow:clip hard-cuts anything outside. */}
-      <div
-        ref={outerRef}
-        style={{
-          position: "relative",
-          width: "100%",
-          overflowX: "clip",
-        }}
-      >
-        {/* innerRef: position:absolute so it is OUT of document flow.
-            A 1280px absolutely-positioned element does NOT affect scroll/layout width. */}
+      <main className="flex-grow">
+        {/* outerRef: position:relative with JS-controlled height. overflow:clip hard-cuts anything outside. */}
         <div
-          ref={innerRef}
+          ref={outerRef}
           style={{
-            width: DESIGN_WIDTH,
-            height: DESIGN_HEIGHT,
-            transformOrigin: "top left",
-            position: "absolute",
-            top: -NAVBAR_HEIGHT,
-            left: 0,
+            position: "relative",
+            width: "100%",
+            overflowX: "clip",
           }}
         >
-          <HomePage onNavigate={handleNavigate} />
+          {/* innerRef: position:absolute so it is OUT of document flow. */}
+          <div
+            ref={innerRef}
+            style={{
+              width: DESIGN_WIDTH,
+              height: DESIGN_HEIGHT,
+              transformOrigin: "top left",
+              position: "relative",
+              left: 0,
+            }}
+          >
+            <HomePage onNavigate={handleNavigate} />
+          </div>
+        </div>
 
-          {/* Footer CTA — "Contact Us" (blue square + white text on orange bg) */}
+        {/* Desktop full-width CTA matching About Us */}
+        <section className="hidden md:flex w-full bg-white px-6 md:px-[68px] py-[82px] md:py-[90px] flex-row items-center justify-between gap-8 z-10 relative">
+          <h2 className="font-serif-brand font-normal text-oec-navy text-[40px] tracking-[-0.8px] leading-[1.25] max-w-[609px] m-0">
+            <RevealText text="Same principle, every single time. Reach out when it matters." />
+          </h2>
           <FillButton
-            top={3341}
-            left={818}
-            squareSize={36}
-            height={44}
-            totalWidth={155}
-            squareColor="#de5c35"
-            restBg="#de5c35"
-            textLeft={46}
-            text="Contact Us"
-            textColor="#f1f1f1"
+            squareSize={40}
+            height={48}
+            width={170}
+            squareColor="#f25b17"
+            restBg="#f25b17"
+            text="Get in touch"
+            textColor="#ffffff"
+            hoverTextColor="#ffffff"
             fontSize={16}
             fontFamily="'Merriweather', serif"
+            fontWeight={400}
+            letterSpacing="-0.32px"
+            rounded={4}
             onClick={() => handleNavigate("contact")}
           />
-        </div>
-      </div>
-    </>
+        </section>
+      </main>
+
+      <Footer onNavigate={handleNavigate} />
+    </div>
   );
 }

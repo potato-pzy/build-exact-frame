@@ -17,8 +17,10 @@ export function Logo({
     return (
       <svg
         className={className}
-        fill="none"
+        width="254"
+        height="56"
         viewBox="0 0 254 56"
+        fill="none"
         role="img"
         aria-label="Offshore Energy Consultants"
       >
@@ -64,8 +66,10 @@ export function Logo({
   return (
     <svg
       className={className}
-      fill="none"
+      width="218"
+      height="49"
       viewBox="0 0 218 49"
+      fill="none"
       role="img"
       aria-label="Offshore Energy Consultants"
     >

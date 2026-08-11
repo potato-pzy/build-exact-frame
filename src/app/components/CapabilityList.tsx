@@ -147,7 +147,7 @@ function CapabilityRow({
       </div>
 
       {/* Desktop Grid Layout */}
-      <div className="hidden lg:grid max-w-[1280px] mx-auto pl-6 lg:pl-[67px] pr-6 lg:pr-0 grid-cols-1 lg:grid-cols-[540px_1fr_170px] grid-rows-[auto_auto] items-stretch">
+      <div className="hidden lg:grid max-w-[1280px] mx-auto pl-6 lg:pl-[68px] pr-6 lg:pr-0 grid-cols-1 lg:grid-cols-[540px_1fr_170px] grid-rows-[auto_auto] items-stretch">
         {/* ROW 1, COL 1: Main Serif Brand Heading */}
         <div className="lg:col-start-1 lg:row-start-1 pr-8 pt-9 lg:pt-12">
           <h2

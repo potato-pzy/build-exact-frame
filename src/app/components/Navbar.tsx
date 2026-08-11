@@ -1,8 +1,15 @@
 import { useState, useEffect } from "react";
 import "./Navbar.css";
-import { Layer } from "@/imports/HomePage-1/index";
+import { Logo } from "./brand/Logo";
 
-type Page = "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution";
+export type Page =
+  | "home"
+  | "about"
+  | "contact"
+  | "delivery"
+  | "integrated-fuel-solution"
+  | "privacy-policy"
+  | "terms-and-conditions";
 
 interface NavbarProps {
   onNavigate?: (page: Page) => void;
@@ -53,7 +60,7 @@ export default function Navbar({ onNavigate, currentPage }: NavbarProps) {
       <nav className="main-navbar">
         <div className="nav-inner">
           <div className="logo" onClick={() => handleNavClick("home")}>
-            <Layer />
+            <Logo variant="dark" className="h-[40px] md:h-[49px] w-auto shrink-0" />
           </div>
 
           {/* Desktop Links */}

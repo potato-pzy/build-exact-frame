@@ -2,16 +2,25 @@ import { Layer1 } from "@/imports/HomePage-1/index";
 import { FooterFlare } from "./brand/FooterFlare";
 import { Logo } from "./brand/Logo";
 
+export type Page =
+  | "home"
+  | "about"
+  | "contact"
+  | "delivery"
+  | "integrated-fuel-solution"
+  | "privacy-policy"
+  | "terms-and-conditions";
+
 interface FooterProps {
-  onNavigate?: (page: "home" | "about" | "contact" | "delivery" | "integrated-fuel-solution") => void;
+  onNavigate?: (page: Page) => void;
 }
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
     <footer className="relative w-full min-h-[380px] h-auto bg-[#122446] overflow-hidden pb-8 md:pb-0">
       {/* Decorative circular emblem */}
-      <div className="absolute right-0 md:left-[64%] w-[60%] md:w-[30%] bottom-[-80px] pointer-events-none opacity-40 md:opacity-60 z-0">
-        <FooterFlare className="w-full h-auto" />
+      <div className="absolute right-0 md:left-[64%] w-[60%] md:w-[472px] h-[350px] md:h-[458px] bottom-[-80px] pointer-events-none opacity-40 md:opacity-60 z-0">
+        <FooterFlare className="w-full h-full object-contain" />
       </div>
 
       {/* Bottom Linear Gradient Overlay */}
@@ -23,21 +32,19 @@ export default function Footer({ onNavigate }: FooterProps) {
       />
 
       {/* ── DESKTOP FOOTER CONTAINER (exact Figma spec from git) ── */}
-      <div className="hidden md:flex relative w-full h-full px-[7%] mx-auto z-10 flex-col">
+      <div className="hidden md:flex relative w-full h-full px-6 md:px-[68px] mx-auto z-10 flex-col">
         {/* Top section: Logo */}
         <div className="pt-[54px]">
           <div
             onClick={() => onNavigate?.("home")}
-            className="w-[254px] h-[56px] cursor-pointer hover:opacity-90 transition-opacity overflow-hidden"
+            className="cursor-pointer hover:opacity-90 transition-opacity"
           >
-            <div style={{ position: "relative", width: 254, height: 56, marginTop: -3579, marginLeft: -84 }}>
-              <Layer1 />
-            </div>
+            <Logo variant="light" className="h-[56px] w-auto shrink-0" />
           </div>
         </div>
 
         {/* Nav section */}
-        <div className="flex mt-[48px] pl-[9px]">
+        <div className="flex mt-[48px] pl-0">
           {/* Column 1 */}
           <div className="flex flex-col gap-[24px] w-[240px]">
             <button
@@ -80,18 +87,18 @@ export default function Footer({ onNavigate }: FooterProps) {
         <div className="w-full h-[0.5px] bg-[#5a629f] mt-[52px]"></div>
 
         {/* Legal Row */}
-        <div className="flex justify-between items-center mt-[14px] pl-[9px]">
+        <div className="flex justify-between items-center mt-[14px] pl-0">
           <div className="flex items-center">
             <div className="w-[240px]">
               <button
-                onClick={() => onNavigate?.("about")}
+                onClick={() => onNavigate?.("terms-and-conditions")}
                 className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
               >
                 TERMS &amp; CONDITIONS
               </button>
             </div>
             <button
-              onClick={() => onNavigate?.("about")}
+              onClick={() => onNavigate?.("privacy-policy")}
               className="text-left text-[#5a629f] hover:text-white text-[12px] font-['Merriweather_Sans:Light',sans-serif] font-light uppercase tracking-tight transition-colors bg-transparent border-0 p-0 cursor-pointer"
             >
               PRIVACY POLICY
@@ -197,7 +204,10 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         <div className="flex flex-col mb-8">
           <div
-            onClick={() => onNavigate?.("contact")}
+            onClick={() => {
+              onNavigate?.("terms-and-conditions");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="flex items-center justify-between py-3 border-b border-white/10 text-white/70 font-['Merriweather_Sans:Light',sans-serif] text-[13px] font-light cursor-pointer hover:text-white transition-colors"
           >
             <span>Terms &amp; Conditions</span>
@@ -207,7 +217,10 @@ export default function Footer({ onNavigate }: FooterProps) {
           </div>
 
           <div
-            onClick={() => onNavigate?.("contact")}
+            onClick={() => {
+              onNavigate?.("privacy-policy");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             className="flex items-center justify-between py-3 border-b border-white/10 text-white/70 font-['Merriweather_Sans:Light',sans-serif] text-[13px] font-light cursor-pointer hover:text-white transition-colors"
           >
             <span>Privacy Policy</span>

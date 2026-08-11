@@ -33,7 +33,7 @@ export function Hero() {
       </div>
 
       {/* Hero main content */}
-      <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-[67px] py-[110px] lg:py-[131px]">
+      <div className="relative z-10 max-w-[1280px] mx-auto px-6 lg:px-[68px] py-[110px] lg:py-[131px]">
         <p
           className="font-serif-brand font-normal text-oec-light text-[26px] leading-[38px] lg:text-[39px] lg:leading-[55px] tracking-[-0.78px] max-w-[985px]"
           style={{ fontVariationSettings: '"wdth" 100' }}

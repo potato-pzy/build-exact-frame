@@ -40,19 +40,17 @@ export function ProjectKnowHowIcon({ className = "" }: IconProps) {
   return <img src={svgProjectKnowHow} alt="Project Know How" className={`object-contain ${className}`} />;
 }
 
-/** The small six-petal mark that sits directly above the "Integrated Fuel Solutions" wordmark. */
 export function PetalMark({ className = "" }: IconProps) {
   return (
-    <svg className={className} width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden>
-      <circle
-        cx="16"
-        cy="16"
-        r="12"
-        stroke={ORANGE}
-        strokeWidth="3.5"
-        strokeDasharray="4.5 4.5"
-        strokeLinecap="round"
-      />
+    <svg className={className} viewBox="0 0 49.3 49" fill="none" aria-hidden>
+      <g>
+        <path d={svgPaths.p215d7d80} fill={ORANGE} transform="translate(16.07 41.01)" />
+        <path d={svgPaths.p9342f00} fill={ORANGE} transform="translate(1 26.6)" />
+        <path d={svgPaths.p18627c80} fill={ORANGE} transform="translate(0 6.27)" />
+        <path d={svgPaths.p34123900} fill={ORANGE} transform="translate(17.18 0)" />
+        <path d={svgPaths.p12a71400} fill={ORANGE} transform="translate(35.36 5.9)" />
+        <path d={svgPaths.p14ceaa00} fill={ORANGE} transform="translate(35.88 26.39)" />
+      </g>
     </svg>
   );
 }

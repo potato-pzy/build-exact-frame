@@ -13,7 +13,7 @@ const stops = (
  */
 export function FooterFlare({ className = "" }: { className?: string }) {
   return (
-    <svg className={className} fill="none" viewBox="0 0 472.4 458.4" aria-hidden>
+    <svg className={className} width="472.4" height="458.4" viewBox="0 0 472.4 458.4" fill="none" aria-hidden>
       <g transform="translate(153.8 383.1)">
         <path d={svgPaths.p191f2880} fill="url(#oec-flare-1)" />
       </g>

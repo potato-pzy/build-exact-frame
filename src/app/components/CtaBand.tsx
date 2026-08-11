@@ -7,7 +7,7 @@ interface CtaBandProps {
 export function CtaBand({ onNavigate }: CtaBandProps) {
   return (
     <section id="contact" className="bg-oec-coral w-full">
-      <div className="w-full px-6 lg:px-[7%] py-[69px] flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
+      <div className="w-full px-6 lg:px-[68px] py-[69px] flex flex-col lg:flex-row lg:items-end lg:justify-between gap-10">
         <p
           className="font-serif-brand font-normal text-oec-light text-[28px] leading-[1.35] lg:text-[40px] lg:leading-[normal] tracking-[-0.8px] max-w-[631px]"
           style={{ fontVariationSettings: '"wdth" 100' }}
