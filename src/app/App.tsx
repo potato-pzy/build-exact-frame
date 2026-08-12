@@ -12,7 +12,7 @@ const PrivacyPolicyPage = lazy(() => import("@/app/components/PrivacyPolicyPage"
 const TermsConditionsPage = lazy(() => import("@/app/components/TermsConditionsPage"));
 
 const DESIGN_WIDTH = 1280;
-const DESIGN_HEIGHT = 3029;
+const DESIGN_HEIGHT = 3524;
 const NAVBAR_HEIGHT = 110;
 
 import RevealText from "@/app/components/RevealText";

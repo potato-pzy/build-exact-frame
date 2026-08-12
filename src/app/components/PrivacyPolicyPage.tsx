@@ -28,9 +28,8 @@ export default function PrivacyPolicyPage({ onNavigate }: PrivacyPolicyPageProps
       <Navbar onNavigate={onNavigate} currentPage="privacy-policy" />
 
       {/* Hero Banner Section */}
-      <div className="bg-[#071D30] text-white pt-[120px] pb-[50px] px-6 md:px-[68px]">
+      <div className="bg-[#182d57] text-white pt-[120px] pb-[50px] px-6 md:px-[68px]">
         <div className="max-w-[1280px] mx-auto">
-          <div className="w-[54px] h-[4px] bg-[#f25b17] mb-[20px]" />
           <h1 className="font-serif-brand font-bold text-[32px] md:text-[40px] text-white mb-[12px] leading-tight">
             <RevealText text="Privacy Policy" />
           </h1>

@@ -90,9 +90,29 @@
   margin: 0;
 }
 
+.contact-page-container .contact-link {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-page-container .contact-link:hover {
+  color: #f25b17;
+  text-decoration: underline;
+}
+
 /* Mobile icon card — hidden on desktop */
 .contact-info-card {
   display: none;
+}
+
+.contact-info-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-info-link:hover .contact-info-value {
+  color: #f25b17;
 }
 
 /* ── Form (desktop: 2-col rows) ── */

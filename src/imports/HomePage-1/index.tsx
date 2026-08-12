@@ -733,6 +733,28 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
             <img alt="OEC fuel delivery tanker vessel at sea" className="absolute h-full left-[-5.54%] max-w-none top-0 w-[113.03%]" src={imgRectangle11} />
           </div>
         </div>
+        <div className="absolute bg-[#de5c35] h-[495px] left-0 top-[3029px] w-[1280px]" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[102px] leading-[normal] left-[calc(50%+181px)] text-[#f1f1f1] text-[40px] top-[3162px] tracking-[-0.8px] w-[367px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="Talk to someone who can say yes." />
+          <br aria-hidden />
+          <br aria-hidden />
+        </p>
+        <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[821px] text-[#f1f1f1] text-[14px] top-[3278px] tracking-[-0.28px] w-[373px]">
+          <RevealText text="No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot." />
+        </p>
+        <Group3 />
+        <div className="absolute bg-white/40 h-[495px] left-[737px] top-[3029px] w-[1px]" />
+        <p className="[word-break:break-word] absolute font-['Merriweather:Light',sans-serif] font-light leading-[normal] left-[calc(50%-556px)] text-[#f1f1f1] text-[32px] top-[3140px] tracking-[-0.64px] w-[591px]" style={{ fontVariationSettings: '"wdth" 100' }}>
+          <RevealText text="“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”" />
+        </p>
+        <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[84px] text-[#f1f1f1] text-[0px] top-[3378px] tracking-[-0.32px] w-[419px]">
+          <p className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] mb-0 text-[16px]">
+            <RevealText text="Rajiv Chada" />
+          </p>
+          <p className="leading-[normal] text-[16px]">
+            <RevealText text="Director, OEC" />
+          </p>
+        </div>
       </div>
 
       {/* MOBILE RESPONSIVE WRAPPER (rendered on screen widths <= 840px) */}
@@ -926,27 +948,42 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           </div>
         </section>
 
-        {/* CTA SECTION MATCHING ABOUT US */}
-        <section className="bg-white px-6 py-12 flex flex-col items-start gap-6">
-          <h2 className="font-serif-brand font-normal text-oec-navy text-[26px] tracking-[-0.8px] leading-[1.25]">
-            <RevealText text="Same principle, every single time. Reach out when it matters." />
-          </h2>
-          <FillButton
-            squareSize={40}
-            height={48}
-            width={170}
-            squareColor="#f25b17"
-            restBg="#f25b17"
-            text="Get in touch"
-            textColor="#ffffff"
-            hoverTextColor="#ffffff"
-            fontSize={16}
-            fontFamily="'Merriweather', serif"
-            fontWeight={400}
-            letterSpacing="-0.32px"
-            rounded={4}
-            onClick={() => onNavigate?.("contact")}
-          />
+        {/* QUOTE / TESTIMONIAL BANNER */}
+        <section className="mobile-quote-banner">
+          <div className="mobile-quote-icon">
+            <svg width="36" height="28" viewBox="0 0 36 28" fill="rgba(255, 255, 255, 0.4)">
+              <path d="M14.4 0L9.6 28H0L7.2 0H14.4ZM36 0L31.2 28H21.6L28.8 0H36Z" />
+            </svg>
+          </div>
+          <p className="mobile-quote-text">
+            “We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”
+          </p>
+          <div className="mobile-quote-line" />
+          <div className="mobile-quote-author">
+            <span className="author-name">Rajiv Chada</span>
+            <span className="author-title">Director, OEC</span>
+          </div>
+        </section>
+
+        {/* CONTACT CTA BANNER */}
+        <section className="mobile-contact-banner">
+          <h2>Talk to someone who can say yes.</h2>
+          <p>No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot.</p>
+
+          <div className="mobile-contact-btn">
+            <FillButton
+              squareSize={36}
+              height={44}
+              width={160}
+              squareColor="#de5c35"
+              restBg="#de5c35"
+              text="Contact Us"
+              textColor="#ffffff"
+              fontSize={16}
+              fontFamily="'Merriweather', serif"
+              onClick={() => onNavigate?.("contact")}
+            />
+          </div>
         </section>
       </div>
     </div>

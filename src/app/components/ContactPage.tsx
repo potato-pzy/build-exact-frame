@@ -69,11 +69,19 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
             </div>
             <div className="info-block">
               <p className="info-label"><RevealText text="Call us:" /></p>
-              <p className="info-value"><RevealText text="+65 9170 1934" /></p>
+              <p className="info-value">
+                <a href="tel:+6591701934" className="contact-link">
+                  <RevealText text="+65 9170 1934" />
+                </a>
+              </p>
             </div>
             <div className="info-block">
               <p className="info-label"><RevealText text="Mail:" /></p>
-              <p className="info-value"><RevealText text="rc@offshore-bunkers.com" /></p>
+              <p className="info-value">
+                <a href="mailto:rc@offshore-bunkers.com" className="contact-link">
+                  <RevealText text="rc@offshore-bunkers.com" />
+                </a>
+              </p>
             </div>
 
             {/* MOBILE ONLY: icon card */}
@@ -90,7 +98,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                   <p className="contact-info-value">72 Circular Road, #02–01,<br />Singapore, 049426</p>
                 </div>
               </div>
-              <div className="contact-info-item">
+              <a href="tel:+6591701934" className="contact-info-item contact-info-link">
                 <div className="contact-info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.6 3.38 2 2 0 0 1 3.56 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -100,8 +108,8 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                   <p className="contact-info-label">Call us</p>
                   <p className="contact-info-value">+65 9170 1934</p>
                 </div>
-              </div>
-              <div className="contact-info-item">
+              </a>
+              <a href="mailto:rc@offshore-bunkers.com" className="contact-info-item contact-info-link">
                 <div className="contact-info-icon">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2"/>
@@ -112,7 +120,7 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
                   <p className="contact-info-label">Mail</p>
                   <p className="contact-info-value">rc@offshore-bunkers.com</p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
