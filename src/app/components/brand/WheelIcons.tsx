@@ -1,9 +1,9 @@
-import svgReadyFinancing from "/svg/1.svg";
-import svgOffshoreFocus from "/svg/5-1.svg";
-import svgAnywhereDelivery from "/svg/2.svg";
-import svgFairPricing from "/svg/3.svg";
-import svgProjectKnowHow from "/svg/4.svg";
-import svgIsolationMode from "/svg/5.svg";
+const svgReadyFinancing = "/svg/1.svg";
+const svgOffshoreFocus = "/svg/5-1.svg";
+const svgAnywhereDelivery = "/svg/2.svg";
+const svgFairPricing = "/svg/3.svg";
+const svgProjectKnowHow = "/svg/4.svg";
+const svgIsolationMode = "/svg/5.svg";
 import svgPaths from "../../../imports/BrandStrengths/svg-wgo26ydiex";
 
 type IconProps = { className?: string };
