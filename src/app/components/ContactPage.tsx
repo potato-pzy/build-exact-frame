@@ -28,9 +28,30 @@ export default function ContactPage({ onNavigate }: ContactPageProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitted(true);
+
+    try {
+      await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: "23796f34-b754-4ac8-bd24-ef86b66e27d5",
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          phone: formData.phone,
+          message: formData.query,
+          subject: `New Contact Inquiry from ${formData.name}`,
+        }),
+      });
+    } catch (err) {
+      console.error("Web3Forms submission error:", err);
+    }
   };
 
   return (

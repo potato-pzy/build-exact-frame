@@ -544,8 +544,6 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           </p>
           <p className="leading-[65px]">
             <RevealText text="the most" delayOffset={0.45} wordDelay={0.15} />
-            <br aria-hidden />
-            <br aria-hidden />
           </p>
         </h1>
         <div className="absolute bg-white h-[541px] left-0 top-[806px] w-[1280px]" />
