@@ -538,13 +538,13 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       {/* DESKTOP CANVAS WRAPPER */}
       <div className="home-desktop-wrapper">
         <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
-        <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[68px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100' }}>
-          <p className="leading-[65px] mb-0">
+        <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[68px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100', margin: 0 }}>
+          <span className="leading-[65px] block" style={{ margin: 0 }}>
             <RevealText text="When fuel matters" wordDelay={0.15} />
-          </p>
-          <p className="leading-[65px]">
+          </span>
+          <span className="leading-[65px] block" style={{ margin: 0 }}>
             <RevealText text="the most" delayOffset={0.45} wordDelay={0.15} />
-          </p>
+          </span>
         </h1>
         <div className="absolute bg-white h-[541px] left-0 top-[806px] w-[1280px]" />
         <IsolationMode />
@@ -599,10 +599,9 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <RevealText text="Global" />
         </p>
         <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[62px] text-[#f25b17] text-[20px] top-[1448px] tracking-[-0.4px] whitespace-nowrap">
-          <p className="leading-[normal] mb-0 whitespace-pre">
+          <span className="leading-[normal] block whitespace-pre" style={{ margin: 0 }}>
             <RevealText text="WHY OEC" />
-          </p>
-          <p className="leading-[normal] whitespace-pre">​</p>
+          </span>
         </div>
         <div className="absolute flex h-[1042px] items-center justify-center left-[619px] top-[1347px] w-0">
           <div className="flex-none rotate-90">
@@ -734,8 +733,6 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         <div className="absolute bg-[#de5c35] h-[495px] left-0 top-[3029px] w-[1280px]" />
         <p className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal h-[102px] leading-[normal] left-[calc(50%+181px)] text-[#f1f1f1] text-[40px] top-[3162px] tracking-[-0.8px] w-[367px]" style={{ fontVariationSettings: '"wdth" 100' }}>
           <RevealText text="Talk to someone who can say yes." />
-          <br aria-hidden />
-          <br aria-hidden />
         </p>
         <p className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] left-[821px] text-[#f1f1f1] text-[14px] top-[3278px] tracking-[-0.28px] w-[373px]">
           <RevealText text="No call centers. No ticket queues. When you call OEC, you reach someone who can make the decision, on the spot." />
@@ -746,12 +743,12 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <RevealText text="“We built OEC on one principle: when an offshore project needs fuel, the answer has to be yes, and it has to come fast. That's not a tagline for us, it's how we operate every single day.”" />
         </p>
         <div className="[word-break:break-word] absolute font-['Merriweather_Sans:Light',sans-serif] font-light leading-[0] left-[84px] text-[#f1f1f1] text-[0px] top-[3378px] tracking-[-0.32px] w-[419px]">
-          <p className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] mb-0 text-[16px]">
+          <span className="font-['Merriweather_Sans:Regular',sans-serif] font-normal leading-[normal] block text-[16px]" style={{ margin: 0 }}>
             <RevealText text="Rajiv Chada" />
-          </p>
-          <p className="leading-[normal] text-[16px]">
+          </span>
+          <span className="leading-[normal] block text-[16px]" style={{ margin: 0 }}>
             <RevealText text="Director, OEC" />
-          </p>
+          </span>
         </div>
       </div>
 
