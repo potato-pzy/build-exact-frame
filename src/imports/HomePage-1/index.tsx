@@ -538,7 +538,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
       {/* DESKTOP CANVAS WRAPPER */}
       <div className="home-desktop-wrapper">
         <div className="absolute bg-white h-[225px] left-0 top-[2804px] w-[1280px]" />
-        <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[68px] text-[#182d57] text-[65px] top-[201px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100', margin: 0 }}>
+        <h1 className="[word-break:break-word] absolute font-['Merriweather:Regular',sans-serif] font-normal leading-[0] left-[68px] text-[#182d57] text-[65px] top-[91px] tracking-[-1.3px] whitespace-nowrap" style={{ fontVariationSettings: '"wdth" 100', margin: 0 }}>
           <span className="leading-[65px] block" style={{ margin: 0 }}>
             <RevealText text="When fuel matters" wordDelay={0.15} />
           </span>
@@ -555,7 +555,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
           <RevealText text="OEC charters bunker tankers, road tankers, and DP-2 supply vessels, matching the right vessel to the site rather than forcing every delivery through one fixed fleet." />
         </p>
         {/* Right Hero Section Container — single div for paragraph text + Learn More button */}
-        <div className="hero-right-container absolute left-[795px] top-[215px] w-[341px] flex flex-col gap-3 z-10">
+        <div className="hero-right-container absolute left-[795px] top-[105px] w-[341px] flex flex-col gap-3 z-10">
           <p className="[word-break:break-word] font-['Merriweather_Sans:Light',sans-serif] font-light leading-[normal] text-[#575757] text-[16px] tracking-[-0.32px]">
             <RevealText text="OEC keeps offshore operations fueled and moving, wherever the work is, however the market shifts." />
           </p>
@@ -575,7 +575,7 @@ export default function HomePage({ onNavigate }: { onNavigate?: (page: "home" | 
         </div>
 
         {/* Main hero vessel image */}
-        <div className="absolute h-[378px] left-0 top-[428px] w-[1280px] overflow-hidden">
+        <div className="absolute h-[378px] left-0 top-[318px] w-[1280px] overflow-hidden">
           <motion.img
             alt="Offshore energy vessel tanker background"
             className="w-full h-auto min-h-full object-cover object-center pointer-events-none"
